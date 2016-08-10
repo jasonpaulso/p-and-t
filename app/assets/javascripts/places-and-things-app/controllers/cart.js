@@ -1,10 +1,22 @@
 PlacesAndThings
-    .controller('CartCtrl', CartCtrl);
-    function CartCtrl($scope, $rootScope, $http) {
-      $http.get('api/store/current_cart')
-        .then(function(response) {
-        
-        $scope.current_cart = response.data;
-        console.log($scope.current_cart);
-      });
-    }
+    .controller('CartCtrl', ['$scope', '$rootScope', '$http', 'CartService',
+    function($scope, $rootScope, $http, CartService) {
+
+
+      this.current_cart = CartService.retrieveCart()
+      .then(function(response) {
+          $scope.current_cart = response.data;
+          cart_item_details($scope.current_cart[0]);
+        })
+
+        var cart_item_details = function(item) {
+          $http.get('/api/products/' + item.id)
+            .then(function(response) {
+            $scope.cart_item_detail = response.data;
+            console.log($scope.cart_item_detail);
+          });
+        }
+        // cart_item_details($scope.current_cart[0]);
+
+
+    }]);
