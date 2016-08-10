@@ -15,7 +15,7 @@ class StoreController < ApplicationController
   def add_to_cart
     cart = Cart.find(session[:cart_id])
     cart_product = cart.add_product(params[:product_id])
-    binding.pry
+    # binding.pry
     cart_product.save
     head :no_content
   end
@@ -29,6 +29,10 @@ class StoreController < ApplicationController
     when "down"
       cart_product.quantity -=1
     end
+  end
+
+  def destroy
+   session[:cart_id] = nil
   end
 
 end

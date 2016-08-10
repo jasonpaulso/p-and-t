@@ -49,6 +49,6 @@ PlacesAndThings
 
         // };
 
-
+        $http.get('api/store/clear_cart')
 
   }]);
