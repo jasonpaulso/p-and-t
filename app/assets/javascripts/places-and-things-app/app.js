@@ -15,7 +15,7 @@ angular
         })
         .state('cart', {
             url: '/cart',
-            templateUrl: 'cart.html',
+            templateUrl: 'cart/cart.html',
             controller: 'CartCtrl'
         })
         // .state('store', {
