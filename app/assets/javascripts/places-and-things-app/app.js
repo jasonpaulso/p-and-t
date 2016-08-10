@@ -19,10 +19,22 @@ angular
             controller: 'CartCtrl'
         })
         .state('store', {
+            // abstract: true,
             url: '/store',
             templateUrl: 'store/store.html',
             controller: 'StoreCtrl'
         })
+        // .state('product', {
+        //     // abstract: true,
+        //     parent: 'store',
+        //     url: '/store/product/:id',
+        //     templateUrl: 'store/store.html',
+        //     controller: 'StoreCtrl'
+        // })
+        // .state('dashboard.one', {
+        //   url: '',
+        //   templateUrl: 'dashboard/one.html'
+        // })
 
         // // temp place view
         // .state('places', {
