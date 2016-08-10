@@ -6,6 +6,7 @@ class Cart < ApplicationRecord
     cart_array = [] 
       cart_products.each do |product|
         cart_array << {
+              id: product.product.id,
               name: product.product.name, 
               price: product.product.price,
               description: product.product.description,
