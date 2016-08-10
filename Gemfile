@@ -49,5 +49,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Gems added to Rails by @jasonpaulso
 gem 'bower-rails'
-gem 'rails-assets-bootstrap-sass', source: 'https://rails-assets.org'
-gem 'rails-assets-angular', source: 'https://rails-assets.org'
+gem 'angular-rails-templates'
+gem 'faker'

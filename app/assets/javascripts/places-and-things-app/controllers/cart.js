@@ -6,7 +6,7 @@ PlacesAndThings
       this.current_cart = CartService.retrieveCart()
       .then(function(response) {
           $scope.current_cart = response.data;
-          cart_item_details($scope.current_cart[0]);
+          // cart_item_details($scope.current_cart[0]);
         })
 
         var cart_item_details = function(item) {
@@ -16,7 +16,7 @@ PlacesAndThings
             console.log($scope.cart_item_detail);
           });
         }
-        // cart_item_details($scope.current_cart[0]);
+        // cart_item_details(this.current_cart[0]);
 
 
     }]);

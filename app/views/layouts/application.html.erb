@@ -6,9 +6,27 @@
 
     <%= stylesheet_link_tag    'application', media: 'all'%>
     <%= javascript_include_tag 'application'%>
+    <base href="/">
   </head>
 
-  <body>
+  <body ng-app="PlacesAndThings">
     <%= yield %>
   </body>
 </html>
+
+
+
+
+
+
+
+<style type="text/css" media="screen">
+  .wrap {
+  position: absolute;
+  top: 50px;
+  left:0;
+  bottom:0;
+  right:0;
+} 
+</style>
+

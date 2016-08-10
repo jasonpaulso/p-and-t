@@ -1,0 +1,199 @@
+<nav class="navbar navbar-default navbar-fixed-top custom" id="custom-nav">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="navbar-brand title" ><span class="brand"><a href="/" title="">Places & Things</a></span></div>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav left">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Places <!-- <span class="caret"></span> --></a>
+          <ul class="dropdown-menu">
+            <li><a href="/stockholm">Stockholm</a></li>
+            <li><a href="#">Copenhagen</a></li>
+            <li><a href="#">Helsinki</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Things <!-- <span class="caret"></span> --></a>
+          <ul class="dropdown-menu">
+            <li><a href="/store">Store</a></li>
+          </ul>
+        </li>
+        <li><a href="#">About</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown" ng-app="PlacesAndThings" ng-controller="CartCtrl">
+          <a href="/cart" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="cartItemsTotal">Cart [{{quantity}}]<!-- <span class="caret"></span> --></a>
+          <ul class="dropdown-menu">
+            <li><a href="/cart">View Cart</a></li>
+            <!-- <li><a href="#">Checkout</a></li> -->
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- -->
+
+
+
+<style type="text/css" media="screen">
+
+/*.dropdown-menu {
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+}
+.navbar.navbar-default.custom {
+    background: transparent;
+    border: none;
+    text-align: center;
+    box-shadow: none;
+    
+    transition: background .5s ease-in-out, opacity .5s ease-in-out, margin-top .5s ease-in-out;
+    margin-top: 1vh;
+}
+@media (min-width: 768px) {
+    .navbar>.container .navbar-brand,
+    .navbar>.container-fluid .navbar-brand {
+        margin-left: 0;
+    }
+}
+.navbar-default .navbar-nav>li>a {
+    font-size: 1em;
+    color: white;
+    text-shadow: none;
+    font-family: "GT-Walsheim-Medium";
+}
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover {
+    color: blue;
+}
+.dropdown-menu>li>a:focus,
+.dropdown-menu>li>a:hover {
+    background-color: transparent;
+    background-image: none;
+    color:blue;
+}
+.dropdown-menu>li>a {
+    color: white
+}
+.dropdown-menu>li>a {
+    padding-left: 15px;
+}
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:focus,
+.navbar-default .navbar-nav>.open>a:hover,
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.open>a {
+    background-image: none;
+    background-color: transparent;
+    color: blue;
+    box-shadow: none;
+    font-size: 1em;
+}
+.navbar-brand.title {
+    font-family: "SuperiorTitle-Black";
+    color: white;
+    text-shadow: none;
+    font-size: 3em;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 1vh;
+    text-align: center;
+    margin: auto;
+    transition: font-size 1s ease, top 1s ease;
+}
+.navbar-brand.title a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-brand.title a:focus,
+.navbar-brand.title a:hover {
+     color:blue;
+}
+.navbar .navbar-collapse {
+    text-align: center;
+}
+#custom-nav.affix {
+
+    margin-top: 0;
+    top: 0;
+    min-width: 100%;
+    background-color: #f8f8f8;
+    opacity: 0.9;
+    transition: background .5s ease-in-out, opacity .5s ease-in-out, margin-top .5s ease-in-out;
+}
+#custom-nav.affix .navbar-brand.title {
+
+    font-size: 2em;
+    top: 0;
+    transition: font-size 1s ease-in-out, top 1s ease-in-out;
+}
+#custom-nav.affix a  {
+    color: black;
+}
+#custom-nav.affix .dropdown-menu {
+    background-color: #f8f8f8;
+}
+@media screen and (max-width: 768px) {
+    button.navbar-toggle {
+        z-index: 5000;
+    }
+    #custom-nav {
+        margin-top: 0;
+        top: 0;
+        min-width: 100%;
+        background-color: #f8f8f8;
+        opacity: 0.9;
+    }
+    #custom-nav .navbar-brand.title {
+        font-size: 2em;
+        top: 0;
+      
+    }
+    .dropdown-menu {
+      
+        
+        background-color: #f8f8f8;
+        
+    }*/
+</style>
+
+<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+
+// $(document).on('click', function() {
+//     $('.collapse').collapse('hide');
+// })
+
+$('ul.nav li.dropdown').hover(function() {
+    $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(300);
+}, function() {
+    $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(100);
+
+});
+
+$(window).scroll(function() {
+    // alert("scrolling!");
+    if ($(".navbar").offset().top > 50) {
+        $('#custom-nav').addClass('affix');
+        $(".navbar-fixed-top").addClass("top-nav-collapse");
+    } else {
+        $('#custom-nav').removeClass('affix');
+        $(".navbar-fixed-top").removeClass("top-nav-collapse");
+    }
+});
+
+</script>
+
