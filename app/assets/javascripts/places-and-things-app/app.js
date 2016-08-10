@@ -13,11 +13,11 @@ angular
             templateUrl: 'home/home.html',
             controller: 'HomeCtrl'
         })
-        // .state('cart', {
-        //     url: '/cart',
-        //     templateUrl: 'cart.html',
-        //     controller: 'CartCtrl'
-        // })
+        .state('cart', {
+            url: '/cart',
+            templateUrl: 'cart.html',
+            controller: 'CartCtrl'
+        })
         // .state('store', {
         //     url: '/store',
         //     templateUrl: 'store.html',
