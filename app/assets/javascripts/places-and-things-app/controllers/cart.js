@@ -24,15 +24,17 @@ PlacesAndThings
     }
 
 
-      cart.addItemtoCart = function(product) {
 
-      $http.post('api/store/add_to_cart', {product_id: product})
-      .then(function(response) {
-        console.log(response.data);
+
+    // cart.changeItemQuantity = function(value) {
+    //   $http.post('api/store/change_cart_product_quantity', {product_id: product.id, change: value})
+    //   .then(function(response) {
+    //     console.log(response.data);
         
-      });
-      
-    };
+    //   });
+    // }
+
+
 
 
     // cart.addItemtoCart(1);

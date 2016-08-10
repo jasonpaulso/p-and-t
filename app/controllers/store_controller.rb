@@ -15,6 +15,7 @@ class StoreController < ApplicationController
   def add_to_cart
     cart = Cart.find(session[:cart_id])
     cart_product = cart.add_product(params[:product_id])
+    binding.pry
     cart_product.save
     head :no_content
   end
@@ -23,9 +24,9 @@ class StoreController < ApplicationController
     cart = Cart.find(session[:cart_id])
     cart_product = cart.find(params[:product_id])
     case params[:change]
-    when up
+    when "up"
       cart_product.quantity +=1
-    when down
+    when "down"
       cart_product.quantity -=1
     end
   end
