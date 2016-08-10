@@ -11,7 +11,7 @@ angular
         .state('home', {
             url: '/',
             templateUrl: 'home/home.html',
-            controller: 'homeCtrl'
+            controller: 'HomeCtrl'
         })
         // .state('cart', {
         //     url: '/cart',
