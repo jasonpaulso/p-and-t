@@ -18,11 +18,11 @@ angular
             templateUrl: 'cart/cart.html',
             controller: 'CartCtrl'
         })
-        // .state('store', {
-        //     url: '/store',
-        //     templateUrl: 'store.html',
-        //     controller: 'CartCtrl'
-        // })
+        .state('store', {
+            url: '/store',
+            templateUrl: 'store/store.html',
+            controller: 'StoreCtrl'
+        })
 
         // // temp place view
         // .state('places', {
