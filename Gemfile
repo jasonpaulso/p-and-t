@@ -51,3 +51,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bower-rails'
 gem 'angular-rails-templates'
 gem 'faker'
+gem 'pry'

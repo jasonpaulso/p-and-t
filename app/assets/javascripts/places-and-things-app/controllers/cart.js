@@ -4,7 +4,7 @@ PlacesAndThings
 
     var cart = $scope;
 
-    cart.current_cart = {};
+    cart.current_cart = [];
     $rootScope.totalItems = "";
 
 
@@ -22,5 +22,31 @@ PlacesAndThings
       }
       return totalItems;
     }
+
+
+      cart.addItemtoCart = function(product) {
+
+      $http.post('api/store/add_to_cart', {product_id: product})
+      .then(function(response) {
+        console.log(response.data);
+        
+      });
+      
+    };
+
+
+    // cart.addItemtoCart(1);
+
+        //     $scope.decrementItems = function(item) {
+        //   if (item.quantity <= 1) {return}
+        //   item.quantity -= 1;
+
+        // };
+        // $scope.incrementItems = function(item) {
+        //   item.quantity += 1;
+
+        // };
+
+
 
   }]);
