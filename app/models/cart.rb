@@ -47,4 +47,20 @@ class Cart < ApplicationRecord
     value
   end
 
+  def change_quantity(cart_product, change)
+    case change
+    when "up"
+      cart_product.quantity +=1
+    when "down"
+      if cart_product.quantity > 1
+        cart_product.quantity -=1
+      else
+        cart_product.destroy!
+      end
+    when "remove"
+      cart_product.destroy!
+    end
+  end
+
+
 end

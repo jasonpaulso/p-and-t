@@ -3,11 +3,11 @@ PlacesAndThings
 function CartService($http) {
 
   this.retrieveCart = function() {
-    return $http.get('api/store/current_cart')
+    return $http.get('api/cart/show')
   }
 
   this.changeItemQuantity = function(product, value) {
-    return $http.post('api/store/change_cart_product_quantity', {product_id: product.product_id, change: value});
+    return $http.post('api/cart/update', {product_id: product.product_id, change: value});
   };
 
 };
