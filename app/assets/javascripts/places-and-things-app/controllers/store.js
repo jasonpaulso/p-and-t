@@ -1,7 +1,7 @@
 PlacesAndThings
 .controller('StoreCtrl', StoreCtrl);
 
-function StoreCtrl($scope, $rootScope, $http, StoreService) {
+function StoreCtrl($scope, StoreService) {
 
   var store = $scope
 

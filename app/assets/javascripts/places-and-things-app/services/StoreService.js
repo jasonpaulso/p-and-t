@@ -18,5 +18,3 @@ function StoreService($http, $rootScope) {
 
 
 
-
-
