@@ -8,9 +8,14 @@ class StoreController < ApplicationController
   def show
     render json: Product.find(params[:id])
   end
+  # def current_cart
+  #   cart = Cart.find(session[:cart_id]).cart_json
+  #   render json: cart
+  # end
+
   def current_cart
-    cart = Cart.find(session[:cart_id]).cart_json
-    render json: cart
+    @cart = Cart.find(session[:cart_id])
+    render json: @cart
   end
 
   def add_to_cart

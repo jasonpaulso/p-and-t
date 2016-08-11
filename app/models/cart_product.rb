@@ -8,4 +8,14 @@ class CartProduct < ApplicationRecord
   def name
     product.name
   end
+  def price
+    product.price
+  end
+  def description
+    product.description
+  end
+
+  def product_id
+    product.id
+  end
 end
