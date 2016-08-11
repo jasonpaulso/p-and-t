@@ -12,8 +12,8 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="product in current_cart | orderBy : 'id'">
-      <td>{{product.id}}</td>
+    <tr ng-repeat="product in current_cart | orderBy : 'product_id'">
+      <td>{{product.product_id}}</td>
       <td></td> 
       <td>{{product.name}}</td> 
       <td>{{product.price | currency}}</td>

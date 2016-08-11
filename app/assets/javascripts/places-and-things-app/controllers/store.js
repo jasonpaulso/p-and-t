@@ -1,27 +1,24 @@
 PlacesAndThings
 .controller('StoreCtrl', StoreCtrl);
 
-function StoreCtrl($scope, $rootScope, $http) {
+function StoreCtrl($scope, $rootScope, $http, StoreService) {
 
-  $http.get("api/products/")
+  var store = $scope
+
+ StoreService.getStore()
   .then(function(response) {
-    $scope.products = response.data;
+    store.products = response.data;
   });
 
-  $scope.productShow = function(productID) {
-    $http.get('api/products/' + productID)
-    .then(function(response) {
-
-    });
-  }
-
-
-  $scope.addItemtoCart = function(product) {
-    $http.post('api/store/add_to_cart', {product_id: product.id})
-    .then(function(response) {
-      $rootScope.$broadcast("AddItemToCart", product);
-      // alert("Added!");
-    });
+  store.addItemtoCart = function(product) {
+    StoreService.addItemtoCart(product);
 
   };
+
+  // $scope.productShow = function(productID) {
+  //   $http.get('api/products/' + productID)
+  //   .then(function(response) {
+
+  //   });
+  // }
 }
