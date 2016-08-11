@@ -1,7 +1,38 @@
-<h1>This Store.</h1>
-<ul>
-    <li ng-repeat="product in products">
-        {{product.name}} - {{product.price}} - {{product.description}}
-        <a href ng-click="addItemtoCart(product)">Add</a>
-    </li>
-</ul>
+<table>
+  <caption>Our Products:</caption>
+  <thead>
+    <tr>
+      <th>ID:</th>
+      <th></th>
+      <th>Name:</th>
+      <th>Price:</th>
+      <th>Country:</th>
+      <th></th>
+      <th>Category:</th>
+      <th> </th> 
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="product in products | orderBy : 'id'">
+      <td>{{product.id}}</td>
+      <td></td> 
+      <td>{{product.name}}</td> 
+      <td>{{product.price | currency}}</td>
+      <td></td>
+      <td>{{product.country}}</td>
+      <td></td>
+      <td>{{product.category}}</td>
+      <td></td> 
+      <td><a href ng-click="addItemtoCart(product)">Add</a></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td> 
+      <td></td> 
+      <td>{{totalPrice | currency}}</td>
+      <td></td>
+      <td>{{totalItems}}</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
