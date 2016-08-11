@@ -5,4 +5,42 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-10.times { product = Product.create(name:Faker::Commerce.product_name, price:Faker::Commerce.price, description:Faker::Commerce.color)}
+3.times { 
+  product = Product.create(
+    name:Faker::Commerce.product_name, 
+    price:Faker::Commerce.price, 
+    description:Faker::Commerce.color,
+    category:1,
+    country:1)}
+
+ 3.times { 
+  product = Product.create(
+    name:Faker::Commerce.product_name, 
+    price:Faker::Commerce.price, 
+    description:Faker::Commerce.color,
+    category:2,
+    country:2)}
+
+ 3.times { 
+  product = Product.create(
+    name:Faker::Commerce.product_name, 
+    price:Faker::Commerce.price, 
+    description:Faker::Commerce.color,
+    category:3,
+    country:3)}
+     
+ 3.times { 
+  product = Product.create(
+    name:Faker::Commerce.product_name, 
+    price:Faker::Commerce.price, 
+    description:Faker::Commerce.color,
+    category:4,
+    country:4)}
+
+ 3.times { 
+  product = Product.create(
+    name:Faker::Commerce.product_name, 
+    price:Faker::Commerce.price, 
+    description:Faker::Commerce.color,
+    category:5,
+    country:5)}
