@@ -1,6 +1,33 @@
-<h1>The Cart.</h1>
-    <li ng-repeat="product in current_cart">
-       {{product.id}} - {{product.name}} - {{product.price | currency}} - Quantity: {{product.quantity}}
-       <a href ng-click="changeItemQuantity(product,'up')">Increase</a>
-    </li>
-    <h3 >{{totalItems}}</h3>
+<table>
+  <caption>Your Cart:</caption>
+  <thead>
+    <tr>
+      <th>ID:</th>
+      <th>Name:</th>
+      <th>Price:</th>
+      <th>Quantity:</th>
+      <th>Options:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="product in current_cart | orderBy : 'id'">
+      <td>{{product.id}}</td> 
+      <td>{{product.name}}</td> 
+      <td>{{product.price | currency}}</td>
+      <td>Quantity: {{product.quantity}}</td>
+      <td><a href ng-click="changeItemQuantity(product,'up')">Increase</a></td>
+    </tr>
+    <tr>
+      <td></td> 
+      <td></td> 
+      <td></td>
+      <td>Quantity: {{totalItems}}</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+<!--     <tr ng-repeat="product in current_cart">
+       <td>{{product.id}} - {{product.name}} - {{product.price | currency}} - Quantity: {{product.quantity}}
+       <a href ng-click="changeItemQuantity(product,'up')">Increase</a></td>
+    </tr> -->
+    
