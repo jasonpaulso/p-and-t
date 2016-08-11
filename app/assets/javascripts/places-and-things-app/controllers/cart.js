@@ -3,16 +3,13 @@ PlacesAndThings
   function($scope, $rootScope, $http, CartService) {
 
     var cart = $scope;
+    var totalItems;
+    var totalPrice;
 
 
-    $rootScope.$on("AddItemToCart", function(event, arg){
-      $scope.updateCart();
-    });
-
-    cart.current_cart = [];
+    cart.current_cart=[];
 
     cart.updateCart = function(){
-
       CartService.retrieveCart()
       .then(function(response) {
         cart.current_cart = response.data;
@@ -20,6 +17,14 @@ PlacesAndThings
         cart.totalPrice = totalPrice();
 
       })};
+
+      cart.changeItemQuantity = function(product, value) {
+        CartService.changeItemQuantity(product, value)
+        .then(function(response) {
+          cart.updateCart();
+
+        });
+      }
 
       var totalItems = function() {
 
@@ -31,28 +36,26 @@ PlacesAndThings
         return totalItems;
       }
 
-      $scope.changeItemQuantity = function(product, value) {
-        $http.post('api/store/change_cart_product_quantity', {product_id: product.id, change: value})
-        .then(function(response) {
-          cart.updateCart();
 
-        });
-      }
 
-    var totalPrice = function() {
-          var totalPrice = 0;
-          for(var i=0; i<cart.current_cart.length; i++){
-            totalPrice = totalPrice + (cart.current_cart[i].price * cart.current_cart[i].quantity)
-          }
+      var totalPrice = function() {
+        var totalPrice = 0;
+        for(var i=0; i<cart.current_cart.length; i++){
+          totalPrice = totalPrice + (cart.current_cart[i].price * cart.current_cart[i].quantity)
+        }
 
-          return totalPrice;
-    };
+        return totalPrice;
+      };
 
       cart.updateCart();
 
-    function changeNavCartQuantity(totalItems) {
+      function changeNavCartQuantity(totalItems) {
         angular.element($("#cartItemsTotal")).scope().quantity = totalItems;
       };
 
+      $rootScope.$on("AddItemToCart", function(event, arg){
+        $scope.updateCart();
+      });
+
     }
-  ]);
+    ]);
