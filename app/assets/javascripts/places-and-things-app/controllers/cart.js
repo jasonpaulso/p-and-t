@@ -6,14 +6,16 @@ PlacesAndThings
 
     cart.current_cart = [];
     $rootScope.totalItems = "";
+    
 
+     cart.updateCart = function(){
 
-    CartService.retrieveCart()
+      CartService.retrieveCart()
     .then(function(response) {
       cart.current_cart = response.data;
       $rootScope.totalItems = totalItems();
 
-    })
+    })};
 
     var totalItems = function() {
       var totalItems = 0;
@@ -23,7 +25,13 @@ PlacesAndThings
       return totalItems;
     }
 
-
+          $scope.changeItemQuantity = function(product, value) {
+      $http.post('api/store/change_cart_product_quantity', {product_id: product.id, change: value})
+      .then(function(response) {
+        cart.updateCart();
+        
+      });
+    }
 
 
     // cart.changeItemQuantity = function(value) {
@@ -49,5 +57,5 @@ PlacesAndThings
 
         // };
 
-      
+      cart.updateCart();
   }]);

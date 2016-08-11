@@ -23,13 +23,14 @@ class StoreController < ApplicationController
 
   def change_cart_product_quantity
     cart = Cart.find(session[:cart_id])
-    cart_product = cart.find(params[:product_id])
+    cart_product = cart.cart_products.find_by(product_id: params[:product_id])
     case params[:change]
     when "up"
       cart_product.quantity +=1
     when "down"
       cart_product.quantity -=1
     end
+    cart_product.save
   end
 
   def clear_cart
