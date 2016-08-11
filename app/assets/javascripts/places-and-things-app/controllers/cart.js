@@ -4,8 +4,15 @@ PlacesAndThings
 
     var cart = $scope;
 
+
+    $rootScope.$on("AddItemToCart", function(event, arg){
+           $scope.updateCart();
+        });
+
+    // this.totalItems = totalItems;
+
     cart.current_cart = [];
-    $rootScope.totalItems = "";
+    // $rootScope.totalItems = "";
     
 
      cart.updateCart = function(){
@@ -13,15 +20,17 @@ PlacesAndThings
       CartService.retrieveCart()
     .then(function(response) {
       cart.current_cart = response.data;
-      $rootScope.totalItems = totalItems();
+      totalItems();
 
     })};
 
     var totalItems = function() {
+
       var totalItems = 0;
       for(var i=0; i<cart.current_cart.length; i++){
         totalItems = totalItems + cart.current_cart[i].quantity
       }
+      changeNavCartQuantity(totalItems);
       return totalItems;
     }
 
@@ -33,4 +42,11 @@ PlacesAndThings
       });
     }
       cart.updateCart();
+
+      // console.log(CartService.retrieveCart());
+
+      function changeNavCartQuantity(totalItems) {
+        angular.element($("#cartItemsTotal")).scope().quantity = totalItems;
+      };
+
   }]);
