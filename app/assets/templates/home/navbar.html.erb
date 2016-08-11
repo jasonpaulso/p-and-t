@@ -52,14 +52,16 @@
 
 
 <style type="text/css" media="screen">
-
-/*.dropdown-menu {
+body {
+    background-color: beige;
+}
+.dropdown-menu {
     border: none;
     background-color: transparent;
     box-shadow: none;
 }
 .navbar.navbar-default.custom {
-    background: transparent;
+    background: grey;
     border: none;
     text-align: center;
     box-shadow: none;
@@ -173,15 +175,15 @@
         
         background-color: #f8f8f8;
         
-    }*/
+    }
 </style>
 
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
 <script type="text/javascript">
 
-// $(document).on('click', function() {
-//     $('.collapse').collapse('hide');
-// })
+$(document).on('click', function() {
+    $('.collapse').collapse('hide');
+})
 
 $('ul.nav li.dropdown').hover(function() {
     $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(300);

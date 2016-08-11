@@ -24,7 +24,6 @@ class CartController < ApplicationController
 
   def destroy
     session[:cart_id] = nil
-    flash.now[:notice] = 'Message sent!'
     render :index
   end
 
