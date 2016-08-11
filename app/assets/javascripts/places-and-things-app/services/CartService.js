@@ -7,7 +7,7 @@ function CartService($http) {
   }
 
   this.changeItemQuantity = function(product, value) {
-    return $http.post('api/cart/update', {product_id: product.product_id, change: value});
+    return $http.patch('api/cart/update', {product_id: product.product_id, change: value});
   };
 
 };

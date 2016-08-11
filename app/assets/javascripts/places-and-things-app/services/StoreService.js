@@ -3,7 +3,7 @@ PlacesAndThings
 function StoreService($http, $rootScope) {
 
   this.getStore = function() {
-    return $http.get("api/products/")
+    return $http.get("api/store/")
   }
 
     this.addItemtoCart = function(product) {

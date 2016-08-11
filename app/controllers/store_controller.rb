@@ -1,6 +1,7 @@
 class StoreController < ApplicationController
   def index
-    render json: Product.all
+    @products = Product.all
+    render json: @products
   end
   def show
     render json: Product.find(params[:id])
