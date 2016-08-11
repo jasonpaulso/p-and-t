@@ -32,30 +32,5 @@ PlacesAndThings
         
       });
     }
-
-
-    // cart.changeItemQuantity = function(value) {
-    //   $http.post('api/store/change_cart_product_quantity', {product_id: product.id, change: value})
-    //   .then(function(response) {
-    //     console.log(response.data);
-        
-    //   });
-    // }
-
-
-
-
-    // cart.addItemtoCart(1);
-
-        //     $scope.decrementItems = function(item) {
-        //   if (item.quantity <= 1) {return}
-        //   item.quantity -= 1;
-
-        // };
-        // $scope.incrementItems = function(item) {
-        //   item.quantity += 1;
-
-        // };
-
       cart.updateCart();
   }]);
