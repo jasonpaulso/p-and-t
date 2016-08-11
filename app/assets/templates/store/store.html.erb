@@ -1,19 +1,19 @@
-<table>
+<table id="searchTextResults">
   <caption>Our Products:</caption>
   <thead>
     <tr>
       <th>ID:</th>
       <th></th>
-      <th>Name:</th>
-      <th>Price:</th>
-      <th>Country:</th>
+      <th ng-click="resultOrder('name')">Name:</th>
+      <th ng-click="resultOrder('price')">Price:</th>
+      <th ng-click="resultOrder('country')">Country:</th>
       <th></th>
-      <th>Category:</th>
+      <th ng-click="resultOrder('category')">Category:</th>
       <th> </th> 
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="product in products | orderBy : 'id'">
+    <tr ng-repeat="product in products | orderBy : orderBy | filter:searchText">
       <td>{{product.id}}</td>
       <td></td> 
       <td>{{product.name}}</td> 
@@ -36,3 +36,4 @@
     </tr>
   </tbody>
 </table>
+<input ng-model="searchText"></label>

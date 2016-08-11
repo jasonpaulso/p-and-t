@@ -15,6 +15,11 @@ function StoreCtrl($scope, StoreService) {
 
   };
 
+  store.resultOrder = function(x) {
+    store.orderBy = x;
+    // alert(x);
+  }
+
   // $scope.productShow = function(productID) {
   //   $http.get('api/products/' + productID)
   //   .then(function(response) {
