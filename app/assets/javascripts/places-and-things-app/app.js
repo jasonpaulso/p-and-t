@@ -14,13 +14,13 @@ angular
             templateUrl: 'home/home.html',
             controller: 'HomeCtrl'
         })
-        .state('home.another', {
-            url:'/another',
-            templateUrl: 'home/homeanother.html',
-            controller: function($scope) {
-            $scope.dogs = ['Bernese', 'Husky', 'Goldendoodle'];
-        }
-        })
+        // .state('home.another', {
+        //     url:'/another',
+        //     templateUrl: 'home/homeanother.html',
+        //     controller: function($scope) {
+        //     $scope.dogs = ['Bernese', 'Husky', 'Goldendoodle'];
+        // }
+        // })
         .state('cart', {
             url: '/cart',
             templateUrl: 'cart/cart.html',

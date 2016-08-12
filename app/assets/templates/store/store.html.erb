@@ -3,7 +3,7 @@
   <caption>Our Products:</caption>
   <thead>
     <tr>
-      <th>ID:</th>
+<!--       <th>ID:</th> -->
       <th></th>
       <th ng-click="resultOrder('name')">Name:</th>
       <th ng-click="resultOrder('price')">Price:</th>
@@ -16,9 +16,9 @@
   </thead>
   <tbody>
     <tr ng-repeat="product in products | orderBy : orderBy | filter:search:strict">
-      <td>{{product.id}}</td>
+      <!-- <td>{{product.id}}</td> -->
       <td></td> 
-      <td> <a href="/store/product/{{product.id}}">Another</a>{{product.name}}</td> 
+      <td> <a href="/store/product/{{product.id}}">{{product.name}}</a></td> 
       <td>{{product.price | currency}}</td>
       <td></td>
       <td>{{product.country}}</td>

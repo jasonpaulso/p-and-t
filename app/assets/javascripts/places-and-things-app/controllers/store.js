@@ -15,8 +15,8 @@ function StoreCtrl($scope, StoreService, $stateParams) {
 
   };
 
-  // store.resultOrder = function(x) {
-  //   store.orderBy = x;
-  // }
+  store.resultOrder = function(x) {
+    store.orderBy = x;
+  }
   
 }
