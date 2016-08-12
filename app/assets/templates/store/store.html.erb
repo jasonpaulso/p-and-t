@@ -14,7 +14,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="product in products | orderBy : orderBy | filter:searchText">
+    <tr ng-repeat="product in products | orderBy : orderBy | filter:search:strict">
       <td>{{product.id}}</td>
       <td></td> 
       <td>{{product.name}}</td> 
@@ -37,4 +37,7 @@
     </tr>
   </tbody>
 </table>
-Search:<input ng-model="searchText"></label>
+Search:   <input ng-model="search.$"><br>
+Name:     <input ng-model="search.name"><br>
+Country:  <input ng-model="search.country"><br>
+Catergory:<input ng-model="search.category"><br>
