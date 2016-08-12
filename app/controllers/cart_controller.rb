@@ -20,7 +20,7 @@ class CartController < ApplicationController
       change_direction = params[:change]
       cart.change_quantity(cart_product, change_direction);
       cart_product.save
-    elsif params[:user_name]
+    elsif params[:change] == "user"
       cart.update(cart_params)
     end 
     head :no_content

@@ -1,5 +1,7 @@
 PlacesAndThings
+
 .controller('CartCtrl', ['$scope', '$rootScope', 'CartService', '$http',
+  
   function($scope, $rootScope, CartService, $http) {
 
     var cart = $scope;
