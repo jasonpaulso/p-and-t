@@ -1,0 +1,7 @@
+PlacesAndThings
+
+  .controller('PlacesCtrl', [
+
+    function() {
+
+}]);

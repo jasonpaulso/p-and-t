@@ -20,22 +20,21 @@ angular
             controller: 'CartCtrl'
         })
         .state('store', {
-            url: '/store',
+            url: '/things',
             templateUrl: 'store/store.html',
             controller: 'StoreCtrl'
         })
         .state('store.product', {
-             url: '/product/:productId',
+             url: '/thing/:productId',
             templateUrl: 'store/product.html',
             controller: 'ProductCtrl',
         })
 
-        // // temp place view
-        // .state('places', {
-        //     url: '/stockholm',
-        //     templateUrl: 'places.html',
-        //     controller: 'placesCtrl'
-        // })
+        .state('places', {
+            url: '/places',
+            templateUrl: 'places/places.html',
+            controller: 'PlacesCtrl'
+        })
 
         
         // .state('place', {
