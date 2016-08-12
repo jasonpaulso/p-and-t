@@ -36,6 +36,12 @@ angular
             controller: 'PlacesCtrl'
         })
 
+        .state('places.place', {
+            url: '/place/:placeId',
+            templateUrl: 'places/place.html',
+            controller: 'PlacesCtrl',
+        })
+
         
         // .state('place', {
         //     url: '/place/:id',

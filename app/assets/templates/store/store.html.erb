@@ -17,7 +17,7 @@
   <tbody>
     <tr ng-repeat="product in products | orderBy : orderBy | filter:search:strict">
       <td></td> 
-      <td> <a href="/store/product/{{product.id}}">{{product.name}}</a></td> 
+      <td> <a href="/things/thing/{{product.id}}">{{product.name}}</a></td> 
       <td>{{product.price | currency}}</td>
       <td></td>
       <td>{{product.country}}</td>
