@@ -4,14 +4,22 @@ angular
         'ui.router',
         'templates', 
         
-    ])
-    .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+    ]);
+    PlacesAndThings.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
       $stateProvider
+
         .state('home', {
-            url: '/',
+            url: '/home',
             templateUrl: 'home/home.html',
             controller: 'HomeCtrl'
+        })
+        .state('home.another', {
+            url:'/another',
+            templateUrl: 'home/homeanother.html',
+            controller: function($scope) {
+            $scope.dogs = ['Bernese', 'Husky', 'Goldendoodle'];
+        }
         })
         .state('cart', {
             url: '/cart',
@@ -19,10 +27,17 @@ angular
             controller: 'CartCtrl'
         })
         .state('store', {
-            // abstract: true,
             url: '/store',
             templateUrl: 'store/store.html',
             controller: 'StoreCtrl'
+        })
+        .state('store.product', {
+             url: '/product/{productId}',
+            templateUrl: 'store/product.html',
+            controller: 'ProductCtrl as product',
+        //     controller: function($scope) {
+        //     $scope.dogs = ['Bernese', 'Husky', 'Goldendoodle'];
+        // }
         })
         // .state('product', {
         //     // abstract: true,
@@ -54,7 +69,7 @@ angular
         
 
     // default fall back route
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/home');
 
     // enable HTML5 Mode for SEO
     $locationProvider.html5Mode(true);

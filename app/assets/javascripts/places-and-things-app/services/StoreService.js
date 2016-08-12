@@ -1,6 +1,6 @@
 PlacesAndThings
 .service('StoreService', StoreService);
-function StoreService($http, $rootScope) {
+function StoreService($http, $rootScope, $stateParams) {
 
   this.getStore = function() {
     return $http.get("api/store/")
@@ -14,6 +14,9 @@ function StoreService($http, $rootScope) {
 
 };
 
+  this.productShow = function(productID) {
+    return $http.get('api/store/product/' + productID)
+  }
 };
 
 

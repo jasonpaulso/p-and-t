@@ -1,7 +1,7 @@
 PlacesAndThings
 .controller('StoreCtrl', StoreCtrl);
 
-function StoreCtrl($scope, StoreService) {
+function StoreCtrl($scope, StoreService, $stateParams) {
 
   var store = $scope
 
@@ -15,15 +15,8 @@ function StoreCtrl($scope, StoreService) {
 
   };
 
-  store.resultOrder = function(x) {
-    store.orderBy = x;
-    // alert(x);
-  }
-
-  // $scope.productShow = function(productID) {
-  //   $http.get('api/products/' + productID)
-  //   .then(function(response) {
-
-  //   });
+  // store.resultOrder = function(x) {
+  //   store.orderBy = x;
   // }
+  
 }
