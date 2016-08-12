@@ -15,10 +15,14 @@ class CartController < ApplicationController
 
   def update
     cart = Cart.find(session[:cart_id])
-    cart_product = cart.cart_products.find_by(product_id: params[:product_id])
-    change_direction = params[:change]
-    cart.change_quantity(cart_product, change_direction);
-    cart_product.save
+    if params[:product_id]
+      cart_product = cart.cart_products.find_by(product_id: params[:product_id])
+      change_direction = params[:change]
+      cart.change_quantity(cart_product, change_direction);
+      cart_product.save
+    elsif params[:user_name]
+      cart.update(cart_params)
+    end 
     head :no_content
   end
 
@@ -32,5 +36,9 @@ private
 def set_session_cart
   session[:cart_id] = session[:cart_id] || Cart.create.id
 end
+
+def cart_params 
+  params.require(:cart).permit(:user_name, :user_email)
+end 
 
 end

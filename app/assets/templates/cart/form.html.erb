@@ -1,0 +1,23 @@
+<form name="userForm" ng-hide="userForm.$submitted">
+
+    <div class="form-group" ng-class="{ 'has-error' : userForm.username.$invalid && !userForm.username.$pristine }">
+        <label>Username</label>
+        <input type="text" name="username" class="form-control" ng-model="user.username" ng-minlength="3" ng-maxlength="15" required>
+        <p ng-show="userForm.username.$error.minlength" class="help-block">Username is too short.</p>
+        <p ng-show="userForm.username.$error.maxlength" class="help-block">Username is too long.</p>
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+        <label>Email</label>
+        <input type="email" name="email" class="form-control" ng-model="user.email" required>
+        <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-error' : userForm.zip.$invalid && !userForm.zip.$pristine }">
+        <label>Zip Code</label>
+        <input type="number" name="zip" class="form-control" ng-model="user.zip" ng-pattern="/^(\d{5}(-\d{4})?|[A-Z]\d[A-Z] *\d[A-Z]\d)$/" ng-maxlength="5" required>
+        <p ng-show="userForm.zip.$invalid && !userForm.zip.$pristine" class="help-block">Enter a valid zip code.</p>
+    </div>
+    <button ng-click="submitForm(user)" class="btn btn-primary" ng-disabled="userForm.$invalid">Save</button>
+
+</form>

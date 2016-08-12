@@ -1,9 +1,9 @@
 PlacesAndThings
-  .controller('CartCtrl', ['$scope', '$rootScope', 'CartService',
-    function($scope, $rootScope, CartService) {
+  .controller('CartCtrl', ['$scope', '$rootScope', 'CartService', '$http',
+    function($scope, $rootScope, CartService, $http) {
   
       var cart = $scope;
-
+      cart.user = {};
 
       cart.updateCart = function(){
         CartService.retrieveCart()
@@ -21,6 +21,22 @@ PlacesAndThings
           });
       };
 
+    cart.submitForm = function(user) {
+      $http.patch('api/cart/update', {
+        change: "user",
+        user_name: user.username, 
+        user_email: user.email,
+        user_zip: user.zip
+      })
+      .then(function(response){
+        console.log(user);
+
+      });
+      
+    }
+
+
+
       cart.clearCart = function() {
         CartService.clearCart();
       }
@@ -31,10 +47,11 @@ PlacesAndThings
 
       cart.updateCart();
       
-    }
+    
+
 
     
 
-  ])
+  }]);
 
  

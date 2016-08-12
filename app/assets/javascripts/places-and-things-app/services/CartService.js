@@ -10,6 +10,8 @@ function CartService($http, $rootScope) {
     return $http.patch('api/cart/update', {product_id: product.product_id, change: value});
   };
 
+  
+
   this.getCartQuantity = function() {
     return $http.get('api/cart/show') 
   }
