@@ -10,22 +10,21 @@ function CartService($http, $rootScope) {
     return $http.patch('api/cart/update', {product_id: product.product_id, change: value});
   };
 
-  
+  this.updateCartUser = function(user) {
+    return $http.patch('api/cart/update', {
+      change: "user",
+      user_name: user.username, 
+      user_email: user.email,
+      user_zip: user.zip
+    });
 
-  this.getCartQuantity = function() {
-    return $http.get('api/cart/show') 
   }
 
   this.clearCart = function() {
     $http.delete('api/cart/clear_cart')
     .then(function(response) {
-    $rootScope.$broadcast("UpdateCart");
-  });
+      $rootScope.$broadcast("UpdateCart");
+    });
   }
 
 };
-
-
-
-
-

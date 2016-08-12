@@ -44,13 +44,4 @@ class Cart < ApplicationRecord
     end
   end
 
-  def change_user_data(params)
-
-    # self.user_name = params.user_name
-    # self.user_email = params.user_email
-    # self.user_zip = params.user_zip
-    # self.save
-    
-  end
-
 end

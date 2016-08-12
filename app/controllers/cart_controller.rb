@@ -31,14 +31,14 @@ class CartController < ApplicationController
     render :index
   end
 
-private 
+  private 
 
-def set_session_cart
-  session[:cart_id] = session[:cart_id] || Cart.create.id
-end
+  def set_session_cart
+    session[:cart_id] = session[:cart_id] || Cart.create.id
+  end
 
-def cart_params 
-  params.require(:cart).permit(:user_name, :user_email)
-end 
+  def cart_params 
+    params.require(:cart).permit(:user_name, :user_email)
+  end 
 
 end
