@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-get "clear_cart" => "cart#destroy"
+
 
 scope :api do
   get "store/(.:format)" => "store#index"
@@ -7,6 +7,7 @@ scope :api do
   get "cart/show" => "cart#show"
   post "cart/add_to_cart" => "cart#add_to_cart"
   patch "cart/update" => "cart#update"
+  delete "cart/clear_cart" => "cart#destroy"
 end
 
 root "application#index"

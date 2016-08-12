@@ -21,6 +21,9 @@ PlacesAndThings
           });
       };
 
+      cart.clearCart = function() {
+        CartService.clearCart();
+      }
 
       cart.$on("UpdateCart", function(){
         cart.updateCart();
@@ -29,6 +32,9 @@ PlacesAndThings
       cart.updateCart();
       
     }
+
+    
+
   ])
 
  

@@ -14,6 +14,13 @@ function CartService($http, $rootScope) {
     return $http.get('api/cart/show') 
   }
 
+  this.clearCart = function() {
+    $http.delete('api/cart/clear_cart')
+    .then(function(response) {
+    $rootScope.$broadcast("UpdateCart");
+  });
+  }
+
 };
 
 
