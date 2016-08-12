@@ -7,6 +7,10 @@ angular
     ]);
     PlacesAndThings.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
+
+
+
+
       $stateProvider
 
         .state('home', {
@@ -75,3 +79,4 @@ angular
     $locationProvider.html5Mode(true);
   
     });
+

@@ -1,7 +1,7 @@
 PlacesAndThings
 .controller('StoreCtrl', StoreCtrl);
 
-function StoreCtrl($scope, StoreService, $stateParams) {
+function StoreCtrl($scope, StoreService, $stateParams, $rootScope) {
 
   var store = $scope
 
@@ -17,6 +17,8 @@ function StoreCtrl($scope, StoreService, $stateParams) {
 
   store.resultOrder = function(x) {
     store.orderBy = x;
+
+
   }
-  
+
 }

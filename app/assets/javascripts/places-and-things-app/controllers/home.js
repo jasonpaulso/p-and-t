@@ -1,4 +1,8 @@
 PlacesAndThings
-    .controller('HomeCtrl', function ($scope) {
-        $scope.things = ['Angular', 'Rails 4.1', 'Working', 'Together!!'];
-    });
+  .controller('HomeCtrl', ['$scope', '$rootScope', 'CartService',
+    function($scope, $rootScope, CartService) {
+
+     $scope.global = $rootScope;
+
+
+}]);
