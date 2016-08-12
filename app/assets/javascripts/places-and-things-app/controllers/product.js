@@ -9,7 +9,6 @@ function ProductCtrl($scope, StoreService, $stateParams) {
   StoreService.productShow(productID)
   .then(function(response) {
     product.details = response.data;
-    console.log(product.details)
   });
 
     product.addItemtoCart = function(product) {

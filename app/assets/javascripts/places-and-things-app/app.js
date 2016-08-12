@@ -32,9 +32,9 @@ angular
             controller: 'StoreCtrl'
         })
         .state('store.product', {
-             url: '/product/{productId}',
+             url: '/product/:productId',
             templateUrl: 'store/product.html',
-            controller: 'ProductCtrl as product',
+            controller: 'ProductCtrl',
         //     controller: function($scope) {
         //     $scope.dogs = ['Bernese', 'Husky', 'Goldendoodle'];
         // }

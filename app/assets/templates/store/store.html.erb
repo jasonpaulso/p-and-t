@@ -18,7 +18,7 @@
     <tr ng-repeat="product in products | orderBy : orderBy | filter:search:strict">
       <td>{{product.id}}</td>
       <td></td> 
-      <td> <a ui-sref="store/product/{{product.id}}">Another</a>{{product.name}}</td> 
+      <td> <a href="/store/product/{{product.id}}">Another</a>{{product.name}}</td> 
       <td>{{product.price | currency}}</td>
       <td></td>
       <td>{{product.country}}</td>
@@ -44,4 +44,3 @@ Country:  <input ng-model="search.country"><br>
 Catergory:<input ng-model="search.category"><br>
 
 </div>
-<a ui-sref="/store/product/1">Product</a>
