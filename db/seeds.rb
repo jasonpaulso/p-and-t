@@ -10,37 +10,37 @@
     name:Faker::Commerce.product_name, 
     price:Faker::Commerce.price, 
     description:Faker::Commerce.color,
-    category:1,
-    country:1)}
+    category:"Art",
+    country:"Sweden")}
 
  3.times { 
   product = Product.create(
     name:Faker::Commerce.product_name, 
     price:Faker::Commerce.price, 
     description:Faker::Commerce.color,
-    category:2,
-    country:2)}
+    category:"Hardware",
+    country:"Denmark")}
 
  3.times { 
   product = Product.create(
     name:Faker::Commerce.product_name, 
     price:Faker::Commerce.price, 
     description:Faker::Commerce.color,
-    category:3,
-    country:3)}
+    category:"Kitchen",
+    country:"Finland")}
      
  3.times { 
   product = Product.create(
     name:Faker::Commerce.product_name, 
     price:Faker::Commerce.price, 
     description:Faker::Commerce.color,
-    category:4,
-    country:4)}
+    category:"Home",
+    country:"Sweden")}
 
  3.times { 
   product = Product.create(
     name:Faker::Commerce.product_name, 
     price:Faker::Commerce.price, 
     description:Faker::Commerce.color,
-    category:5,
-    country:5)}
+    category:"Misc",
+    country:"Denmark")}
