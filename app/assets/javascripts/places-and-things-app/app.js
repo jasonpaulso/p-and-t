@@ -4,12 +4,8 @@ angular
         'ui.router',
         'templates', 
         
-    ]);
-    PlacesAndThings.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
-
-
-
-
+    ])
+    .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
       $stateProvider
 
@@ -18,13 +14,6 @@ angular
             templateUrl: 'home/home.html',
             controller: 'HomeCtrl'
         })
-        // .state('home.another', {
-        //     url:'/another',
-        //     templateUrl: 'home/homeanother.html',
-        //     controller: function($scope) {
-        //     $scope.dogs = ['Bernese', 'Husky', 'Goldendoodle'];
-        // }
-        // })
         .state('cart', {
             url: '/cart',
             templateUrl: 'cart/cart.html',
@@ -39,21 +28,7 @@ angular
              url: '/product/:productId',
             templateUrl: 'store/product.html',
             controller: 'ProductCtrl',
-        //     controller: function($scope) {
-        //     $scope.dogs = ['Bernese', 'Husky', 'Goldendoodle'];
-        // }
         })
-        // .state('product', {
-        //     // abstract: true,
-        //     parent: 'store',
-        //     url: '/store/product/:id',
-        //     templateUrl: 'store/store.html',
-        //     controller: 'StoreCtrl'
-        // })
-        // .state('dashboard.one', {
-        //   url: '',
-        //   templateUrl: 'dashboard/one.html'
-        // })
 
         // // temp place view
         // .state('places', {
@@ -72,10 +47,10 @@ angular
 
         
 
-    // default fall back route
+    // default route
     $urlRouterProvider.otherwise('/home');
 
-    // enable HTML5 Mode for SEO
+    // enable HTML5 Mode for to remove # from URL
     $locationProvider.html5Mode(true);
   
     });
