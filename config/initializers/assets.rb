@@ -4,6 +4,8 @@
 Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.paths << Rails.root.join("vendor","assets","bower_components","bootstrap-sass-official", "assets", "stylesheets")
 Rails.application.config.assets.paths << Rails.root.join("vendor","assets","bower_components","bootstrap-sass-official", "assets","fonts")
+Rails.application.config.assets.paths << Rails.root.join("vendor","assets","bower_components","bootstrap-sass-official", "assets", "javascripts")
+# Rails.application.config.assets.paths << Rails.root.join("vendor","assets","bower_components","bootstrap-sass-official", "assets","fonts")
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
 
