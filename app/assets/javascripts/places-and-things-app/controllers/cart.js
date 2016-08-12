@@ -16,7 +16,7 @@ PlacesAndThings
       
       cart.changeItemQuantity = function(product, value) {
           CartService.changeItemQuantity(product, value)
-          .then(function(response) {
+          .then(function() {
             $rootScope.$broadcast("UpdateCart");
           });
       };
