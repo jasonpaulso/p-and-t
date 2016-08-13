@@ -11,9 +11,8 @@ function StoreCtrl($scope, StoreService, $stateParams, $rootScope) {
   });
 
   store.addItemtoCart = function(product, quantity) {
-    $scope.resetSearch();
+    
     StoreService.addItemtoCart(product, quantity);
-    // console.log(quantity)
   };
 
   store.resultOrder = function(x) {

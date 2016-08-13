@@ -8,7 +8,7 @@ function StoreService($http, $rootScope) {
 
   this.addItemtoCart = function(product, quantity) {
     $http.post('api/cart/add_to_cart', {product_id: product.id, quantity: quantity})
-    .then(function(response) {
+    .then(function() {
       $rootScope.$broadcast("UpdateCart");
     });
 

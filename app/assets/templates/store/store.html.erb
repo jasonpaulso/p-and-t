@@ -23,7 +23,7 @@
       <td></td>
       <td>{{product.category}}</td>
       <td></td> 
-      <td><input ng-model="quantity"><a href ng-click="addItemtoCart(product, quantity)">Add</a></td>
+      <td><form name="quanity" id="quanity" novalidate><input ng-model="quantity" required=""><button href ng-click="addItemtoCart(product, quantity)" type="reset">Add</button></form></td>
     </tr>
     <tr>
       <td></td>
