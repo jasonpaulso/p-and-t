@@ -8,7 +8,7 @@ class CartController < ApplicationController
 
   def add_to_cart
     cart = Cart.find(session[:cart_id])
-    cart_product = cart.add_product(params[:product_id])
+    cart_product = cart.add_product(params[:product_id], params[:quantity].to_i)
     cart_product.save
     head :no_content
   end

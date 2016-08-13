@@ -10,9 +10,10 @@ function StoreCtrl($scope, StoreService, $stateParams, $rootScope) {
     store.products = response.data;
   });
 
-  store.addItemtoCart = function(product) {
-    StoreService.addItemtoCart(product);
-
+  store.addItemtoCart = function(product, quantity) {
+    $scope.resetSearch();
+    StoreService.addItemtoCart(product, quantity);
+    // console.log(quantity)
   };
 
   store.resultOrder = function(x) {
@@ -20,5 +21,7 @@ function StoreCtrl($scope, StoreService, $stateParams, $rootScope) {
 
 
   }
+
+  $scope.resetSearch = function(){$scope.quantity = "";}
 
 }

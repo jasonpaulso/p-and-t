@@ -11,12 +11,14 @@ class Cart < ApplicationRecord
   end
 
 
-  def add_product(product_id)
+  def add_product(product_id, quantity)
     cart_product = self.cart_products.find_by(product_id: product_id) 
     if cart_product
-      cart_product.quantity += 1
+      cart_product.quantity += quantity
     else
       cart_product=self.cart_products.build(product_id: product_id)
+      cart_product.quantity = quantity
+      cart_product.save
     end
     cart_product
   end
