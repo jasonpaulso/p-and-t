@@ -41,6 +41,11 @@ PlacesAndThings
 
     cart.updateCart();
 
+
+    // cart.$watch(CartService.changeItemQuantity, function(newValue, oldValue) {
+    //   console.log(newValue);
+    // } );
+
   }]);
 
 
