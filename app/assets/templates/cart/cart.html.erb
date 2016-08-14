@@ -17,7 +17,7 @@
     <tr ng-repeat="product in current_cart | orderBy : 'product_id'">
       <td><!-- {{product.product_id}} --></td>
       <td></td> 
-      <td><a href="/store/product/{{product.product_id}}">{{product.name}}</a></td> 
+      <td><a href="/things/thing/{{product.product_id}}">{{product.name}}</a></td> 
       
       <td></td>
       <td>{{product.quantity}}</td>
@@ -40,11 +40,26 @@
 </div>
 
 <style type="text/css" media="screen">
+
+html {
+  background-color: white !important;
+}
+  .navbar-brand.title a{
+    color: black;
+  }
+.navbar-default .navbar-nav>li>a {
+    font-size: 1em;
+    color: black;
+    text-shadow: none;
+    font-family: "GT-Walsheim-Medium";
+}
+
   div.container.wrap {
+    background-color: #ebebeb;
     margin-top: 2vh;
     width:95vw;
     height: 80vh;
-    border: 1px solid black;
+   /* border: 1px solid black;*/
     display: flex;
     align-items: center;
     justify-content: center;
