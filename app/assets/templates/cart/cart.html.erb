@@ -1,39 +1,64 @@
 <div class="container wrap">
+<div class="cart-table">
 <table>
-  <caption>Your Cart:</caption>
+  <caption>Shopping Cart</caption>
   <thead>
     <tr>
-      <th>ID:</th>
+      <th>Item</th>
       <th></th>
-      <th>Name:</th>
-      <th>Price:</th>
+      <th><!-- Name: --></th>
+      <th></th>
       <th>Quantity:</th>
-      <th></th>
+      <th>Price:</th>
       <th>Options:</th>
     </tr>
   </thead>
   <tbody>
     <tr ng-repeat="product in current_cart | orderBy : 'product_id'">
-      <td>{{product.product_id}}</td>
+      <td><!-- {{product.product_id}} --></td>
       <td></td> 
       <td><a href="/store/product/{{product.product_id}}">{{product.name}}</a></td> 
-      <td>{{product.price | currency}}</td>
+      
       <td></td>
       <td>{{product.quantity}}</td>
+      <td>{{product.price | currency}}</td>
       <td change-quantity></td>
     </tr>
     <tr>
       <td></td>
       <td></td> 
       <td></td> 
-      <td>{{totalPrice | currency}}</td>
+      <td><!-- {{totalItems}} --></td>
       <td></td>
-      <td>{{totalItems}}</td>
+      
+      <td>{{totalPrice | currency}}</td>
       <td></td>
     </tr>
   </tbody>
 </table>
 </div>
+</div>
+
+<style type="text/css" media="screen">
+  div.container.wrap {
+    margin-top: 2vh;
+    width:95vw;
+    height: 80vh;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  div.cart-table {
+    border: 1px solid black;
+    width: 80%;
+  }
+
+  table {
+    border: 1px solid black;
+    width: 100%;
+  }
+</style>
 
 
 
