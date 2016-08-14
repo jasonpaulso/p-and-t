@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-top custom" id="custom-nav">
+<nav class="navbar navbar-default navbar-fixed-top custom container" id="custom-nav">
   
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -12,7 +12,7 @@
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav left">
-        <li class="dropdown">
+        <li class="dropdown left-most">
           <a href="/places" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Places <!-- <span class="caret"></span> --></a>
           <ul class="dropdown-menu">
             <li><a href="#">Stockholm</a></li>
@@ -52,28 +52,27 @@
 
 
 <style type="text/css" media="screen">
-/*.navbar-default.custom {
-    display: flex;
+
+.navbar-default {
+    border: none;
 }
 
-.navbar-header {
-    width: 95vw;
+li.left-most a{
+    padding-left: 0;
 }
-*/
-
 .dropdown-menu {
     border: none;
     background-color: transparent;
     box-shadow: none;
 }
 .navbar.navbar-default.custom {
+    padding-left:0;
+    padding-right: 0;
+    width:95vw;
     background: transparent;
-    border: none;
     text-align: center;
     box-shadow: none;
-    
     transition: background .5s ease-in-out, opacity .5s ease-in-out, margin-top .5s ease-in-out;
-    /*margin-top: 1vh;*/
 }
 @media (min-width: 768px) {
     .navbar>.container .navbar-brand,
@@ -114,6 +113,10 @@
     box-shadow: none;
     font-size: 1em;
 }
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border: none !important;
+}
 .navbar-brand.title {
     font-family: "SuperiorTitle-Black";
     color: white;
@@ -122,10 +125,10 @@
     position: absolute;
     width: 100%;
     left: 0;
-    /*top: 1vh;*/
     text-align: center;
     margin: auto;
     transition: font-size 1s ease, top 1s ease;
+
 }
 .navbar-brand.title a {
     text-decoration: none;
