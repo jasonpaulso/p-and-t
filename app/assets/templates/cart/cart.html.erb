@@ -4,45 +4,43 @@
 <div class="container wrap cart-table">
 
   <div class="content">
-  <h5>Shopping Cart</h5>
-  
-  <div class="row headers">
-    <div class="col-sm-2">Item</div>
-    <div class="col-sm-5"></div>
-    <div class="col-sm-2 centered"><span class="left">Quantity</span></div>
-    <div class="col-sm-2 centered">Price</div>
-    <div class="col-sm-1"></div>
-  </div>
-  <div class="cart">
-  
-  <div class="row product" ng-repeat="product in current_cart | orderBy : 'product_id'">
-    <div class="col-sm-2 image"><img src="<%=asset_url("LensBox_1.png")%>" alt="" class="img-responsive"></div>
-    <div class="col-sm-5"><a href="/things/thing/{{product.product_id}}">{{product.name}}</a></div>
-    <div class="col-sm-2 centered">
-      <div class="col-sm-4"><a href ng-click="changeItemQuantity(product,'up')">+</a></div>
-      <div class="col-sm-4">{{product.quantity}}</div>
-      <div class="col-sm-4"><a href ng-click="changeItemQuantity(product,'down')">-</a></div>
+    <h5>Shopping Cart</h5>
+    <div class="row headers">
+      <div class="col-sm-2">Item</div>
+      <div class="col-sm-6"></div>
+      <div class="col-sm-2 centered"><span class="left">Quantity</span></div>
+      <div class="col-sm-1 centered">Price</div>
+      <div class="col-sm-1"></div>
     </div>
-    <div class="col-sm-2 centered">{{product.total | currency}}</div>
-    <div class="col-sm-1"> <a href ng-click="changeItemQuantity(product,'remove')">x</a></div>
-  </div>
-    <div class="row total">
-    <div class="col-sm-2"></div>
-    <div class="col-sm-5"></div>
-    <div class="col-sm-2 right-align">Sub Total</div>
-    <div class="col-sm-2 sub-total centered">{{totalPrice | currency}}</div>
-    <div class="col-sm-1"></div>
-  </div>
-  <div class="checkout">
-    <button type="Submit" class="checkout" value="">Check Out</button>
-  </div>
-    
-  </div>
+    <div class="cart">
+      <div class="row product" ng-repeat="product in current_cart | orderBy : 'product_id'">
+        <div class="col-sm-2 image"><img ng-src="{{ product.image || '//:0' }}" alt="" class="img-responsive"></div>
+        <div class="col-sm-6"><a href="/things/thing/{{product.product_id}}">{{product.name}}</a></div>
+        <div class="col-sm-2 centered">
+          <div class="col-sm-3"></div>
+          <div class="col-sm-2"><a href ng-click="changeItemQuantity(product,'up')">+</a></div>
+          <div class="col-sm-2">{{product.quantity}}</div>
+          <div class="col-sm-2"><a href ng-click="changeItemQuantity(product,'down')">-</a></div>
+          <div class="col-sm-3"></div>
+        </div>
+        <div class="col-sm-1 centered">{{product.total | currency}}</div>
+        <div class="col-sm-1"> <a href ng-click="changeItemQuantity(product,'remove')">x</a></div>
+      </div>
+      <div class="row total">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-6"></div>
+        <div class="col-sm-2 right-align">Sub Total</div>
+        <div class="col-sm-1 sub-total centered">{{totalPrice | currency}}</div>
+        <div class="col-sm-1"></div>
+      </div>
+      <div class="checkout">
+        <button type="Submit" class="checkout" value="">Check Out</button>
+      </div>
+
+    </div>
 
   </div>
 </div>
-
-
 
 
 <script src="https://rawgit.com/choroshin/angular-ui-numeric/master/src/angular-ui-numeric.js"></script>
@@ -54,25 +52,25 @@
 </script>
 <style type="text/css" media="screen">
 
-html {
-  background-color: white !important;
-}
+  html {
+    background-color: white !important;
+  }
 
-.navbar-brand.title a{
+  .navbar-brand.title a{
     color: black;
   }
-.navbar-default .navbar-nav>li>a {
+  .navbar-default .navbar-nav>li>a {
     color: black;
-}
+  }
 
-.centered {
-  text-align: center;
-  padding:0;
-}
+  .centered {
+    text-align: center;
+    padding:0;
+  }
 
-div.col-sm-2 {
-  width:;
-}
+  div.col-sm-2 {
+    width:;
+  }
 
   div.container.wrap {
     background-color: #ebebeb;
@@ -168,8 +166,9 @@ div.col-sm-2 {
     background-color: black;
     color:white;
     border: none;
-    height:25px;
-    width: 100px;
+    height:50px;
+    width: 150px;
+    font-size: 1.5em;
   }
 
   .space {

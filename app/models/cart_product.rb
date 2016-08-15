@@ -18,4 +18,7 @@ class CartProduct < ApplicationRecord
   def product_id
     product.id
   end
+  def image 
+    product.image
+  end
 end
