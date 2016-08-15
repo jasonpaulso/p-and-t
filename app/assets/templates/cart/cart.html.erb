@@ -16,7 +16,7 @@
   <div class="cart">
   
   <div class="row product" ng-repeat="product in current_cart | orderBy : 'product_id'">
-    <div class="col-sm-2 image"><img src="http://cdn.shopify.com/s/files/1/0051/9342/products/Lens_Box_Unstackable_M_green_grande.jpg?v=1466530109" alt="" class="img-responsive"></div>
+    <div class="col-sm-2 image"><img src="<%=asset_url("LensBox_1.png")%>" alt="" class="img-responsive"></div>
     <div class="col-sm-5"><a href="/things/thing/{{product.product_id}}">{{product.name}}</a></div>
     <div class="col-sm-2 centered">
       <div class="col-sm-4"><a href ng-click="changeItemQuantity(product,'up')">+</a></div>
@@ -34,7 +34,7 @@
     <div class="col-sm-1"></div>
   </div>
   <div class="checkout">
-    <button type="Submit" disabled class="checkout" value="">Check Out</button>
+    <button type="Submit" class="checkout" value="">Check Out</button>
   </div>
     
   </div>
@@ -46,6 +46,12 @@
 
 
 <script src="https://rawgit.com/choroshin/angular-ui-numeric/master/src/angular-ui-numeric.js"></script>
+<script type="text/javascript">
+
+  $('.checkout').on("click", function(){
+    alert("Thanks for clicking, but checkout is disabled at this time.")
+  });
+</script>
 <style type="text/css" media="screen">
 
 html {
