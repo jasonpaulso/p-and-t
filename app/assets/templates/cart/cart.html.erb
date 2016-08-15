@@ -1,51 +1,67 @@
+
+
+
 <div class="container wrap cart-table">
 
-
-  <table class="table">
-  <h4>Shopping Cart</h4>
-  <thead>
-
-    <tr>
-      <th>Item</th>
-      <th></th>
-      <th>Quantity</th>
-      <th>Price</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat="product in current_cart | orderBy : 'product_id'" class="product">
-      <th scope="row">*Image*</th>
-      <td class="detail"><a href="/things/thing/{{product.product_id}}">{{product.name}}</a></td>
-      <td>{{product.quantity}}</td>
-      <td>{{product.price | currency}}</td>
-      <td change-quantity></td>
-    </tr>
-  </tbody>
-</table>
-
-
-
-
-
-
+  <div class="content">
+  <h5>Shopping Cart</h5>
   
+  <div class="row headers">
+    <div class="col-sm-2">Item</div>
+    <div class="col-sm-5"></div>
+    <div class="col-sm-2 centered">Quantity</div>
+    <div class="col-sm-2 centered">Price</div>
+    <div class="col-sm-1"></div>
+  </div>
+  <div class="cart">
+  
+  <div class="row product" ng-repeat="product in current_cart | orderBy : 'product_id'">
+    <div class="col-sm-2 image"><img src="http://cdn.shopify.com/s/files/1/0051/9342/products/Lens_Box_Unstackable_M_green_grande.jpg?v=1466530109" alt="" class="img-responsive"></div>
+    <div class="col-sm-5"><a href="/things/thing/{{product.product_id}}">{{product.name}}</a></div>
+    <div class="col-sm-2 centered">
+      <div class="col-sm-4"><a href ng-click="changeItemQuantity(product,'up')">+</a></div>
+      <div class="col-sm-4">{{product.quantity}}</div>
+      <div class="col-sm-4"><a href ng-click="changeItemQuantity(product,'down')">-</a></div>
+    </div>
+    <div class="col-sm-2 centered">{{product.total | currency}}</div>
+    <div class="col-sm-1"> <a href ng-click="changeItemQuantity(product,'remove')">x</a></div>
+  </div>
+    <div class="row total">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-5"></div>
+    <div class="col-sm-2 right-align">Sub Total</div>
+    <div class="col-sm-2 sub-total centered">{{totalPrice | currency}}</div>
+    <div class="col-sm-1"></div>
+  </div>
+  <div class="checkout">
+    <button type="Submit" disabled class="checkout" value="">Check Out</button>
+  </div>
+    
+  </div>
+
+  </div>
 </div>
 
 
 
 
-
+<script src="https://rawgit.com/choroshin/angular-ui-numeric/master/src/angular-ui-numeric.js"></script>
 <style type="text/css" media="screen">
 
 html {
   background-color: white !important;
 }
-  .navbar-brand.title a{
+
+.navbar-brand.title a{
     color: black;
   }
 .navbar-default .navbar-nav>li>a {
     color: black;
+}
+
+.centered {
+  text-align: center;
+  padding:0;
 }
 
   div.container.wrap {
@@ -56,38 +72,104 @@ html {
 
     display: flex;
     align-items: center;
-    justify-content: center;
+    /*justify-content: center;*/
     flex-direction: column;
   }
 
-  .table {
-    width:80%;
+  div.content {
+    height: 50%;
+    width: 80%;
+    margin-top:15vh;
+    font-family: "GT-Walsheim";
+  }
+
+  div.cart {
+    border-top: 1px solid black;
+    height: 100%;
+    width:100%;
+
+  }
+
+  h6 {
+    align-self: flex-start;
   }
 
   .product {
-    height: 10vh;
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+    height:25%;
+    border-bottom: 1px solid black;
+
   }
 
-  .detail {
-    width: 60%;
+  .checkout {
+    margin-top: 3vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-h4 {
-  
-  width: 80%;
-}
+  .sub-total {
+    padding-left: 0;
+  }
 
+  .total {
+    margin-top: 2vh;
+  }
+
+  .headers {
+    margin-bottom: 2vh;
+  }
+
+  .image {
+
+  }
+
+  .product img {
+    height: 100px;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  div.col-sm-2.image {
+    padding: 0;
+    margin: 0;
+  }
+
+  div.col-sm-5  {
+    padding-left: 0;
+  }
+
+  .right-align {
+    text-align: right;
+  }
+
+  .content a {
+    text-decoration: none;
+    color: black;
+  }
+
+  button.checkout {
+    text-align: center;
+    background-image: none;
+    background-color: black;
+    color:white;
+    border: none;
+    height:25px;
+    width: 100px;
+  }
+
+  .space {
+    margin-left: 10px;
+    margin-right: 10px;
+    width:2vw;
+  }
 
 </style>
 
 
 
-<!-- <div class="col-sm-7 border">
-      <div class="row product-detail">
-        <div class="col-sm-3 image"></div>
-        <div class="col-sm-9"><a href="/things/thing/{{product.product_id}}">{{product.name}}</a></div>
-      </div>
-    </div>
-    <div class="col-sm-2 border"></div>
-    <div class="col-sm-2 border"></div>
-    <div class="col-sm-1 border"></div> -->
+
