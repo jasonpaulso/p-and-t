@@ -1,8 +1,4 @@
-
-
-
 <div class="container wrap cart-table">
-
   <div class="content">
     <h5>Shopping Cart</h5>
     <div class="row headers">
@@ -13,18 +9,12 @@
       <div class="col-sm-1"></div>
     </div>
     <div class="cart">
-      <div class="row product" ng-repeat="product in current_cart | orderBy : 'product_id'">
+      <div class="row product" ng-repeat="product in current_cart | orderBy : 'name'">
         <div class="col-sm-2 image"><img ng-src="assets/{{ product.image || '//:0' }}" alt="" class="img-responsive"></div>
         <div class="col-sm-6"><a href="/things/thing/{{product.product_id}}">{{product.name}}</a></div>
         <div class="col-sm-2 centered">
           <div class="col-sm-3"></div>
-          
           <div class="col-sm-2"><a href ng-click="changeItemQuantity(product,'down')" class="glyphicon glyphicon-minus"></a></div>
-<!--           <div class="col-sm-2">
-
-            <div class="row"><a href ng-click="changeItemQuantity(product,'up')">+</a></div>
-            <div class="row"><a href ng-click="changeItemQuantity(product,'down')">-</a></div>
-          </div> -->
           <div class="col-sm-2">{{product.quantity}}</div>
           <div class="col-sm-2"><a href ng-click="changeItemQuantity(product,'up')" class="glyphicon glyphicon-plus"></a></div>
           <div class="col-sm-3"></div>
@@ -32,21 +22,18 @@
         <div class="col-sm-1 centered">{{product.total | currency}}</div>
         <div class="col-sm-1"> <a href ng-click="changeItemQuantity(product,'remove')" class="glyphicon glyphicon-trash"></a></div>
       </div>
-      <div class="row total">
-        <div class="col-sm-2"></div>
-        <div class="col-sm-6"></div>
-        <div class="col-sm-2 right-align">Sub Total</div>
-        <div class="col-sm-1 sub-total centered">{{totalPrice | currency}}</div>
-        <div class="col-sm-1"></div>
-      </div>
-
-
     </div>
-            <div class="checkout">
-        <button type="Submit" class="checkout" ng-click="checkout()">Checkout</button>
-      </div>
+    <div class="row total">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-6"></div>
+      <div class="col-sm-2 right-align">Sub Total</div>
+      <div class="col-sm-1 sub-total centered">{{totalPrice | currency}}</div>
+      <div class="col-sm-1"></div>
+    </div>
+    <div class="checkout">
+      <button type="Submit" class="checkout" ng-click="checkout()">Checkout</button>
+    </div>
   </div>
-
 </div>
 
 
@@ -81,7 +68,6 @@
 
     display: flex;
     align-items: center;
-    /*justify-content: center;*/
     flex-direction: column;
   }
 
@@ -90,11 +76,11 @@
     width: 80%;
     margin-top:15vh;
     font-family: "GT-Walsheim";
-    
+
   }
 
   div.cart {
-    border-top: 1px solid black;
+    
     overflow-y: auto;
     height: 100%;
     width:100%;
@@ -110,9 +96,12 @@
     margin-right: 0;
     display: flex;
     align-items: center;
-    /*height:25%;*/
     border-bottom: 1px solid black;
 
+  }
+
+  div.product:first-child {
+    border-top: 1px solid black;
   }
 
   .checkout {
@@ -132,10 +121,6 @@
 
   .headers {
     margin-bottom: 2vh;
-  }
-
-  .image {
-
   }
 
   .product img {
