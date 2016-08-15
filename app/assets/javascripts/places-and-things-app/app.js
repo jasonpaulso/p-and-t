@@ -3,7 +3,6 @@ angular
     .module('PlacesAndThings', [
         'ui.router',
         'templates',
-        'ui.numeric' 
         
     ])
     .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {

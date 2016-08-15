@@ -22,4 +22,3 @@
 //= require underscore
 //= require bootstrap-sprockets
 //= require bootstrap
-//= require angular-ui-numeric
