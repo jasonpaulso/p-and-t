@@ -14,7 +14,7 @@
     </div>
     <div class="cart">
       <div class="row product" ng-repeat="product in current_cart | orderBy : 'product_id'">
-        <div class="col-sm-2 image"><img ng-src="{{ product.image || '//:0' }}" alt="" class="img-responsive"></div>
+        <div class="col-sm-2 image"><img ng-src="assets/{{ product.image || '//:0' }}" alt="" class="img-responsive"></div>
         <div class="col-sm-6"><a href="/things/thing/{{product.product_id}}">{{product.name}}</a></div>
         <div class="col-sm-2 centered">
           <div class="col-sm-3"></div>
@@ -34,22 +34,17 @@
         <div class="col-sm-1"></div>
       </div>
       <div class="checkout">
-        <button type="Submit" class="checkout" value="">Check Out</button>
+        <button type="Submit" class="checkout" ng-click="checkout()">Checkout</button>
       </div>
 
     </div>
 
   </div>
+  <div class="content"></div>
 </div>
 
 
-<script src="https://rawgit.com/choroshin/angular-ui-numeric/master/src/angular-ui-numeric.js"></script>
-<script type="text/javascript">
 
-  $('.checkout').on("click", function(){
-    alert("Thanks for clicking, but checkout is disabled at this time.")
-  });
-</script>
 <style type="text/css" media="screen">
 
   html {
@@ -85,7 +80,7 @@
   }
 
   div.content {
-    height: 50%;
+    /*height: 50%;*/
     width: 80%;
     margin-top:15vh;
     font-family: "GT-Walsheim";
@@ -93,8 +88,8 @@
 
   div.cart {
     border-top: 1px solid black;
-    height: 100%;
-    width:100%;
+/*    height: 100%;
+    width:100%;*/
 
   }
 
@@ -107,7 +102,7 @@
     margin-right: 0;
     display: flex;
     align-items: center;
-    height:25%;
+    /*height:25%;*/
     border-bottom: 1px solid black;
 
   }
@@ -161,6 +156,8 @@
   }
 
   button.checkout {
+    display:block;
+    margin: 0 auto;
     text-align: center;
     background-image: none;
     background-color: black;

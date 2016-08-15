@@ -35,6 +35,10 @@ PlacesAndThings
       CartService.clearCart();
     }
 
+    cart.checkout = function() {
+      alert("Thanks for clicking, but checkout is disabled at this time.")
+    }
+
     cart.$on("UpdateCart", function(){
       cart.updateCart();
     });
