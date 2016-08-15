@@ -1,0 +1,94 @@
+<div class="container wrap">
+<div class="cart-table">
+
+  <th>Shopping Cart</th>
+  <table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th></th>
+      <th><!-- Name: --></th>
+      <th></th>
+      <th>Quantity</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="product in current_cart | orderBy : 'product_id'">
+      <td class="product"><a href="/things/thing/{{product.product_id}}">{{product.name}}</a></td> 
+      <td>{{product.quantity}}</td>
+      <td>{{product.price | currency}}</td>
+      <td change-quantity></td>
+    </tr>
+    
+    <tr class="bottom-border">
+    <td>Sub Total</td>
+      <td class="price">{{totalPrice | currency}}</td>
+    </tr>
+
+    </tbody>
+
+ </table>
+
+           
+  
+
+</div>
+</div>
+
+<style type="text/css" media="screen">
+.bottom-border {
+  border-top: 1px solid black;
+  width:100%;
+}
+td {
+  border: 1px solid black;
+}
+td.price {
+  /*border: 1px solid black;*/
+}
+
+td.product {
+  width: 50%;
+}
+
+tr {
+  height: 15vh;
+ /* border:1px solid black;*/
+}
+tbody {
+  border-top: 1px solid black;
+  /*border-bottom: 1px solid black;*/
+}
+html {
+  background-color: white !important;
+}
+  .navbar-brand.title a{
+    color: black;
+  }
+.navbar-default .navbar-nav>li>a {
+    color: black;
+}
+
+  div.container.wrap {
+    background-color: #ebebeb;
+    margin-top: 3vh;
+    width:95vw;
+    height: 89vh;
+   /* border: 1px solid black;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  div.cart-table {
+    width: 80%;
+  }
+
+  table {
+    /*border: 1px solid black;*/
+    width: 100%;
+  }
+</style>
+
+
+

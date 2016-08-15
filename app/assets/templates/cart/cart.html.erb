@@ -1,67 +1,43 @@
-<div class="container wrap">
-<div class="cart-table">
+<div class="container wrap cart-table">
 
-  <th>Shopping Cart</th>
-  <table>
+
+  <table class="table">
+  <h4>Shopping Cart</h4>
   <thead>
+
     <tr>
       <th>Item</th>
       <th></th>
-      <th><!-- Name: --></th>
+      <th>Quantity</th>
+      <th>Price</th>
       <th></th>
-      <th>Quantity:</th>
-      <th>Price:</th>
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="product in current_cart | orderBy : 'product_id'">
-      <td><!-- {{product.product_id}} --></td>
-      <td></td> 
-      <td><a href="/things/thing/{{product.product_id}}">{{product.name}}</a></td> 
-      
-      <td></td>
+    <tr ng-repeat="product in current_cart | orderBy : 'product_id'" class="product">
+      <th scope="row">*Image*</th>
+      <td class="detail"><a href="/things/thing/{{product.product_id}}">{{product.name}}</a></td>
       <td>{{product.quantity}}</td>
       <td>{{product.price | currency}}</td>
       <td change-quantity></td>
     </tr>
-    
-    <tr class="bottom-border">
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td>Sub Total</td>
-      <td class="price">{{totalPrice | currency}}</td>
-      <td></td>
-    </tr>
+  </tbody>
+</table>
 
-    </tbody>
- </table>
-          
-           
+
+
+
+
+
   
+</div>
 
-</div>
-</div>
+
+
+
 
 <style type="text/css" media="screen">
-.bottom-border {
-  border-top: 1px solid black;
-  width:100%;
-}
 
-td.price {
-  /*border: 1px solid black;*/
-}
-
-tr {
-  height: 15vh;
- /* border:1px solid black;*/
-}
-tbody {
-  border-top: 1px solid black;
-  /*border-bottom: 1px solid black;*/
-}
 html {
   background-color: white !important;
 }
@@ -76,21 +52,42 @@ html {
     background-color: #ebebeb;
     margin-top: 3vh;
     width:95vw;
-    height: 87vh;
-   /* border: 1px solid black;*/
+    height: 89vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  div.cart-table {
-    width: 80%;
+    flex-direction: column;
   }
 
-  table {
-    /*border: 1px solid black;*/
-    width: 100%;
+  .table {
+    width:80%;
   }
+
+  .product {
+    height: 10vh;
+  }
+
+  .detail {
+    width: 60%;
+  }
+
+h4 {
+  
+  width: 80%;
+}
+
+
 </style>
 
 
 
+<!-- <div class="col-sm-7 border">
+      <div class="row product-detail">
+        <div class="col-sm-3 image"></div>
+        <div class="col-sm-9"><a href="/things/thing/{{product.product_id}}">{{product.name}}</a></div>
+      </div>
+    </div>
+    <div class="col-sm-2 border"></div>
+    <div class="col-sm-2 border"></div>
+    <div class="col-sm-1 border"></div> -->
