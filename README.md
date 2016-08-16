@@ -10,7 +10,7 @@ To launch the site you'll need to do the following:
 
 * Once in the repo - run the following: bundle install, rake db:create, rake db:migrate, rake db:seed, and then rails s.
 
-* Now you can view the app as it is now. (I plan to add more, so pull the newest version every now and then.
+* Now you can view the app as it is now. (I plan to add more, so pull the newest version every now and then.)
 
 * As of this readme the "cart" is associated with your current browser session. If you feel the need to you can clear the session by either clearing your cookies or by clicking the "clear cart" link in the "cart" menu on the upper righthand side of the site.
 
