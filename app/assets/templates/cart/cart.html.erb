@@ -1,5 +1,5 @@
 <div class="container ui-view main">
-  <div class="content" ng-show="current_cart.length > 0">
+<div class="content cart" ng-show="current_cart.length > 0">
     <h5>Shopping Cart</h5>
     <div class="row headers">
       <div class="col-sm-2">Item</div>
@@ -8,9 +8,9 @@
       <div class="col-sm-1 centered">Price</div>
       <div class="col-sm-1"></div>
     </div>
-    <div class="cart">
-      <div class="row product" ng-repeat="product in current_cart | orderBy : 'product_id'">
-        <div class="col-sm-2 image"><img ng-src="assets/{{ product.image || '//:0' }}" alt="" class="img-responsive"></div>
+    <div>
+      <div class="row product flexbox-container" ng-repeat="product in current_cart | orderBy : 'product_id'">
+        <div class="col-sm-2 image"><img ng-src="assets/{{ product.image }}" alt="" class="img-responsive"></div>
         <div class="col-sm-6"><a href="/things/thing/{{product.product_id}}">{{product.name}}</a></div>
         <div class="col-sm-2 centered">
           <div class="col-sm-3"></div>
@@ -33,16 +33,16 @@
       <div class="col-sm-1 sub-total centered">{{totalPrice | currency}}</div>
       <div class="col-sm-1"></div>
     </div>
-    <div class="checkout">
+    <div class="checkout flexbox-container">
       <button type="Submit" class="checkout" ng-click="checkout()">Checkout</button>
     </div>
-  </div>
+</div>
 
   <div class="content" ng-show="current_cart.length == 0">
     <h1>Awe, your cart is empty. :-( Check out our store to add some lovely things!</h1>
   </div>
+  </div>
 
-</div>
 
 
 
@@ -52,25 +52,6 @@
 
 <style type="text/css" media="screen">
 
-  html {
-    background-color: white !important;
-  }
-
-  .main {
-  display: flex;
-  margin-top: 8vh;
-  width:95%;
-  background-color: #ebebeb;
-  align-items: center;
-  justify-content: center;
-}
-
-  .navbar-brand.title a{
-    color: black;
-  }
-  .navbar-default .navbar-nav>li>a {
-    color: black;
-  }
 
   .centered {
     text-align: center;
@@ -81,33 +62,6 @@
     width:;
   }
 
-  div.container.wrap {
-    background-color: #ebebeb;
-    margin-top: 3vh;
-   /* margin-bottom: 3vh;*/
-    width:95vw;
-   /* height: 90vh;*/
-
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  div.content {
-    /*height: 50%;*/
-    width: 80%;
-    margin-top:10vh;
-    font-family: "GT-Walsheim";
-
-  }
-
-/*  div.cart {
-    
-    overflow-y: auto;
-    height: 100%;
-    width:100%;
-
-  }*/
 
   h6 {
     align-self: flex-start;
@@ -116,7 +70,6 @@
   .product {
     margin-left: 0;
     margin-right: 0;
-    display: flex;
     align-items: center;
     border-bottom: 1px solid black;
 
@@ -128,7 +81,6 @@
 
   .checkout {
     margin-top: 3vh;
-    display: flex;
     align-items: center;
     justify-content: center;
   }
@@ -161,14 +113,6 @@
     padding-left: 0;
   }
 
-  .right-align {
-    text-align: right;
-  }
-
-  .content a {
-    text-decoration: none;
-    color: black;
-  }
 
   button.checkout {
     display:block;
@@ -192,7 +136,9 @@
   .row {
     margin-right: unset;
   }
-
+  div.checkout {
+    padding-bottom: 10vh;
+  }
 </style>
 
 

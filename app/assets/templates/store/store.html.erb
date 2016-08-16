@@ -1,16 +1,20 @@
 <div class="container ui-view main">
-  <div class="content flexbox-container">
-    <div ng-repeat="product in products | orderBy : orderBy | filter:search:strict" class="store">
-      <div class="product">
-        <img ng-src="assets/{{ product.image || '//:0' }}" alt="" class="img-responsive">
-        <h5><a href="/things/thing/{{product.id}}">{{product.name}}</a></h5>
-        <h5>{{product.price | currency}}</h5>
-        <button href ng-click="addItemtoCart(product, 1)" type="">Add</button>
-        </div>
+  <div class="content flexbox-container store">
+    <div ng-repeat="product in products | orderBy : orderBy | filter:search:strict">
+      
+      <div class="store-product flexbox-container centered">
+        <a href="/things/thing/{{product.id}}" class=" item flexbox-container">
+          <img ng-src="assets/{{ product.image }}" alt="" class="img-responsive">
+          <h5>{{product.name}}</h5>
+          <h5>{{product.price | currency}}</h5>
+  <!--         <button href ng-click="addItemtoCart(product, 1)" type="">Add</button> -->
+        </a>
       </div>
+        
     </div>
-  </div> 
-</div>
+  </div>
+  </div>
+
 
 
 
@@ -20,15 +24,9 @@
 
 <style type="text/css" media="screen">
 
-.flexbox-container {
-  display: -ms-flex;
-  display: -webkit-flex;
-  display: flex;
-  /*overflow-y: auto;*/
 
-}
 
-.flexbox-container > div {
+.store.flexbox-container > div {
   width: 33%;
 
 }
@@ -37,42 +35,22 @@
 
 }
 
-div.product {
-  display: flex;
+div.store-product {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-bottom: 2vh;
 
 }
 
-.main {
-  display: flex;
-  margin-top: 8vh;
-  width:95%;
-  background-color: #ebebeb;
-  align-items: center;
+a.item {
+    align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
-  html {
-    background-color: white !important;
-  }
 
-  .navbar-brand.title a{
-    color: black;
-  }
-  .navbar-default .navbar-nav>li>a {
-    color: black;
-  }
-
-
-
-  div.content {
-    width: 90%;
-    margin-top:10vh;
-    font-family: "GT-Walsheim";
-    display: -webkit-flex;
-   display: flex;
+  div.store {
    align-items: center;
    justify-content: center;
    flex-direction: row;
@@ -80,12 +58,14 @@ div.product {
 
   }
 
-  .product img {
+
+  .store-product img {
     height:200px;
   }
 
-  .product a {
-    color:black;
+
+  div.store {
+    padding-bottom: 10vh;
   }
  
 
