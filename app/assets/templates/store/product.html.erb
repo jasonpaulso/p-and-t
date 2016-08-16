@@ -16,7 +16,7 @@
         <p>Materials: {{details.materials || "Unknown"}}</p>
         <p>Dimensions: {{details.dimensions || "Unknown"}}</p>
         <p>Origin: {{details.country}}</p>
-        <div class="button"><button href ng-click="addItemtoCart(details, 1)" type="reset">Add to cart</button></div>
+        <div class="button"><button href ng-click="addItemtoCart(details, 1)" type="reset">Add to Cart</button></div>
         
         </div>
 
@@ -58,5 +58,22 @@
 /*  .product-show .row {
     width:50%;
   }*/
+
+  div.button {
+    margin-top: 2vh;
+  }
+  button {
+    left:0;
+    /*display:block;*/
+    margin: 0 auto;
+    text-align: center;
+    background-image: none;
+    background-color: black;
+    color:white;
+    border: none;
+    height:25px;
+    width: 100px;
+    font-size: 1em;
+  }
 
 </style>
