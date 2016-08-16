@@ -13,6 +13,7 @@ function StoreCtrl($scope, StoreService, $stateParams, $rootScope) {
   store.addItemtoCart = function(product, quantity) {
     
     StoreService.addItemtoCart(product, quantity);
+    
   };
 
   store.resultOrder = function(x) {

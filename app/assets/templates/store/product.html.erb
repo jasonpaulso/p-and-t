@@ -1,4 +1,58 @@
-<div class="container wrap">
-  {{details.name}}
-<td><a href ng-click="addItemtoCart(details)">Add</a></td>
+<div class="container ">
+  <div class="product-show content">
+    
+    <div class="row">
+      <div class="col-sm-7 flexbox-container product-show-image"><img ng-src="assets/{{ details.image }}" alt="" class="img-responsive"></div>
+      <div class="col-sm-5 flexbox-container product-details">
+        <h4>{{details.name}}</h4>
+        <p>{{details.price | currency}}</p>
+        <p><!-- {{details.description}} --> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Designer: {{details.designer || "Unknown"}}</p>
+        <p>Materials: {{details.materials || "Unknown"}}</p>
+        <p>Dimensions: {{details.dimensions || "Unknown"}}</p>
+        <p>Origin: {{details.country}}</p>
+        <div class="button"><button href ng-click="addItemtoCart(details, 1)" type="reset">Add to cart</button></div>
+        
+        </div>
+
+    </div>
+
+
+  </div>
 </div>
+
+
+<style type="text/css" media="screen">
+  .product-show {
+
+    /*height:50%;*/
+    width:80%;
+    /*border: 1px solid black;*/
+  }
+
+  div.product-show-image {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .product-show-image img {
+    height:500px;
+  }
+
+.product-details {
+
+    flex-direction: column;
+    /*align-items: center;*/
+    justify-content: center;
+  }
+
+/*  .product-show .row {
+    width:50%;
+  }*/
+
+</style>

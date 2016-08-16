@@ -11,7 +11,7 @@ function ProductCtrl($scope, StoreService, $stateParams) {
     product.details = response.data;
   });
 
-    product.addItemtoCart = function(product) {
-    StoreService.addItemtoCart(product);
+    product.addItemtoCart = function(product, quantity) {
+    StoreService.addItemtoCart(product, quantity);
   };
 }
