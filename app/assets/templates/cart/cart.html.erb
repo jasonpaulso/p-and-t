@@ -1,5 +1,5 @@
 <div class="container wrap cart-table">
-  <div class="content">
+  <div class="content" ng-show="current_cart.length > 0">
     <h5>Shopping Cart</h5>
     <div class="row headers">
       <div class="col-sm-2">Item</div>
@@ -9,12 +9,12 @@
       <div class="col-sm-1"></div>
     </div>
     <div class="cart">
-      <div class="row product" ng-repeat="product in current_cart | orderBy : 'name'">
+      <div class="row product" ng-repeat="product in current_cart | orderBy : 'product_id'">
         <div class="col-sm-2 image"><img ng-src="assets/{{ product.image || '//:0' }}" alt="" class="img-responsive"></div>
         <div class="col-sm-6"><a href="/things/thing/{{product.product_id}}">{{product.name}}</a></div>
         <div class="col-sm-2 centered">
           <div class="col-sm-3"></div>
-          <div class="col-sm-2"><a href ng-click="changeItemQuantity(product,'down')" class="glyphicon glyphicon-minus"></a></div>
+          <div class="col-sm-2"><a href ng-click="changeItemQuantity(product,'down')" class="glyphicon glyphicon-minus" ng-show="product.quantity > 1"></a></div>
           <div class="col-sm-2">{{product.quantity}}</div>
           <div class="col-sm-2"><a href ng-click="changeItemQuantity(product,'up')" class="glyphicon glyphicon-plus"></a></div>
           <div class="col-sm-3"></div>
@@ -33,6 +33,10 @@
     <div class="checkout">
       <button type="Submit" class="checkout" ng-click="checkout()">Checkout</button>
     </div>
+  </div>
+
+  <div class="content" ng-show="current_cart.length == 0">
+    <h1>Awe, your cart is empty. :-( Check out our store to add some lovely things!</h1>
   </div>
 </div>
 
@@ -63,8 +67,9 @@
   div.container.wrap {
     background-color: #ebebeb;
     margin-top: 3vh;
+    margin-bottom: 3vh;
     width:95vw;
-    height: 89vh;
+    height: 90vh;
 
     display: flex;
     align-items: center;
@@ -74,7 +79,7 @@
   div.content {
     height: 50%;
     width: 80%;
-    margin-top:15vh;
+    margin-top:10vh;
     font-family: "GT-Walsheim";
 
   }

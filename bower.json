@@ -15,7 +15,8 @@
       "angular-animate": "latest",
       "bootstrap-sass-official": "latest",
       "jquery":"latest",
-      "underscore":"latest"
+      "underscore":"latest",
+      "animate.css":"latest"
     }
   }
 }
