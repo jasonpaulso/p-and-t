@@ -1,8 +1,8 @@
 <div class="container ">
   <div class="product-show content">
     
-    <div class="row">
-      <div class="col-sm-7 flexbox-container product-show-image"><img ng-src="assets/{{ details.image }}" alt="" class="img-responsive"></div>
+    <div class="row flexbox-container">
+      <div class="col-sm-7 flexbox-container product-show-image"><img ng-src="assets/{{ details.image || 'LensBox_1.jpg'}}" alt="" class="img-responsive"></div>
       <div class="col-sm-5 flexbox-container product-details">
         <h4>{{details.name}}</h4>
         <p>{{details.price | currency}}</p>
@@ -28,6 +28,10 @@
 
 
 <style type="text/css" media="screen">
+
+.product-show.content {
+  margin-top: unset;
+}
   .product-show {
 
     /*height:50%;*/

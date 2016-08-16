@@ -5,7 +5,7 @@
       
       <div class="store-product flexbox-container centered">
         <a href="/things/thing/{{product.id}}" class=" item flexbox-container">
-          <img ng-src="assets/{{ product.image }}" alt="" class="img-responsive">
+          <img ng-src="assets/{{ product.image || 'LensBox_1.jpg'}}" alt="" class="img-responsive">
           <h5>{{product.name}}</h5>
           <h5>{{product.price | currency}}</h5>
   <!--         <button href ng-click="addItemtoCart(product, 1)" type="">Add</button> -->
@@ -24,6 +24,13 @@
 
 
 <style type="text/css" media="screen">
+
+  .navbar-brand.title a{
+    color: black;
+  }
+  .navbar-default .navbar-nav>li>a {
+    color: black;
+  }
 
 
 
