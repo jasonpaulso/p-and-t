@@ -121,13 +121,13 @@ li.left-most a{
     font-family: "ActaDeck-Book";
     color: white;
     text-shadow: none;
-    font-size: 3em;
+    font-size: 4em;
     position: absolute;
     width: 100%;
     left: 0;
     text-align: center;
     margin: auto;
-    transition: font-size 1s ease, top 1s ease;
+    transition: font-size 1s ease, top 1s ease, margin-top .5s ease-in-out;
     margin-top: 1vh;
 }
 .navbar-brand.title a {
@@ -143,7 +143,7 @@ li.left-most a{
     text-align: center;
 }
 #custom-nav.affix {
-
+    height:2vh;
     margin-top: 0;
     top: 0;
     /*min-width: 100%;*/
@@ -173,6 +173,7 @@ li.left-most a{
         min-width: 100%;
         background-color: #f8f8f8;
         opacity: 0.9;
+
     }
     #custom-nav .navbar-brand.title {
         font-size: 2em;
@@ -189,7 +190,7 @@ li.left-most a{
 
 <script type="text/javascript">
 
-$(document).on('click', function() {
+$('document').on('click', function() {
     $('.collapse').collapse('hide');
 })
 
