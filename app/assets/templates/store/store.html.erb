@@ -1,44 +1,96 @@
-<div ui-view class="container wrap">
-<table id="searchTextResults">
-  <caption>Our Products:</caption>
-  <thead>
-    <tr>
-      <th></th>
-      <th ng-click="resultOrder('name')">Name:</th>
-      <th ng-click="resultOrder('price')">Price:</th>
-      <th></th>
-      <th ng-click="resultOrder('country')">Country:</th>
-      <th></th>
-      <th ng-click="resultOrder('category')">Category:</th>
-      <th> </th> 
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat="product in products | orderBy : orderBy | filter:search:strict">
-      <td></td> 
-      <td> <a href="/things/thing/{{product.id}}">{{product.name}}</a></td> 
-      <td>{{product.price | currency}}</td>
-      <td></td>
-      <td>{{product.country}}</td>
-      <td></td>
-      <td>{{product.category}}</td>
-      <td></td> 
-      <td><form name="quanity" id="quanity" novalidate><input ng-model="quantity" required=""><button href ng-click="addItemtoCart(product, quantity)" type="reset">Add</button></form></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td> 
-      <td></td> 
-      <td>{{totalPrice | currency}}</td>
-      <td></td>
-      <td>{{totalItems}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
-Search:   <input ng-model="search.$"><br>
-Name:     <input ng-model="search.name"><br>
-Country:  <input ng-model="search.country"><br>
-Catergory:<input ng-model="search.category"><br>
-
+<div class="container ui-view main">
+  <div class="content flexbox-container">
+    <div ng-repeat="product in products | orderBy : orderBy | filter:search:strict" class="store">
+      <div class="product">
+        <img ng-src="assets/{{ product.image || '//:0' }}" alt="" class="img-responsive">
+        <h5><a href="/things/thing/{{product.id}}">{{product.name}}</a></h5>
+        <h5>{{product.price | currency}}</h5>
+        <button href ng-click="addItemtoCart(product, 1)" type="">Add</button>
+        </div>
+      </div>
+    </div>
+  </div> 
 </div>
+
+
+
+
+
+
+
+<style type="text/css" media="screen">
+
+.flexbox-container {
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  /*overflow-y: auto;*/
+
+}
+
+.flexbox-container > div {
+  width: 33%;
+
+}
+
+.flexbox-container > div:first-child {
+
+}
+
+div.product {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.main {
+  display: flex;
+  margin-top: 8vh;
+  width:95%;
+  background-color: #ebebeb;
+  align-items: center;
+  justify-content: center;
+}
+
+  html {
+    background-color: white !important;
+  }
+
+  .navbar-brand.title a{
+    color: black;
+  }
+  .navbar-default .navbar-nav>li>a {
+    color: black;
+  }
+
+
+
+  div.content {
+    width: 90%;
+    margin-top:10vh;
+    font-family: "GT-Walsheim";
+    display: -webkit-flex;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: row;
+   flex-wrap: wrap;
+
+  }
+
+  .product img {
+    height:200px;
+  }
+
+  .product a {
+    color:black;
+  }
+ 
+
+</style>
+
+
+
+
