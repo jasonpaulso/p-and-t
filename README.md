@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Places & Things is a Rails/Angular App. The idea for Places & Things is to be a lifestyle and travel mazagine/shop. THe site will hightlight places that I've traveled and things that I've bought or coveted while I've been there. 
 
-Things you may want to cover:
+To launch the site you'll need to do the following:
 
-* Ruby version
+* Clone the repo.
 
-* System dependencies
+* CD into the repo.
 
-* Configuration
+* Once in the repo - run the following: bundle install, rake db:create, rake db:migrate, rake db:seed, and then rails s.
 
-* Database creation
+* Now you can view the app as it is now. (I plan to add more, so pull the newest version every now and then.)
 
-* Database initialization
+* As of this readme the "cart" is associated with your current browser session. If you feel the need to you can clear the session by either clearing your cookies or by clicking the "clear cart" link in the "cart" menu on the upper righthand side of the site.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
