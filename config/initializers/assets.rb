@@ -8,6 +8,7 @@ Rails.application.config.assets.paths << Rails.root.join("vendor","assets","bowe
 # Rails.application.config.assets.paths << Rails.root.join("vendor","assets","bower_components","bootstrap-sass-official", "assets","fonts", "bootstrap")
 Rails.application.config.assets.paths << Rails.root.join("vendor","assets","bower_components","bootstrap-sass-official", "assets", "javascripts")
 Rails.application.config.assets.paths << Rails.root.join("public")
+Rails.application.config.assets.paths << Rails.root.join("app", "assets", "fonts")
 # Rails.application.config.assets.paths << Rails.root.join("vendor","assets","bower_components","bootstrap-sass-official", "assets","fonts")
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path

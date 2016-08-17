@@ -1,10 +1,49 @@
-<div class="container footer">
-  <h5>Footer!</h5>
+<footer class="footer">
+<div class="footer-content flexbox-container">
+  <div class="footer-left flexbox-container">Contact</div>
+  <div class="footer-center flexbox-container">
+    <img ng-src="assets/PlacesThings_Logo.png" alt="" class="img-responsive"></a>
+  </div>
+  <div class="footer-right flexbox-container">&copy; 2016 Places & Things</div>
 </div>
+  
+</footer>
 
 <style type="text/css" media="screen">
   .footer {
-    height: 15vh;
-    width: 95%;
+    margin-top: 3vh;
+    height: 10vh;
+    background-color: black;
+    color:white;
+    /*width: 95%;*/
   }
+
+  .footer-content {
+    width: 95%;
+    margin: 0 auto;
+
+    flex-direction: row;
+  }
+
+  .footer-content div {
+    width:33.4%;
+   
+    height: 9.9vh;
+    align-items: center;
+  }
+  .footer-content h5 {
+    align-self: flex-end;
+  }
+
+  .footer-left {
+    
+  }
+    .footer-center {
+    justify-content: center;
+  }
+    .footer-right {
+    justify-content: flex-end;
+  }
+
+  .footer .glyphicon {
 </style>

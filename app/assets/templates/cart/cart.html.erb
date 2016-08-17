@@ -18,11 +18,11 @@
           <a href ng-click="changeItemQuantity(product,'down')" class="glyphicon glyphicon-minus" ng-show="product.quantity > 1"></a>
          <!--  <a href ng-click="changeItemQuantity(product,'remove')" class="glyphicon glyphicon-remove" ng-show="product.quantity == 1"></a> -->
           </div>
-          <div class="col-sm-2">{{product.quantity}}</div>
+          <div class="col-sm-2 ">{{product.quantity}}</div>
           <div class="col-sm-2"><a href ng-click="changeItemQuantity(product,'up')" class="glyphicon glyphicon-plus"></a></div>
           <div class="col-sm-3"></div>
         </div>
-        <div class="col-sm-1 centered">{{product.total | currency}}</div>
+        <div class="col-sm-1 centered number-font">{{product.total | currency}}</div>
         <div class="col-sm-1"> <a href ng-click="changeItemQuantity(product,'remove')" class="glyphicon glyphicon-trash"></a></div>
       </div>
     </div>
@@ -30,7 +30,7 @@
       <div class="col-sm-2"></div>
       <div class="col-sm-6"></div>
       <div class="col-sm-2 right-align">Sub Total</div>
-      <div class="col-sm-1 sub-total centered">{{totalPrice | currency}}</div>
+      <div class="col-sm-1 sub-total centered number-font">{{totalPrice | currency}}</div>
       <div class="col-sm-1"></div>
     </div>
     <div class="checkout flexbox-container">
@@ -148,6 +148,7 @@
   div.checkout {
     padding-bottom: 10vh;
   }
+
 </style>
 
 

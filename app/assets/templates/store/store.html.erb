@@ -11,7 +11,7 @@
           <img ng-src="assets/{{ product.image || 'LensBox_1.jpg'}}" alt="" class="img-responsive">
           <h5>{{product.name}}</h5>
           <h5>{{product.country}}</h5>
-          <h5>{{product.price | currency}}</h5>
+          <h5 class="number-font">{{product.price | currency}}</h5>
         </a>
         <button href ng-click="addItemtoCart(product, 1)" type="">Add</button>
       </div>
@@ -115,6 +115,8 @@ a.item {
   .options button {
     width:auto;
   }
+
+  
  
 
 </style>
