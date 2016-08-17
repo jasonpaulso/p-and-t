@@ -22,15 +22,7 @@ PlacesAndThings
         $rootScope.$broadcast("UpdateCart");
       });
     }
-
-    cart.submitForm = function(user) {
-      CartService.updateCartUser(user)
-      .then(function(response){
-        $rootScope.$broadcast("UpdateCart");
-      });
-
-    }
-
+    
     cart.clearCart = function() {
       CartService.clearCart();
     }

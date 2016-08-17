@@ -13,9 +13,9 @@ function CartService($http, $rootScope) {
   this.updateCartUser = function(user) {
     return $http.patch('api/cart/update', {
       change: "user",
-      user_name: user.username, 
+      // user_name: user.username, 
       user_email: user.email,
-      user_zip: user.zip
+      // user_zip: user.zip
     });
 
   }

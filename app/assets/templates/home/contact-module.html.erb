@@ -1,0 +1,46 @@
+<div class="contact-module flexbox-container">
+<div class="contact-content">
+
+  <p class="contact-input">Stay in the loop</p>
+  <p>Join our mailing list and be notified about news and updates.</p>
+  <form name="userForm" ng-hide="userForm.$submitted">
+    <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+        <label>Email</label>
+        <input type="email" name="email" class="form-control" ng-model="user.email" required>
+        <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+    </div>
+    <button ng-click="submitForm(user)" class="btn btn-primary" ng-disabled="userForm.$invalid">Save</button>
+</form>
+  <!-- <p class="quote-attrib">&mdash;Freya Stark</p> -->
+
+</div>
+  
+</div>
+
+
+<style type="text/css" media="screen">
+  div.contact-module {
+    height:25vh;
+    width: 95%;
+    margin: 2.5% auto;
+    /*background-color: #ebebewhib;*/
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  /*div.quote-module .quote-content .quote {
+    font-family: "ActaDeck-Book-Italic";
+    font-size: 2em;
+  }
+
+  div.quote-content {
+    width: 40%;
+    text-align: center;
+  }
+
+  p.quote-attrib {
+    font-family: "GT-Walsheim";
+  }*/
+</style>

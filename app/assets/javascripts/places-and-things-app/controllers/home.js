@@ -1,7 +1,18 @@
 PlacesAndThings
 
-  .controller('HomeCtrl', [
+.controller('HomeCtrl', ['$scope', '$rootScope', 'CartService', '$http',
+  
+  function($scope, $rootScope, CartService, $http) {
 
-    function() {
+        $scope.submitForm = function(user) {
+      CartService.updateCartUser(user)
+      .then(function(response){
+        $rootScope.$broadcast("UpdateCart");
+      });
 
-}]);
+    }
+
+
+  }]);
+
+
