@@ -1,7 +1,8 @@
 <div class="container ui-view main">
 <!-- <h1 ng-click="resultOrder('country')">Country:</h1> -->
   <div class="content flexbox-container store">
-    <div ng-repeat="product in products | orderBy : orderBy | filter:search:strict">
+    <!-- <div ng-repeat="product in products | orderBy : orderBy | filter:search:strict"> -->
+    <div ng-repeat="product in products | orderBy: 'name'">
       
       <div class="store-product flexbox-container centered">
         <a href="/things/thing/{{product.id}}" class=" item flexbox-container">

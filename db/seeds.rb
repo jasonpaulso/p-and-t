@@ -10,6 +10,7 @@
     name:Faker::Commerce.product_name, 
     price:Faker::Commerce.price, 
     description:Faker::Commerce.color,
+    image:"Candle.jpg",
     category:"Art",
     country:"Sweden")}
 
@@ -18,6 +19,7 @@
     name:Faker::Commerce.product_name, 
     price:Faker::Commerce.price, 
     description:Faker::Commerce.color,
+    image:"KaleidoTray.jpg",
     category:"Hardware",
     country:"Denmark")}
 
@@ -26,6 +28,7 @@
     name:Faker::Commerce.product_name, 
     price:Faker::Commerce.price, 
     description:Faker::Commerce.color,
+    image:"LensBox_1.jpg",
     category:"Kitchen",
     country:"Finland")}
      
@@ -34,6 +37,7 @@
     name:Faker::Commerce.product_name, 
     price:Faker::Commerce.price, 
     description:Faker::Commerce.color,
+    image:"Parfum.jpg",
     category:"Home",
     country:"Sweden")}
 
@@ -42,5 +46,6 @@
     name:Faker::Commerce.product_name, 
     price:Faker::Commerce.price, 
     description:Faker::Commerce.color,
+    image:"Vase.jpg",
     category:"Misc",
     country:"Denmark")}
