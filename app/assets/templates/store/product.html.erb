@@ -12,11 +12,11 @@
         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Designer: {{details.designer || "Unknown"}}</p>
-        <p>Materials: {{details.materials || "Unknown"}}</p>
-        <p>Dimensions: {{details.dimensions || "Unknown"}}</p>
-        <p>Origin: {{details.country}}</p>
-        <p>Currently in cart: <span class="number-font">{{inCart || 0}}</span></p>
+        <p><b>Designer</b>: {{details.designer || "Unknown"}}</p>
+        <p><b>Materials:</b> {{details.materials || "Unknown"}}</p>
+        <p><b>Dimensions:</b> {{details.dimensions || "Unknown"}}</p>
+        <p><b>Origin:</b> {{details.country}}</p>
+        <p><b>Currently in cart:</b> <span class="number-font">{{inCart || 0}}</span></p>
         <div class="button"><button href ng-click="addItemtoCart(details, 1)" >Add to cart</button></div>
         </div>
 
@@ -49,7 +49,7 @@
   }
 
 .product-details {
-
+    
     flex-direction: column;
     /*align-items: center;*/
     justify-content: center;
