@@ -1,9 +1,8 @@
-<div class="contact-module flexbox-container">
-<div class="contact-content">
-
+<div class="contact-module flexbox-container " ng-show="!userEmail">
+<div class="contact-content" >
+  <form name="userForm" ng-hide="userForm.$submitted">
   <p class="contact-input">Stay in the loop</p>
   <p>Join our mailing list and be notified about news and updates.</p>
-  <form name="userForm" ng-hide="userForm.$submitted">
     <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
         <label>Email</label>
         <input type="email" name="email" class="form-control" ng-model="user.email" required>
@@ -11,7 +10,10 @@
     </div>
     <button ng-click="submitForm(user)" class="btn btn-primary" ng-disabled="userForm.$invalid">Save</button>
 </form>
-  <!-- <p class="quote-attrib">&mdash;Freya Stark</p> -->
+</div>
+
+<div class="thank-you">
+  <p>Thanks for signing up {{userEmail}}!</p>
 
 </div>
   
