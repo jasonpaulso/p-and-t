@@ -16,8 +16,8 @@
         <p>Materials: {{details.materials || "Unknown"}}</p>
         <p>Dimensions: {{details.dimensions || "Unknown"}}</p>
         <p>Origin: {{details.country}}</p>
-        <div class="button"><button href ng-click="addItemtoCart(details, 1)" type="reset">Add to cart</button></div>
-        
+        <p>Currently in cart: {{inCart || 0}}</p>
+        <div class="button"><button href ng-click="addItemtoCart(details, 1)" >Add to cart</button></div>
         </div>
 
     </div>
