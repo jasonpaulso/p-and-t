@@ -10,7 +10,7 @@
         <a href="/things/thing/{{product.id}}" class=" item flexbox-container">
           <img ng-src="assets/{{ product.image || 'LensBox_1.jpg'}}" alt="" class="img-responsive">
           <h5>{{product.name}}</h5>
-          <h5>{{product.country}}</h5>
+          <h5 class="country-margin">{{product.country}}</h5>
           <h5 class="number-font">{{product.price | currency}}</h5>
         </a>
         <button href ng-click="addItemtoCart(product, 1)" type="">Add</button>
@@ -116,7 +116,10 @@ a.item {
     width:auto;
   }
 
-  
+  .country-margin {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
  
 
 </style>
