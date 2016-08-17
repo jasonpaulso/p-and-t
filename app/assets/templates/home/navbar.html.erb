@@ -1,5 +1,5 @@
 <nav class="navbar navbar-default navbar-fixed-top custom container" id="custom-nav">
-  
+  <div class="navbar-content">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 
@@ -44,6 +44,7 @@
 
       </ul>
     </div>
+    </div>
 
 </nav>
 
@@ -68,11 +69,15 @@ li.left-most a{
 .navbar.navbar-default.custom {
     padding-left:0;
     padding-right: 0;
-    width:95vw;
+    width:100%;
     background: transparent;
     text-align: center;
     box-shadow: none;
     transition: background .5s ease-in-out, opacity .5s ease-in-out, margin-top .5s ease-in-out;
+}
+div.navbar-content {
+    width:95%;
+    margin:0 auto;
 }
 @media (min-width: 768px) {
     .navbar>.container .navbar-brand,
