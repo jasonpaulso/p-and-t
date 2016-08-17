@@ -12,9 +12,8 @@
 </form>
 </div>
 
-<div class="thank-you">
-  <p>Thanks for signing up {{userEmail}}!</p>
-
+<div class="thank-you" ng-hide="!userForm.$submitted">
+  <p>Thanks for signing up!</p>
 </div>
   
 </div>
