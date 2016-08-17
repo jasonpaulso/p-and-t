@@ -1,19 +1,20 @@
-<div class="container ui-view main">
-<!-- <h1 ng-click="resultOrder('country')">Country:</h1> -->
-  <div class="content flexbox-container store">
-    <!-- <div ng-repeat="product in products | orderBy : orderBy | filter:search:strict"> -->
-    <div ng-repeat="product in products | orderBy: 'name'">
-      
+<div class="container ui-view main store">
+  <div class="options flexbox-container">
+    <button ng-click="resultOrder('name')">Name</button>
+    <button ng-click="resultOrder('country')">Country</button>
+    <button ng-click="resultOrder('price')">Price</button>
+  </div> 
+  <div class="content flexbox-container store-grid">
+    <div ng-repeat="product in products | orderBy : orderBy | filter:search:strict">
       <div class="store-product flexbox-container centered">
         <a href="/things/thing/{{product.id}}" class=" item flexbox-container">
           <img ng-src="assets/{{ product.image || 'LensBox_1.jpg'}}" alt="" class="img-responsive">
           <h5>{{product.name}}</h5>
+          <h5>{{product.country}}</h5>
           <h5>{{product.price | currency}}</h5>
-  
         </a>
-                <button href ng-click="addItemtoCart(product, 1)" type="">Add</button>
+        <button href ng-click="addItemtoCart(product, 1)" type="">Add</button>
       </div>
-        
     </div>
   </div>
   </div>
@@ -36,13 +37,24 @@
 
 
 
-.store.flexbox-container > div {
+.store-grid.flexbox-container > div {
   width: 33%;
 
 }
 
 .flexbox-container > div:first-child {
 
+}
+
+.store {
+  flex-direction: column;
+
+}
+
+.store .options.flexbox-container {
+    width: 95%;
+    margin-top: 4vh;
+    margin-bottom: -8vh;
 }
 
 div.store-product {
@@ -60,7 +72,7 @@ a.item {
 }
 
 
-  div.store {
+  div.store-grid {
    align-items: center;
    justify-content: center;
    flex-direction: row;
