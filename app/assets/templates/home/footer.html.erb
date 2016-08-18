@@ -1,12 +1,12 @@
 <footer class="footer">
-<div class="footer-content flexbox-container">
-  <div class="footer-left flexbox-container"> <a href="mailto:hello@jasonpaulsouthwell.com?subject=feedback" "email me">Contact</a></div>
-  <div class="footer-center flexbox-container">
-    <img ng-src="assets/PlacesThings_Logo.png" alt="" class="img-responsive"></a>
+  <div class="footer-content flexbox-container">
+    <div class="footer-left flexbox-container"> <a href="mailto:hello@jasonpaulsouthwell.com?subject=feedback" "email me">Contact</a></div>
+    <div class="footer-center flexbox-container">
+      <img ng-src="assets/PlacesThings_Logo.png" alt="" class="img-responsive"></a>
+    </div>
+    <div class="footer-right flexbox-container">&copy; 2016 Places & Things</div>
   </div>
-  <div class="footer-right flexbox-container">&copy; 2016 Places & Things</div>
-</div>
-  
+
 </footer>
 
 <style type="text/css" media="screen">
@@ -22,26 +22,40 @@
     width: 95%;
     margin: 0 auto;
 
+    -webkit-box-orient: horizontal;
+
+    -webkit-box-direction: normal;
+
+    -ms-flex-direction: row;
+
     flex-direction: row;
   }
 
   .footer-content div {
     width:33.4%;
-   
+
     height: 9.9vh;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
     align-items: center;
   }
   .footer-content h5 {
+    -ms-flex-item-align: end;
     align-self: flex-end;
   }
 
   .footer-left {
-    
+
   }
-    .footer-center {
+  .footer-center {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
-    .footer-right {
+  .footer-right {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
   }
 
