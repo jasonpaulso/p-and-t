@@ -1,14 +1,14 @@
 <div id="carousel-example-generic" class="carousel slide carousel-fade" data-ride="carousel">
   <!-- Indicators -->
   <div class="flex">
-  <ol class="carousel-indicators right-side">
+    <ol class="carousel-indicators right-side">
 
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
 
-  </ol>
-</div>
+    </ol>
+  </div>
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active" id="mask">
@@ -22,8 +22,8 @@
     <div class="item">
       <img src="assets/TheRoundTower.jpeg" class="bkg">
       <div class="carousel-caption">
-      <div class="arrow-container"><img src="assets/Down_Arrow.png" class="arrow"></div>
-      <div class="arn-stamp-container"><img src="assets/Stamp_Stockholm.png" class="stamp"></div>
+        <div class="arrow-container"><img src="assets/Down_Arrow.png" class="arrow"></div>
+        <div class="arn-stamp-container"><img src="assets/Stamp_Stockholm.png" class="stamp"></div>
         <div class="full-width"><h1>The Round Tower</h1><!-- <h5>Sweden in the Winter</h5> --></div>
       </div>
     </div>
@@ -31,12 +31,12 @@
 
       <img src="assets/TheRoundTower.jpeg" class="bkg">
       <div class="carousel-caption">
-      <div class="arrow-container"><img src="assets/Down_Arrow.png" class="arrow"></div>
-      <div class="hlsk-stamp-container"><img src="assets/Stamp_Helsinki.png" class="stamp"></div>
+        <div class="arrow-container"><img src="assets/Down_Arrow.png" class="arrow"></div>
+        <div class="hlsk-stamp-container"><img src="assets/Stamp_Helsinki.png" class="stamp"></div>
         <div class="full-width"><h1>The Round Tower</h1><!-- <h5>Sweden in the Winter</h5> --></div>
       </div>
     </div>
-    
+
   </div>
 
 </div>
@@ -48,98 +48,116 @@
   .carousel {
     height: 100vh;
   }
-.full-screen {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+  .full-screen {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 
-.flex {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-}
+  .flex {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
 
-.right-side {
-  margin-left: auto;
-}
-.right-side li {
-  margin: 0 5px;
-  background-color: transparent;
-  border-color: white;
-}
-.right-side li.active {
-  margin: 0 5px;
-  background-color: white;
-}
+  .right-side {
+    margin-left: auto;
+  }
+  .right-side li {
+    margin: 0 5px;
+    background-color: transparent;
+    border-color: white;
+  }
+  .right-side li.active {
+    margin: 0 5px;
+    background-color: white;
+  }
 
-#carousel-example-generic .carousel-inner .carousel-caption {
-  display: flex;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  bottom: 0;
-  flex-direction:row;
-  text-align: unset;
-}
+  #carousel-example-generic .carousel-inner .carousel-caption {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    -webkit-box-orient:horizontal;
+    -webkit-box-direction:normal;
+    -ms-flex-direction:row;
+    flex-direction:row;
+    text-align: unset;
+  }
 
-div.arrow-container {
+  div.arrow-container {
     height: 100px;
+    -ms-flex-item-align: end;
     align-self: flex-end;
     margin-left: 4vw;
     margin-bottom: -3vh;
-}
+  }
 
-div.cph-stamp-container {
-  margin-top: 20vh;
-}
+  div.cph-stamp-container {
+    margin-top: 20vh;
+  }
 
-div.arn-stamp-container {
-  margin-top: 50vh;
-  margin-left: 90vh;
-}
+  div.arn-stamp-container {
+    margin-top: 50vh;
+    margin-left: 90vh;
+  }
 
-div.hlsk-stamp-container {
-  margin-left: 90vh;
-  margin-top: 20vh;
-}
-.full-width {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  justify-content: center;
-}
+  div.hlsk-stamp-container {
+    margin-left: 90vh;
+    margin-top: 20vh;
+  }
+  .full-width {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
 
-.full-width h1{
-  height: 2em;
-  font-size: 1.5em;
-  align-self: flex-end;
-  color: white;
-  margin-bottom:2vh;
-}
-.carousel-caption .full-width {
-  text-shadow: none;
-  font-family: "ActaDeck-Book";
-}
-#carousel-example-generic .carousel-inner .carousel-caption img.arrow {
-  align-self: flex-end;
-  margin-right: 5vw;
-  margin-bottom: 0;
-}
+  .full-width h1{
+    height: 2em;
+    font-size: 1.5em;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    color: white;
+    margin-bottom:2vh;
+  }
+  .carousel-caption .full-width {
+    text-shadow: none;
+    font-family: "ActaDeck-Book";
+  }
+  #carousel-example-generic .carousel-inner .carousel-caption img.arrow {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    margin-right: 5vw;
+    margin-bottom: 0;
+  }
 
 
-.carousel-indicators.right-side {
-  width: auto;
-  left: unset;
-  right:3vw;
-}
-ol.carousel-indicators.right-side {
-  margin:0 auto;
-}
-.carousel.carousel-fade .item {
+  .carousel-indicators.right-side {
+    width: auto;
+    left: unset;
+    right:3vw;
+  }
+  ol.carousel-indicators.right-side {
+    margin:0 auto;
+  }
+  .carousel.carousel-fade .item {
+    -webkit-transition: background .5s ease-in-out;
     transition: background .5s ease-in-out;
-}
+  }
 
 
 
@@ -150,30 +168,30 @@ ol.carousel-indicators.right-side {
 
 
   $(document).ready(function(){
-    
 
-  $('.carousel').carousel({  interval: 10000,
-  pause: false});
-  var $item = $('.carousel .item'); 
-  var $wHeight = $(window).height();
-  $item.eq(0).addClass('active');
-  $item.height($wHeight); 
-  $item.addClass('full-screen');
-  $('.carousel-caption').css("margin-top", $('.navbar').height());
+
+    $('.carousel').carousel({  interval: 10000,
+      pause: false});
+    var $item = $('.carousel .item'); 
+    var $wHeight = $(window).height();
+    $item.eq(0).addClass('active');
+    $item.height($wHeight); 
+    $item.addClass('full-screen');
+    $('.carousel-caption').css("margin-top", $('.navbar').height());
   });
 
-$('.carousel img.bkg').each(function() {
-  var $src = $(this).attr('src');
-  $(this).parent().css({
-    'background-image' : 'url(' + $src + ')',
+  $('.carousel img.bkg').each(function() {
+    var $src = $(this).attr('src');
+    $(this).parent().css({
+      'background-image' : 'url(' + $src + ')',
+    });
+    $(this).remove();
   });
-  $(this).remove();
-});
 
-$(window).on('resize', function (){
-  $wHeight = $(window).height();
-  $item.height($wHeight);
-});
+  $(window).on('resize', function (){
+    $wHeight = $(window).height();
+    $item.height($wHeight);
+  });
 
 
 
