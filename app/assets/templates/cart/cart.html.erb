@@ -36,6 +36,7 @@
       </div>
       <div class="checkout flexbox-container">
         <button type="Submit" class="checkout" ng-click="checkout()" disabled>Checkout</button>
+        <a href ng-click="clearCart()" id="clearCart">Clear Cart</a>
       </div>
     </div>
     <h1 class="empty-cart" ng-show="current_cart.length == 0">Shucks, your cart is empty! :-( <br>Check out our <a href="/things" title="Things">store</a> to add some lovely things!</h1>
@@ -175,6 +176,16 @@
     font-weight: bold;
     color:black;
     text-decoration: none;
+  }
+
+  .checkout {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #clearCart {
+    margin-top: 5vh;
   }
 
 
