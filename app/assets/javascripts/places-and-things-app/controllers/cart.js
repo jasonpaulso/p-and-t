@@ -16,6 +16,8 @@ PlacesAndThings
       });
     }
 
+    
+
     cart.changeItemQuantity = function(product, value) {
       CartService.changeItemQuantity(product, value)
       .then(function() {
