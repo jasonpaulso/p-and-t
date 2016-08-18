@@ -12,20 +12,27 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active" id="mask">
-      <img src="assets/TheRoundTower.jpeg">
+      <img src="assets/TheRoundTower.jpeg" class="bkg">
       <div class="carousel-caption">
+        <div class="arrow-container"><img src="assets/Down_Arrow.png" class="arrow"></div>
+        <div class="cph-stamp-container"><img src="assets/Stamp_Copenhagen.png" class="stamp"></div>
         <div class="full-width"><h1>The Round Tower</h1><!-- <h5>Sweden in the Winter</h5> --></div>
       </div>
     </div>
     <div class="item">
-      <img src="assets/TheRoundTower.jpeg">
+      <img src="assets/TheRoundTower.jpeg" class="bkg">
       <div class="carousel-caption">
+      <div class="arrow-container"><img src="assets/Down_Arrow.png" class="arrow"></div>
+      <div class="arn-stamp-container"><img src="assets/Stamp_Stockholm.png" class="stamp"></div>
         <div class="full-width"><h1>The Round Tower</h1><!-- <h5>Sweden in the Winter</h5> --></div>
       </div>
     </div>
     <div class="item">
-      <img src="assets/TheRoundTower.jpeg">
+
+      <img src="assets/TheRoundTower.jpeg" class="bkg">
       <div class="carousel-caption">
+      <div class="arrow-container"><img src="assets/Down_Arrow.png" class="arrow"></div>
+      <div class="hlsk-stamp-container"><img src="assets/Stamp_Helsinki.png" class="stamp"></div>
         <div class="full-width"><h1>The Round Tower</h1><!-- <h5>Sweden in the Winter</h5> --></div>
       </div>
     </div>
@@ -75,26 +82,61 @@
   background-color: white;
 }
 
-.carousel-caption {
+#carousel-example-generic .carousel-inner .carousel-caption {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  left: 0;
   height: 100%;
-  /*border: 1px solid black;*/
+  width: 100%;
+  border: 3px solid black;
+  bottom: 0;
+  flex-direction:row;
+  text-align: unset;
+}
+
+div.arrow-container {
+    height: 100px;
+    align-self: flex-end;
+    margin-left: 4vw;
+    margin-bottom: -3vh;
+}
+
+div.cph-stamp-container {
+  margin-top: 20vh;
+}
+
+div.arn-stamp-container {
+  margin-top: 50vh;
+  margin-left: 90vh;
+}
+
+div.hlsk-stamp-container {
+  margin-left: 90vh;
+  margin-top: 20vh;
 }
 .full-width {
+  display: flex;
+  height: 100%;
   width: 100%;
- /* background-color: rgba(255, 255, 255, 0.4);*/
+  position: absolute;
+  justify-content: center;
+}
+
+.full-width h1{
+  height: 2em;
+  align-self: flex-end;
+  color: white
 }
 .carousel-caption .full-width {
   color:black;
   text-shadow: none;
   font-family: "GT-Walsheim-Light"
 }
-
-.carousel-caption .full-width h1 {
-  font-size: 4em;
+#carousel-example-generic .carousel-inner .carousel-caption img.arrow {
+  align-self: flex-end;
+  margin-right: 5vw;
+  margin-bottom: 0;
 }
+
 
 .carousel-indicators.right-side {
   width: auto;
@@ -129,7 +171,7 @@ ol.carousel-indicators.right-side {
   $('.carousel-caption').css("margin-top", $('.navbar').height());
   });
 
-$('.carousel img').each(function() {
+$('.carousel img.bkg').each(function() {
   var $src = $(this).attr('src');
   $(this).parent().css({
     'background-image' : 'url(' + $src + ')',
