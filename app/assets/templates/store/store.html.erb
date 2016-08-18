@@ -17,23 +17,23 @@
       </div>
     </div>
   </div>
-  </div>
+</div>
 
 
-  <!-- <div class="options flexbox-container">
-    <div class="name-search">
-      <button ng-click="resultOrder('name')">Sort by Name</button>
-      Name:<input ng-model="search.name">
-    </div>
-    <div class="country-search">
-      <button ng-click="resultOrder('country')">Sort by Country</button>
-      Country:<input ng-model="search.country">
-    </div>
-    <div class="price-search">
-      <button ng-click="resultOrder('price')">Sort by Price</button>
-      Category:<input ng-model="search.category">
-    </div>
-  </div>  -->
+<!-- <div class="options flexbox-container">
+<div class="name-search">
+<button ng-click="resultOrder('name')">Sort by Name</button>
+Name:<input ng-model="search.name">
+</div>
+<div class="country-search">
+<button ng-click="resultOrder('country')">Sort by Country</button>
+Country:<input ng-model="search.country">
+</div>
+<div class="price-search">
+<button ng-click="resultOrder('price')">Sort by Price</button>
+Category:<input ng-model="search.category">
+</div>
+</div>  -->
 
 <style type="text/css" media="screen">
 
@@ -46,46 +46,74 @@
 
 
 
-.store-grid.flexbox-container > div {
-  width: 33%;
+  .store-grid.flexbox-container > div {
+    width: 33%;
 
-}
+  }
 
-.flexbox-container > div:first-child {
+  .flexbox-container > div:first-child {
 
-}
+  }
 
-.store {
-  flex-direction: column;
+  .store {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
 
-}
+  }
 
-.store .options.flexbox-container {
+  .store .options.flexbox-container {
     width: 95%;
     margin-top: 4vh;
     margin-bottom: -8vh;
-}
+  }
 
-div.store-product {
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin-bottom: 5.5vh;
+  div.store-product {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 5.5vh;
 
-}
+  }
 
-a.item {
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
+  a.item {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
 
 
   div.store-grid {
-   align-items: center;
-   justify-content: center;
-   flex-direction: row;
-   flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
 
   }
 
@@ -95,12 +123,9 @@ a.item {
   }
 
 
-  div.store {
-    /*padding-bottom: 10vh;*/
-  }
 
-    button {
-    /*display:block;*/
+
+  button {
     margin: 0 auto;
     text-align: center;
     background-image: none;
@@ -120,24 +145,33 @@ a.item {
     margin-top: 0;
     margin-bottom: 0;
   }
- 
- @media screen and (max-width: 768px) {
+
+  @media screen and (max-width: 768px) {
     div.store-grid {
-   align-items: center;
-   justify-content: center;
-   flex-direction: column;
-   flex-wrap: wrap;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -ms-grid-row-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+
+    }
+
+    .store-grid.flexbox-container > div {
+      margin-top: 0;
+      margin-bottom: 0;
+      width: 100%;
+
+    }
 
   }
-
-  .store-grid.flexbox-container > div {
-    margin-top: 0;
-    margin-bottom: 0;
-    width: 100%;
-
-}
-
- }
 
 </style>
 
