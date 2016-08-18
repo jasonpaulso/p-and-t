@@ -39,6 +39,7 @@ PlacesAndThings
 
     cart.updateCart();
 
-  }]);
+  }])
+
 
 
