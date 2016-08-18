@@ -22,6 +22,6 @@ function StoreCtrl($scope, StoreService, $stateParams, $rootScope) {
 
   }
 
-  $scope.resetSearch = function(){$scope.quantity = "";}
+  // $scope.resetSearch = function(){$scope.quantity = "";}
 
 }

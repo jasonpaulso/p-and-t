@@ -1,46 +1,46 @@
 <div class="container ui-view main">
-<div class="flexbox-container cart-container">
-<div class="content cart" ng-show="current_cart.length > 0">
-    <h5>Shopping Cart</h5>
-    <div class="row headers">
-      <div class="col-sm-2">Item</div>
-      <div class="col-sm-6"></div>
-      <div class="col-sm-2 centered"><span class="left">Quantity</span></div>
-      <div class="col-sm-1 centered">Price</div>
-      <div class="col-sm-1"></div>
-    </div>
-    <div>
-      <div class="row product flexbox-container" ng-repeat="product in current_cart | orderBy : 'product_id'">
-        <div class="col-sm-3 image"><a href="/things/thing/{{product.product_id}}"><img ng-src="assets/{{ product.image }}" alt="" class="img-responsive"></a></div>
-        <div class="col-sm-5"><a href="/things/thing/{{product.product_id}}">{{product.name}}</a></div>
-        <div class="col-sm-2 centered">
-          <div class="col-sm-3"></div>
-          <div class="col-sm-2">
-          <a href ng-click="changeItemQuantity(product,'down')" class="glyphicon glyphicon-minus" ng-show="product.quantity > 1"></a>
-         <!--  <a href ng-click="changeItemQuantity(product,'remove')" class="glyphicon glyphicon-remove" ng-show="product.quantity == 1"></a> -->
+  <div class="flexbox-container cart-container">
+    <div class="content cart" ng-show="current_cart.length > 0">
+      <h5>Shopping Cart</h5>
+      <div class="row headers">
+        <div class="col-sm-2">Item</div>
+        <div class="col-sm-6"></div>
+        <div class="col-sm-2 centered"><span class="left">Quantity</span></div>
+        <div class="col-sm-1 centered">Price</div>
+        <div class="col-sm-1"></div>
+      </div>
+      <div>
+        <div class="row product flexbox-container" ng-repeat="product in current_cart | orderBy : 'product_id'">
+          <div class="col-sm-3 product-image"><a href="/things/thing/{{product.product_id}}"><img ng-src="assets/{{ product.image }}" alt="" class="img-responsive"></a></div>
+          <div class="col-sm-5"><a href="/things/thing/{{product.product_id}}">{{product.name}}</a></div>
+          <div class="col-sm-2 centered">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-2">
+              <a href ng-click="changeItemQuantity(product,'down')" class="glyphicon glyphicon-minus" ng-show="product.quantity > 1"></a>
+              <!--  <a href ng-click="changeItemQuantity(product,'remove')" class="glyphicon glyphicon-remove" ng-show="product.quantity == 1"></a> -->
+            </div>
+            <div class="col-sm-2 ">{{product.quantity}}</div>
+            <div class="col-sm-2"><a href ng-click="changeItemQuantity(product,'up')" class="glyphicon glyphicon-plus"></a></div>
+            <div class="col-sm-3"></div>
           </div>
-          <div class="col-sm-2 ">{{product.quantity}}</div>
-          <div class="col-sm-2"><a href ng-click="changeItemQuantity(product,'up')" class="glyphicon glyphicon-plus"></a></div>
-          <div class="col-sm-3"></div>
+          <div class="col-sm-1 centered number-font">{{product.total | currency}}</div>
+          <div class="col-sm-1"> <a href ng-click="changeItemQuantity(product,'remove')" class="glyphicon glyphicon-trash"></a></div>
         </div>
-        <div class="col-sm-1 centered number-font">{{product.total | currency}}</div>
-        <div class="col-sm-1"> <a href ng-click="changeItemQuantity(product,'remove')" class="glyphicon glyphicon-trash"></a></div>
+      </div>
+      <div class="row total">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-6"></div>
+        <div class="col-sm-2 right-align"><b>Sub Total</b></div>
+        <div class="col-sm-1 sub-total centered number-font">{{totalPrice | currency}}</div>
+        <div class="col-sm-1"></div>
+      </div>
+      <div class="checkout flexbox-container">
+        <button type="Submit" class="checkout" ng-click="checkout()" disabled>Checkout</button>
       </div>
     </div>
-    <div class="row total">
-      <div class="col-sm-2"></div>
-      <div class="col-sm-6"></div>
-      <div class="col-sm-2 right-align"><b>Sub Total</b></div>
-      <div class="col-sm-1 sub-total centered number-font">{{totalPrice | currency}}</div>
-      <div class="col-sm-1"></div>
-    </div>
-    <div class="checkout flexbox-container">
-      <button type="Submit" class="checkout" ng-click="checkout()" disabled>Checkout</button>
-    </div>
-</div>
-  <h1 class="empty-cart" ng-show="current_cart.length == 0">Shucks, your cart is empty! :-( <br>Check out our <a href="/things" title="Things">store</a> to add some lovely things!</h1>
-</div>
+    <h1 class="empty-cart" ng-show="current_cart.length == 0">Shucks, your cart is empty! :-( <br>Check out our <a href="/things" title="Things">store</a> to add some lovely things!</h1>
   </div>
+</div>
 
 
 
@@ -51,11 +51,16 @@
 
 <style type="text/css" media="screen">
 
-.cart-container {
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-}
+  .cart-container {
+    width: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
 
   .navbar-brand.title a{
     color: black;
@@ -64,26 +69,28 @@
     color: black;
   }
 
-.content.cart {
-  width: 80%;
-}
+  .content.cart {
+    width: 80%;
+  }
   .centered {
     text-align: center;
     padding:0;
   }
 
-  div.col-sm-2 {
-    width:;
-  }
+
 
 
   h6 {
+    -ms-flex-item-align: start;
     align-self: flex-start;
   }
 
   .product {
     margin-left: 0;
     margin-right: 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
     align-items: center;
     border-bottom: 1px solid black;
 
@@ -95,7 +102,12 @@
 
   .checkout {
     margin-top: 3vh;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
 
@@ -118,7 +130,7 @@
     padding-right: 0;
   }
 
-  div.col-sm-2.image {
+  div.col-sm-2.product-image {
     padding: 0;
     margin: 0;
   }
@@ -154,17 +166,16 @@
     padding-bottom: 10vh;
   }
 
-.empty-cart {
-  font-family: "GT-Walsheim";
-  text-align: center;
-}
-.empty-cart a {
-  font-weight: bold;
-  color:black;
-  text-decoration: none;
-}
+  .empty-cart {
+    font-family: "GT-Walsheim";
+    text-align: center;
+  }
+  .empty-cart a {
+    font-weight: bold;
+    color:black;
+    text-decoration: none;
+  }
 
-  
 
 </style>
 

@@ -2,13 +2,12 @@
 <div class="contact-content" >
   <form name="userForm" ng-hide="userForm.$submitted">
   <p class="contact-input">Stay in the loop</p>
-  <p>Join our mailing list and be notified about news and updates.</p>
+  <p class="acta">Join our mailing list and be notified about news and updates.</p>
     <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
-        <label>Email</label>
-        <input type="email" name="email" class="form-control" ng-model="user.email" required>
+        <input type="email" name="email" class="form-control" ng-model="user.email" required placeholder="Email Address">
         <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
     </div>
-    <button ng-click="submitForm(user)" class="btn btn-primary" ng-disabled="userForm.$invalid">Save</button>
+    <button ng-click="submitForm(user)" class="contact-submit" ng-disabled="userForm.$invalid">Sign Up</button>
 </form>
 </div>
 
@@ -28,20 +27,37 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-
-
-  /*div.quote-module .quote-content .quote {
-    font-family: "ActaDeck-Book-Italic";
-    font-size: 2em;
-  }
-
-  div.quote-content {
-    width: 40%;
     text-align: center;
   }
 
-  p.quote-attrib {
-    font-family: "GT-Walsheim";
-  }*/
+  div.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+p.contact-input {
+  font-family: "GT-Walsheim";
+  font-size: 2em;
+  
+}
+
+.contact-content button {
+    display:block;
+    margin: 0 auto;
+    text-align: center;
+    background-image: none;
+    background-color: black;
+    color:white;
+    border: none;
+    height:35px;
+    width: 100px;
+    font-size: 1.5em;
+  }
+
+  p.acta {
+
+    font-family: "ActaDeck-Book";
+  }
 </style>
