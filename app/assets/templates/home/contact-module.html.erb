@@ -1,20 +1,20 @@
 <div class="contact-module flexbox-container " ng-show="!userEmail">
-<div class="contact-content" >
-  <form name="userForm" ng-hide="userForm.$submitted">
-  <p class="contact-input">Stay in the loop</p>
-  <p class="acta">Join our mailing list and be notified about news and updates.</p>
-    <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+  <div class="contact-content" >
+    <form name="userForm" ng-hide="userForm.$submitted">
+      <p class="contact-input">Stay in the loop</p>
+      <p class="acta">Join our mailing list and be notified about news and updates.</p>
+      <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
         <input type="email" name="email" class="form-control" ng-model="user.email" required placeholder="Email Address">
         <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
-    </div>
-    <button ng-click="submitForm(user)" class="contact-submit" ng-disabled="userForm.$invalid">Sign Up</button>
-</form>
-</div>
+      </div>
+      <button ng-click="submitForm(user)" class="contact-submit" ng-disabled="userForm.$invalid">Sign Up</button>
+    </form>
+  </div>
 
-<div class="thank-you" ng-hide="!userForm.$submitted">
-  <p>Thanks for signing up!</p>
-</div>
-  
+  <div class="thank-you" ng-hide="!userForm.$submitted">
+    <p>Thanks for signing up!</p>
+  </div>
+
 </div>
 
 
@@ -24,26 +24,43 @@
     width: 95%;
     margin: 2.5% auto;
     /*background-color: #ebebewhib;*/
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     text-align: center;
   }
 
   div.contact-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 
   }
-p.contact-input {
-  font-family: "GT-Walsheim";
-  font-size: 2em;
-  
-}
+  p.contact-input {
+    font-family: "GT-Walsheim";
+    font-size: 2em;
 
-.contact-content button {
+  }
+
+  .contact-content button {
     display:block;
     margin: 0 auto;
     text-align: center;
