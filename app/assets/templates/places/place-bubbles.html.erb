@@ -1,5 +1,14 @@
-<div class="container ui-view main flexbox-container">
-
+<div class="container ui-view main flexbox-container place-bubbles">
+<!-- <input ng-model="search.name"> -->
+<div class="search-module flexbox-container">
+  <div class="search-content" >
+      <div class="form-group flexbox-container">
+        <input type="search" name="search" class="form-control" placeholder="I'm looking for...">
+        <button ng-click="" class="search-submit">Search</button>
+      </div>
+      
+    </form>
+  </div>
 <div class="bubbles flexbox-container content">
   <div class="bubble flexbox-container">
     <div class="info"><h2>Copenhagen Street Food Park</h2></div>
@@ -35,6 +44,10 @@
 
 
 <style type="text/css">
+
+div.place-bubbles {
+  flex-direction: column;
+}
 
 body > div.pt-container.ng-scope > div > div:nth-child(2) > div {
 
@@ -90,6 +103,84 @@ body > div.pt-container.ng-scope > div > div:nth-child(2) > div {
 
   .bubble:hover .info {
     display: flex;
+  }
+
+
+
+  /* SEARCH STYLES */
+
+    div.search-module {
+    
+    width: 95%;
+    margin-top: 10%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  div.search-content {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+  }
+
+  body > div.pt-container.ng-scope > div > div:nth-child(2) > div > div > div.search-content > div {
+    
+    width: 25%;
+  }
+
+
+  .search-content button {
+    display:block;
+    margin: 0 auto;
+    text-align: center;
+    background-image: none;
+    background-color: black;
+    color:white;
+    border: none;
+    height:35px;
+    width: 100px;
+    font-size: 1em;
+    font-family: "GT-Walsheim";
+  }
+
+  p.acta {
+
+    font-family: "ActaDeck-Book";
+  }
+
+  input.form-control {
+    border-radius: unset;
+    margin-right: 1em;
+    height:35px;
+    width:100%;
+    font-family: "GT-Walsheim";
+    background-color: transparent;
+  }
+
+  .search-module .form-group {
+    flex-direction:row;
   }
 </style>
 
