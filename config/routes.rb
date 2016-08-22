@@ -8,6 +8,8 @@ scope :api do
   post "cart/add_to_cart" => "cart#add_to_cart"
   patch "cart/update" => "cart#update"
   delete "cart/clear_cart" => "cart#destroy"
+
+  get "places" => "place#index"
 end
 
 root "application#index"

@@ -51,6 +51,8 @@
     country:"Denmark")}
 
 
+#Copenhagen Seeds
+
   place = Place.create(name:"Copenhagen")
 
   eat = Category.create(name:"Dine")
