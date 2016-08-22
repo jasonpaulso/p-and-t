@@ -10,7 +10,7 @@ function StoreCtrl($scope, StoreService, $stateParams, $rootScope) {
   store.searchCities = [
     {name: "Sweden"},
     {name: "Denmark"},
-    {name: "Finland"}
+    {name: "Finland"},
   ];
 
   $scope.select= function(item) {
@@ -31,14 +31,9 @@ function StoreCtrl($scope, StoreService, $stateParams, $rootScope) {
 
   };
 
-
-
   // store.resultOrder = function(x) {
   //   store.orderBy = x;
   // }
 
-  $scope.selectMe = function (event){
-   $(event.target).addClass('active');
-}
 
 }

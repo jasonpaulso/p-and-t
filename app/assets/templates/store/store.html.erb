@@ -1,14 +1,14 @@
 <div class="container ui-view main store">
   <div class="search-module flexbox-container">
     <div class="search-content" >
-      <form class="form-group flexbox-container search-input">
+      <form class="form-group flexbox-container search-input" ng-submit="filterSearch = search">
 
         <input name="search" class="form-control" placeholder="I'm looking for..." ng-model="search">
         <button ng-click="filterSearch = search" class="search-submit" type="reset">Search</button>
 
       </form>
       <div class="filter-options flexbox-container">
-        <a href='#' ng-click="countryFilter={}; filterSearch = ''">All</a>
+        <a href='#' ng-click="countryFilter={}; filterSearch = ''; select($this)" ng-class="{active: isActive(city)}">All</a>
         <a href='#' ng-repeat="city in searchCities" ng-click="$parent.countryFilter={country:city.name}; select(city)" ng-class="{active: isActive(city)}"">{{city.name}}</a>
       </div> 
     </div>
@@ -31,12 +31,22 @@
 
 <style type="text/css" media="screen">
 
-a:hover {
+
+/*a:hover {
   text-decoration: none;
+  color: rgb(0, 0, 255);
+}
+a:focus {
+  text-decoration: none;
+  color: rgb(0, 0, 255);
 }
 .active {
-  color: red;
+  color: rgb(0, 0, 255);
 }
+a {
+  color:black;
+  text-decoration: none;
+}*/
 
   .navbar-brand.title a{
     color: black;
