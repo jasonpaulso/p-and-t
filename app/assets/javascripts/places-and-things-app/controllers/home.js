@@ -1,8 +1,8 @@
 PlacesAndThings
 
-.controller('HomeCtrl', ['$scope', '$rootScope', 'CartService', '$http',
+.controller('HomeCtrl', ['$scope', '$rootScope', 'CartService', '$http', '$state', '$location',
 
-  function($scope, $rootScope, CartService, $http) {
+  function($scope, $rootScope, CartService, $http, $state, $location) {
 
     var home = $scope;
 
@@ -45,6 +45,8 @@ PlacesAndThings
     }
 
     home.checkForUser();
+    
+  
 
   }]);
 

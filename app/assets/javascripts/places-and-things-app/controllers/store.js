@@ -3,8 +3,8 @@ PlacesAndThings
 
 function StoreCtrl($scope, StoreService, $stateParams, $rootScope) {
 
-  var store = $scope
-  ;
+  var store = $scope;
+
   $scope.countryFilter = {};
 
   store.searchCities = [
@@ -13,16 +13,16 @@ function StoreCtrl($scope, StoreService, $stateParams, $rootScope) {
     {name: "Finland"},
   ];
 
-  $scope.select= function(item) {
+  store.select= function(item) {
          $scope.selected = item; 
   };
-  $scope.isActive = function(item) {
+  store.isActive = function(item) {
          return $scope.selected === item;
   };
 
   StoreService.getStore()
   .then(function(response) {
-    store.products = response.data;;
+    store.products = response.data;
   });
 
   store.addItemtoCart = function(product, quantity) {
@@ -30,6 +30,7 @@ function StoreCtrl($scope, StoreService, $stateParams, $rootScope) {
     StoreService.addItemtoCart(product, quantity);
 
   };
+
 
   // store.resultOrder = function(x) {
   //   store.orderBy = x;

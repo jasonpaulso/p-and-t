@@ -1,8 +1,10 @@
 PlacesAndThings
 .controller('ProductCtrl', ProductCtrl);
-function ProductCtrl($scope, StoreService, $stateParams, CartService, $rootScope) {
+function ProductCtrl($scope, StoreService, $stateParams, CartService, $rootScope, $state) {
 
   var product = $scope;
+
+
 
   var productID = $stateParams.productId;
 
@@ -31,4 +33,5 @@ function ProductCtrl($scope, StoreService, $stateParams, CartService, $rootScope
   $rootScope.$on("UpdateCart", function(){
       product.checkInCart();
     });
+
 }
