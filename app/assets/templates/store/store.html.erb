@@ -8,10 +8,8 @@
 
       </form>
       <div class="filter-options flexbox-container">
-      <a href  ng-click="countryFilter={}; filterSearch = ''">All</a>
-        <a href ng-click="countryFilter={country:'denmark'}">Copenhagen</a>
-        <a  href ng-click="countryFilter={country:'sweden'}">Stockholm</a>
-        <a  href ng-click="countryFilter={country:'finland'}">Helsinki</a>
+        <a href='#' ng-click="countryFilter={}; filterSearch = ''">All</a>
+        <a href='#' ng-repeat="city in searchCities" ng-click="$parent.countryFilter={country:city.name}; select(city)" ng-class="{active: isActive(city)}"">{{city.name}}</a>
       </div> 
     </div>
   </div>
@@ -32,6 +30,10 @@
 </div>
 
 <style type="text/css" media="screen">
+
+a:hover {
+  text-decoration: none;
+}
 .active {
   color: red;
 }
