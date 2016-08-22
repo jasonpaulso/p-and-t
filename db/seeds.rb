@@ -49,3 +49,29 @@
     image:"Vase.jpg",
     category:"Misc",
     country:"Denmark")}
+
+
+  place = Place.create(name:"Copenhagen")
+
+  eat = Category.create(name:"Dine")
+  shop = Category.create(name:"Shop")
+  see = Category.create(name:"See")
+
+
+
+  destination_list = 
+  [{name:"Almanak",category:eat,image:"almanak.jpg"},
+    {name:"Copenhagen Street Food",category:eat,image:"CopenhagenStreetFood.jpeg"},
+    {name:"KÖD",category:eat,image:"KoD.jpg"},
+    {name:"Hay House",category:shop,image:"HayHouse.jpg"},
+    {name:"Playtype",category:shop,image:"Playtype.jpg"},
+    {name:"Nyhavn",category:see,image:"Nyhavn.jpeg"},
+    {name:"The Round Tower",category:see,image:"TheRoundTower.jpeg"},
+    {name:"Tivoli",category:see,image:"Tivoli.jpeg"},
+    {name:"Tortus",category:shop,image:"Tortus.jpg"}]
+
+destination_list.each do |destination|
+    place.destinations.create(destination)
+end
+
+
