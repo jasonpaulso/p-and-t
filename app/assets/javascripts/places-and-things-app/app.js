@@ -1,6 +1,6 @@
 var PlacesAndThings = angular.module('PlacesAndThings', ['ui.router','templates']);
 
-PlacesAndThings.$inject = ["$stateProvider", "$urlRouterProvider", "$locationProvider"];
+// PlacesAndThings.$inject = ["$stateProvider", "$urlRouterProvider", "$locationProvider"];
 
 PlacesAndThings.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
@@ -48,4 +48,4 @@ PlacesAndThings.config(function ($stateProvider, $urlRouterProvider, $locationPr
     $locationProvider.html5Mode(true);
   
 });
-
+PlacesAndThings.$inject = ["$stateProvider", "$urlRouterProvider", "$locationProvider"];
