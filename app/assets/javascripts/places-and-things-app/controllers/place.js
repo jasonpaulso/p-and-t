@@ -1,6 +1,9 @@
 PlacesAndThings
 .controller('PlaceCtrl', PlaceCtrl);
-function PlaceCtrl($scope, StoreService, $stateParams, PlaceService, $rootScope, $state) {
+
+PlaceCtrl.$inject = ['$scope', '$stateParams','PlaceService'];
+
+function PlaceCtrl($scope, $stateParams, PlaceService) {
 
   var place = $scope;
   var placeId = $stateParams.placeId;
