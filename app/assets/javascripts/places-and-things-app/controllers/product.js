@@ -1,6 +1,9 @@
 PlacesAndThings
 .controller('ProductCtrl', ProductCtrl);
-function ProductCtrl($scope, StoreService, $stateParams, CartService, $rootScope, $state) {
+
+ProductCtrl.$inject = ['$scope','StoreService', '$stateParams', 'CartService', '$rootScope' ];
+
+function ProductCtrl($scope, StoreService, $stateParams, CartService, $rootScope) {
 
   var product = $scope;
 
