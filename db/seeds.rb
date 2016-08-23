@@ -58,7 +58,7 @@
 
 #Copenhagen Seeds
 
-  copenhagen = Place.create(name:"Copenhagen", map:"Copenhagen_Map.jpg")
+  copenhagen = Place.create(name:"Copenhagen", map:"Copenhagen_Map.jpg", image:"copenhagen.jpg", image_text:"The Round Tower")
   
   copenhagen_destination_list = 
   [{name:"Almanak",category:eat,image:"Almanak.jpg"},
@@ -77,7 +77,7 @@
 
   #Stockholm Seeds
 
-  stockholm = Place.create(name:"Stockholm", map:"Stockholm_Map.jpg")
+  stockholm = Place.create(name:"Stockholm", map:"Stockholm_Map.jpg", image:"stockholm.jpg", image_text:"Stockholm Archipelago")
   
   stockholm_destination_list = 
   [{name:"Knut",category:eat,image:"Eat_Knut.jpg"},
@@ -96,7 +96,7 @@
 
   #Helsinki Seeds
 
-  helsinki = Place.create(name:"Helsinki", map:"Helsinki_Map.jpg")
+  helsinki = Place.create(name:"Helsinki", map:"Helsinki_Map.jpg", image:"helsinki.jpg", image_text:"The Sibelius Monument")
   
   helsinki_destination_list = 
   [{name:"B Smokery",category:eat,image:"Dine_BSmokery.jpg"},
