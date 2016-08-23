@@ -31,9 +31,7 @@ PlacesAndThings
       CartService.retrieveCart()
       .then(function(response){
         home.userEmail = response.data.user_email;
-
       })
-
     }
 
     home.submitForm = function(user) {
@@ -46,8 +44,6 @@ PlacesAndThings
 
     home.checkForUser();
     
-  
-
   }]);
 
 
