@@ -1,4 +1,4 @@
-<div class="container ui-view main flexbox-container place-bubbles">
+<div class="container main flexbox-container place-bubbles">
   <div class="search-module flexbox-container">
     <div class="search-content" >
       <div class="form-group flexbox-container search-input">
@@ -32,8 +32,12 @@
 
 <style type="text/css">
 
+  div.place-bubbles {
+    margin-top: unset;
+  }
+
   div.bubble-container {
-    width: 80%;
+    /*width: 80%;*/
     flex-wrap: wrap;
   }
 
@@ -54,15 +58,9 @@
     color: black;
   }
 
-
-  div.main {
-    align-items: center;
-    min-height: 100vh;
-  }
-
   div.bubbles {
 
-    width: 80vw;
+    /*width: 100%;*/
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
@@ -72,9 +70,9 @@
   }
 
   div.bubble-box {
-    min-width: 250px;
-    width:22vw;
-    height: 22vw;
+   
+    width:23vw;
+/*    height: 22vw;*/
     margin:2%;
     flex-direction: column;
     align-items: center;
@@ -83,9 +81,9 @@
   }
 
   div.bubble {
-    min-width: 250px;
-    width:18vw;
-    height: 18vw;
+    
+    width:21vw;
+    height: 21vw;
     border-radius:50%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -114,7 +112,7 @@
   .bubble:hover .info {
     display: flex;
     background:rgba(0,0,255,.75);
-    text-align:center;
+    /*text-align:center;*/
     opacity:0;
     -webkit-transition: opacity .25s ease;
     -moz-transition: opacity .25s ease;
@@ -130,6 +128,9 @@
 
 
     /* SEARCH STYLES */
+
+
+
 
     div.search-module {
 
@@ -188,7 +189,7 @@
     }
 
     div.search-input {
-      width: 25%;
+      width: 30%;
     }
 
     input.form-control {
@@ -211,6 +212,8 @@
       justify-content: space-around;
 
     }
+  
+
   </style>
 
   <script type="text/javascript">

@@ -1,4 +1,4 @@
-<div class="container ui-view main">
+<div class="container ui-view main ">
   <div class="flexbox-container cart-container">
     <div class="content cart" ng-show="current_cart.length > 0">
       <h5>Shopping Cart</h5>
@@ -17,7 +17,6 @@
             <div class="col-sm-3"></div>
             <div class="col-sm-2">
               <a href ng-click="changeItemQuantity(product,'down')" class="glyphicon glyphicon-minus" ng-show="product.quantity > 1"></a>
-              <!--  <a href ng-click="changeItemQuantity(product,'remove')" class="glyphicon glyphicon-remove" ng-show="product.quantity == 1"></a> -->
             </div>
             <div class="col-sm-2 ">{{product.quantity}}</div>
             <div class="col-sm-2"><a href ng-click="changeItemQuantity(product,'up')" class="glyphicon glyphicon-plus"></a></div>
@@ -49,15 +48,11 @@
 
 
 
-
-
-
-
-
 <style type="text/css" media="screen">
 
 
   .cart-container {
+    margin-top: 5vh;
     width: 100%;
     -webkit-box-align: center;
     -ms-flex-align: center;
