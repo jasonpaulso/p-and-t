@@ -50,18 +50,17 @@
     category:"Misc",
     country:"Denmark")}
 
-
-#Copenhagen Seeds
-
-  place = Place.create(name:"Copenhagen")
+#Destination Category Seeds
 
   eat = Category.create(name:"Dine")
   shop = Category.create(name:"Shop")
   see = Category.create(name:"See")
 
+#Copenhagen Seeds
 
-
-  destination_list = 
+  copenhagen = Place.create(name:"Copenhagen", map:"Copenhagen_Map.jpg")
+  
+  copenhagen_destination_list = 
   [{name:"Almanak",category:eat,image:"Almanak.jpg"},
     {name:"Copenhagen Street Food",category:eat,image:"CopenhagenStreetFood.jpeg"},
     {name:"KÖD",category:eat,image:"KoD.jpg"},
@@ -72,8 +71,8 @@
     {name:"Tivoli",category:see,image:"Tivoli.jpeg"},
     {name:"Tortus",category:shop,image:"Tortus.jpg"}]
 
-destination_list.each do |destination|
-    place.destinations.create(destination)
-end
+  copenhagen_destination_list.each do |destination|
+    copenhagen.destinations.create(destination)
+  end
 
 
