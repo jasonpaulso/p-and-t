@@ -10,10 +10,14 @@ function PlaceCtrl($scope, $stateParams, PlaceService) {
   var imageRootURL = "/assets/places-maps/";
 
 
-  PlaceService.placeShow(placeId)
-  .then(function(response) {
-    place.destinations = response.data.destinations;
-    place.map = imageRootURL + response.data.map;
-    place.name = response.data.name;
-  });
-}
+  var getPlace = function() {
+    PlaceService.placeShow(placeId)
+    .then(function(response) {
+      place.destinations = response.data.destinations;
+      place.map = imageRootURL + response.data.map;
+      place.name = response.data.name;
+      place.blurb = response.data.blurb;
+    });}
+
+    getPlace();
+  }

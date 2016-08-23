@@ -15,7 +15,12 @@
 
 #Copenhagen Seeds
 
-  copenhagen = Place.create(name:"Copenhagen", map:"Copenhagen_Map.jpg", image:"copenhagen.jpg", image_text:"The Round Tower")
+  copenhagen = Place.create(
+    name:"Copenhagen", 
+    map:"Copenhagen_Map.jpg", 
+    image:"copenhagen.jpg", 
+    image_text:"The Round Tower",
+    blurb: "Copenhagen is the capital and most populated city of Denmark. It has a municipal population of 591,481 and a larger urban population of 1,280,371 (as of 1 January 2016). The Copenhagen metropolitan area has just over 2 million inhabitants. The city is situated on the eastern coast of the island of Zealand; another small portion of the city is located on Amager, and is separated from Malmö, Sweden, by the strait of Øresund.")
   
   copenhagen_destination_list = 
   [{name:"Almanak",category:eat,image:"Almanak.jpg"},
@@ -34,7 +39,12 @@
 
   #Stockholm Seeds
 
-  stockholm = Place.create(name:"Stockholm", map:"Stockholm_Map.jpg", image:"stockholm.jpg", image_text:"Stockholm Archipelago")
+  stockholm = Place.create(
+    name:"Stockholm", 
+    map:"Stockholm_Map.jpg", 
+    image:"stockholm.jpg", 
+    image_text:"Stockholm Archipelago",
+    blurb: "Stockholm is the capital of Sweden and the most populous city in the Nordic countries, with 925 934 people living in the municipality, approximately 1.4 million in the urban area, and 2.2 million in the metropolitan area. The city is spread across 14 islands on the coast in the southeast of Sweden at the mouth of Lake Mälaren, by the Stockholm archipelago and the Baltic Sea. The area has been settled since the Stone Age, in the 6th millennium BC, and was founded as a city in 1252 by a Swedish statesman Birger Jarl. It is also the capital of Stockholm County.")
   
   stockholm_destination_list = 
   [{name:"Knut",category:eat,image:"Eat_Knut.jpg"},
@@ -53,7 +63,12 @@
 
   #Helsinki Seeds
 
-  helsinki = Place.create(name:"Helsinki", map:"Helsinki_Map.jpg", image:"helsinki.jpg", image_text:"The Sibelius Monument")
+  helsinki = Place.create(
+    name:"Helsinki", 
+    map:"Helsinki_Map.jpg", 
+    image:"helsinki.jpg", 
+    image_text:"The Sibelius Monument",
+    blurb: "Helsinki is the capital and largest city of Finland. It is in the region of Uusimaa, in southern Finland, on the shore of the Gulf of Finland. Helsinki has a population of 629,512, an urban population of 1,214,210, and a metropolitan population of over 1.4 million, making it the most populous municipality and urban area in Finland. Helsinki is located some 80 kilometres (50 mi) north of Tallinn, Estonia, 400 km (250 mi) east of Stockholm, Sweden, and 388 km (241 mi) west of Saint Petersburg, Russia. Helsinki has close historical connections with these three cities.")
   
   helsinki_destination_list = 
   [{name:"B Smokery",category:eat,image:"Dine_BSmokery.jpg"},
