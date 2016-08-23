@@ -14,41 +14,28 @@
 
     </div>
   </div>
-  <div class="bubbles flexbox-container content">
-    <div class="bubble flexbox-container" >
-      <div class="info"><h2>Copenhagen Street Food Park</h2></div>
-    </div>
-    <div class="bubble flexbox-container">
-    <div class="info"><h2>Copenhagen Street Food Park</h2></div>
-    </div>  
-    <div class="bubble flexbox-container">
-      <div class="info"><h2>Copenhagen Street Food Park</h2></div>
-    </div>  
-    <div class="bubble flexbox-container">
-      <div class="info"><h2>Copenhagen Street Food Park</h2></div>
-    </div>  
-    <div class="bubble flexbox-container">
-      <div class="info"><h2>Copenhagen Street Food Park</h2></div>
-    </div>  
-    <div class="bubble flexbox-container">
-      <div class="info"><h2>Copenhagen Street Food Park</h2></div>
-    </div>  
-    <div class="bubble flexbox-container">
-      <div class="info"><h2>Copenhagen Street Food Park</h2></div>
-    </div>  
-    <div class="bubble flexbox-container">
-      <div class="info"><h2>Copenhagen Street Food Park</h2></div>
-    </div>  
-    <div class="bubble flexbox-container">
-      <div class="info"><h2>Copenhagen Street Food Park</h2></div>
-    </div>
-  </div>
 
+
+
+  <div class="bubbles flexbox-container">
+
+    <div class="flexbox-container bubble-box" ng-repeat="destination in destinations | orderBy: 'category_id'" >
+      <div class="bubble" ng-style="{'background-image':'url(assets/copenhagen-places/{{destination.image}})'}"><div class="info"><a href="{{destination.link}}"><h2>Visit</h2></a></div></div>
+      <h3>{{destination.name}}</h3>
+    </div>
+
+  </div>
 </div>
 
 
 
+
 <style type="text/css">
+
+  div.bubble-container {
+    width: 80%;
+    flex-wrap: wrap;
+  }
 
   div.place-bubbles {
     flex-direction: column;
@@ -84,17 +71,35 @@
 
   }
 
+  div.bubble-box {
+    min-width: 250px;
+    width:22vw;
+    height: 22vw;
+    margin:2%;
+    flex-direction: column;
+    align-items: center;
+    font-family: "GT-Walsheim";
+
+  }
+
   div.bubble {
     min-width: 250px;
-    width:23%;
-    margin:3%;
+    width:18vw;
+    height: 18vw;
     border-radius:50%;
-    background-image: url(assets/sausages.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     align-items: center;
     justify-content: center;
-    color: white
+   
+  }
+
+  .bubble a {
+     color: white
+  }
+
+  .bubble a:hover {
+     color: white
   }
 
   .info {
@@ -120,110 +125,111 @@
   }
 
   .bubble:hover .info {
-   opacity:1;}
+    opacity:1;}
 
 
 
-   /* SEARCH STYLES */
+    /* SEARCH STYLES */
 
-   div.search-module {
+    div.search-module {
 
-    width: 95%;
-    margin-top: 5%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -ms-grid-row-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    text-align: center;
-  }
+      width: 95%;
+      margin-top: 5%;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -ms-grid-row-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      text-align: center;
+    }
 
-  div.search-content {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    div.search-content {
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
 
-  }
+    }
 
 
-  .search-content button {
-    display:block;
-    margin: 0 auto;
-    text-align: center;
-    background-image: none;
-    background-color: black;
-    color:white;
-    border: none;
-    height:35px;
-    width: 100px;
-    font-size: 1em;
-    font-family: "GT-Walsheim";
-  }
+    .search-content button {
+      display:block;
+      margin: 0 auto;
+      text-align: center;
+      background-image: none;
+      background-color: black;
+      color:white;
+      border: none;
+      height:35px;
+      width: 100px;
+      font-size: 1em;
+      font-family: "GT-Walsheim";
+    }
 
-  p.acta {
+    p.acta {
 
-    font-family: "ActaDeck-Book";
-  }
+      font-family: "ActaDeck-Book";
+    }
 
-  div.search-input {
-    width: 25%;
-  }
+    div.search-input {
+      width: 25%;
+    }
 
-  input.form-control {
-    border-radius: unset;
-    margin-right: 1em;
-    height:35px;
-    width:100%;
-    font-family: "GT-Walsheim";
-    background-color: transparent;
-  }
+    input.form-control {
+      border-radius: unset;
+      margin-right: 1em;
+      height:35px;
+      width:100%;
+      font-family: "GT-Walsheim";
+      background-color: transparent;
+    }
 
-  .search-module .form-group {
-    flex-direction:row;
-  }
+    .search-module .form-group {
+      flex-direction:row;
+    }
 
-  .filter-options {
-    margin-top: 2%;
-    width:30%;
-    flex-direction: row;
-    justify-content: space-around;
+    .filter-options {
+      margin-top: 2%;
+      width:30%;
+      flex-direction: row;
+      justify-content: space-around;
 
-  }
-</style>
+    }
+  </style>
 
-<script type="text/javascript">
+  <script type="text/javascript">
 
-  var setSquareHeight;
+// var setSquareHeight;
 
-  $(document).ready(function() {
-    setSquareHeight($('div .bubble'));
+// $(document).ready(function() {
+//   setSquareHeight($('div .bubble'));
 
-  })
+// })
 
-  $(window).on('resize', function () {
-    setSquareHeight($('div .bubble'));
+// $(window).on('resize', function () {
+//   setSquareHeight($('div .bubble'));
 
-  });
+// });
 
-  var setSquareHeight = function(element) {
-    $(element).height($(element).width());
-  } 
+// var setSquareHeight = function(element) {
+//   $(element).height($(element).width());
+// } 
+
 
 </script>
