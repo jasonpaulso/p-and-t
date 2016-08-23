@@ -75,4 +75,42 @@
     copenhagen.destinations.create(destination)
   end
 
+  #Stockholm Seeds
+
+  stockholm = Place.create(name:"Stockholm", map:"Stockholm_Map.jpg")
+  
+  stockholm_destination_list = 
+  [{name:"Knut",category:eat,image:"Eat_Knut.jpg"},
+    {name:"Malarpaviljongen",category:eat,image:"Eat_Malarpaviljongen.jpg"},
+    {name:"Rosendals Tradgard",category:eat,image:"Eat_RosendalsTradgard.jpg"},
+    {name:"Archipelago",category:see,image:"See_Archipelago.jpeg"},
+    {name:"City Hall",category:see,image:"See_CityHall.jpg"},
+    {name:"Skansen",category:see,image:"See_Skansen.jpg"},
+    {name:"Byredo",category:shop,image:"Shop_Byredo.jpg"},
+    {name:"Konst-ig",category:shop,image:"Shop_Konst-ig.jpg"},
+    {name:"Nitty Gritty",category:shop,image:"Shop_NittyGritty.jpg"}]
+
+  stockholm_destination_list.each do |destination|
+    stockholm.destinations.create(destination)
+  end
+
+  #Helsinki Seeds
+
+  helsinki = Place.create(name:"Helsinki", map:"Helsinki_Map.jpg")
+  
+  helsinki_destination_list = 
+  [{name:"B Smokery",category:eat,image:"Dine_BSmokery.jpg"},
+    {name:"Tori",category:eat,image:"Dine_Tori.JPG"},
+    {name:"Vanha Kauppahalli",category:eat,image:"Dine_VanhaKauppahalli.jpg"},
+    {name:"Kiasma",category:see,image:"See_Kiasma.jpeg"},
+    {name:"Sibelius Monument",category:see,image:"See_SibeliusMonument.JPG"},
+    {name:"The Senate Square",category:see,image:"See_TheSenateSquare.jpg"},
+    {name:"Iitalla",category:shop,image:"Shop_Iittala.jpg"},
+    {name:"Kauniste",category:shop,image:"Shop_Kauniste.jpg"},
+    {name:"Marimekko",category:shop,image:"Shop_Marimekko.jpg"}]
+
+  helsinki_destination_list.each do |destination|
+    helsinki.destinations.create(destination)
+  end
+
 
