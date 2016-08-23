@@ -1,7 +1,7 @@
 class PlaceController < ApplicationController
   def index
     @places = Place.all
-    render json: @place
+    render json: @places
   end
 
   def show

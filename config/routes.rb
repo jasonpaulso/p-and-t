@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
 
 scope :api do
+  get "places/(.:format)" => "place#index"
   get "place/:id(.:format)" => "place#show"
   get "store/(.:format)" => "store#index"
   get "store/product/:id(.:format)" => "store#show"
