@@ -1,7 +1,9 @@
 PlacesAndThings
 .controller('StoreCtrl', StoreCtrl);
 
-function StoreCtrl($scope, StoreService, $stateParams, $rootScope) {
+StoreCtrl.$inject = ['$scope','StoreService'];
+
+function StoreCtrl($scope, StoreService) {
 
   var store = $scope;
 
