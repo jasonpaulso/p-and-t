@@ -1,11 +1,8 @@
-var PlacesAndThings = 
-angular
-    .module('PlacesAndThings', [
-        'ui.router',
-        'templates',
-        
-    ])
-    .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+var PlacesAndThings = angular.module('PlacesAndThings', ['ui.router','templates']);
+
+PlacesAndThings.$inject = ["$stateProvider", "$urlRouterProvider", "$locationProvider"];
+
+PlacesAndThings.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
       $stateProvider
 
@@ -50,5 +47,5 @@ angular
     // enable HTML5 Mode for to remove # from URL
     $locationProvider.html5Mode(true);
   
-    });
+});
 
