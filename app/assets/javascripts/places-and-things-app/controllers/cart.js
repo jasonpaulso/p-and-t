@@ -1,8 +1,10 @@
-PlacesAndThings
+angular
+.module('PlacesAndThings')
+.controller('CartCtrl', CartCtrl);
 
-.controller('CartCtrl', ['$scope', '$rootScope', 'CartService', '$http',
+CartCtrl.$inject = ['$scope', '$rootScope', 'CartService', '$http'];
   
-  function($scope, $rootScope, CartService, $http) {
+  function CartCtrl($scope, $rootScope, CartService, $http) {
 
     var cart = $scope;
     cart.user = {};
@@ -39,7 +41,5 @@ PlacesAndThings
 
     cart.updateCart();
 
-  }])
-
-
+  }
 
