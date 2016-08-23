@@ -37,6 +37,15 @@
 
 <style type="text/css" media="screen">
 
+#bs-example-navbar-collapse-1 > ul.nav.navbar-nav.left > li.dropdown.left-most > ul a{
+    color:black;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+#bs-example-navbar-collapse-1 > ul.nav.navbar-nav.left > li.dropdown.left-most > ul a:hover {
+    color: rgb(0, 0, 255);
+}
     .navbar-default {
         border: none;
     }
@@ -153,9 +162,10 @@
     #custom-nav.affix a  {
         color: black;
     }
-    #custom-nav.affix .dropdown-menu {
-        background-color: #f8f8f8;
-    }
+  
+
+    #custom-nav.affix #bs-example-navbar-collapse-1 > ul.nav.navbar-nav.left > li.dropdown.left-most > ul a{
+    color:black;
     @media screen and (max-width: 768px) {
         button.navbar-toggle {
             z-index: 5000;
