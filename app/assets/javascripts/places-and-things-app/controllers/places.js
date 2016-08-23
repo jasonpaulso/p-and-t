@@ -1,17 +1,17 @@
 PlacesAndThings
+.controller('PlacesCtrl', PlacesCtrl);
 
-.controller('PlacesCtrl', ['$scope','$stateParams', 'PlaceService', '$http',
+PlacesCtrl.$inject = ['$scope','PlaceService'];
 
-  function($scope, $stateParams, PlaceService, $http) {
+function PlacesCtrl($scope, PlaceService) {
 
     places = $scope
 
     PlaceService.placesIndex()
       .then(function(response) {
         places.cities = response.data
-        console.log(places.cities)
   });
 
 
-}]);
+};
 
