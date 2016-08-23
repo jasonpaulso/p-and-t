@@ -32,14 +32,14 @@ angular
 
         .state('places', {
             url: '/places',
-            templateUrl: 'places/place.html',
+            templateUrl: 'places/places.html',
             controller: 'PlacesCtrl'
         })
 
         .state('places.place', {
             url: '/place/:placeId',
             templateUrl: 'places/place.html',
-            controller: 'PlacesCtrl',
+            controller: 'PlaceCtrl',
         })
 
         

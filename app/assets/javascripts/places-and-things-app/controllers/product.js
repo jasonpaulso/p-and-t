@@ -7,6 +7,7 @@ function ProductCtrl($scope, StoreService, $stateParams, CartService, $rootScope
 
 
   var productID = $stateParams.productId;
+  console.log(productID);
 
   StoreService.productShow(productID)
   .then(function(response) {
