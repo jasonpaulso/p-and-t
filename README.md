@@ -14,3 +14,13 @@ To launch the site you'll need to do the following:
 
 * As of this readme the "cart" is associated with your current browser session. If you feel the need to you can clear the session by either clearing your cookies or by clicking the "clear cart" link in the "cart" menu on the upper righthand side of the site.
 
+*License File
+
+This project uses the MIT License. For more information, please see license.txt
+
+*Contributions
+
+Please, fork this repo and let me know what we can do together.
+
+
+

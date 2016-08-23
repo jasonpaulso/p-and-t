@@ -13,7 +13,7 @@ Specs:
 - [x] Data should be validated in Angular before submission
   - Contact email is validated in Angular before being added to backend object.
 - [x] Must talk to the Rails backend using $http and Services
-- [ ] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
+- [x] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
 
 Confirm
 - [x] You have a large number of small Git commits
