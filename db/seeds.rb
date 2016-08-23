@@ -5,50 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-3.times { 
-  product = Product.create(
-    name:Faker::Commerce.product_name, 
-    price:Faker::Commerce.price, 
-    description:Faker::Commerce.color,
-    image:"Candle.jpg",
-    category:"Art",
-    country:"Sweden")}
 
- 3.times { 
-  product = Product.create(
-    name:Faker::Commerce.product_name, 
-    price:Faker::Commerce.price, 
-    description:Faker::Commerce.color,
-    image:"KaleidoTray.jpg",
-    category:"Hardware",
-    country:"Denmark")}
-
- 3.times { 
-  product = Product.create(
-    name:Faker::Commerce.product_name, 
-    price:Faker::Commerce.price, 
-    description:Faker::Commerce.color,
-    image:"LensBox_1.jpg",
-    category:"Kitchen",
-    country:"Finland")}
-     
- 3.times { 
-  product = Product.create(
-    name:Faker::Commerce.product_name, 
-    price:Faker::Commerce.price, 
-    description:Faker::Commerce.color,
-    image:"Parfum.jpg",
-    category:"Home",
-    country:"Sweden")}
-
- 3.times { 
-  product = Product.create(
-    name:Faker::Commerce.product_name, 
-    price:Faker::Commerce.price, 
-    description:Faker::Commerce.color,
-    image:"Vase.jpg",
-    category:"Misc",
-    country:"Denmark")}
 
 #Destination Category Seeds
 
@@ -112,5 +69,59 @@
   helsinki_destination_list.each do |destination|
     helsinki.destinations.create(destination)
   end
+
+  #Product Seeds
+
+3.times { 
+  product = Product.create(
+    name:Faker::Commerce.product_name, 
+    price:Faker::Commerce.price, 
+    description:Faker::Commerce.color,
+    image:"Candle.jpg",
+    category:"Art",
+    country:"Denmark"),
+    destination_id:copenhagen.destinations.first.id}
+
+ 3.times { 
+  product = Product.create(
+    name:Faker::Commerce.product_name, 
+    price:Faker::Commerce.price, 
+    description:Faker::Commerce.color,
+    image:"KaleidoTray.jpg",
+    category:"Hardware",
+    country:"Denmark"),
+    destination_id:copenhagen.destinations.first.id
+    }
+
+ 3.times { 
+  product = Product.create(
+    name:Faker::Commerce.product_name, 
+    price:Faker::Commerce.price, 
+    description:Faker::Commerce.color,
+    image:"LensBox_1.jpg",
+    category:"Kitchen",
+    country:"Finland"),
+    destination_id:helsinki.destinations.first.id}
+     
+ 3.times { 
+  product = Product.create(
+    name:Faker::Commerce.product_name, 
+    price:Faker::Commerce.price, 
+    description:Faker::Commerce.color,
+    image:"Parfum.jpg",
+    category:"Home",
+    country:"Sweden"),
+    destination_id:stockholm.destinations.first.id
+    }
+
+ 3.times { 
+  product = Product.create(
+    name:Faker::Commerce.product_name, 
+    price:Faker::Commerce.price, 
+    description:Faker::Commerce.color,
+    image:"Vase.jpg",
+    category:"Misc",
+    country:"Denmark"),
+    destination_id:copenhagen.destinations.last.id}
 
 
