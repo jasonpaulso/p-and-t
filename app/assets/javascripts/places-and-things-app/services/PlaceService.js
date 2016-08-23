@@ -1,5 +1,8 @@
 PlacesAndThings
 .service('PlaceService', PlaceService);
+
+PlaceService.$inject = ["$http"];
+
 function PlaceService($http) {
 
   this.placeShow = function(placeId) {
