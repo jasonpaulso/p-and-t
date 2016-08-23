@@ -62,7 +62,7 @@
 
 
   destination_list = 
-  [{name:"Almanak",category:eat,image:"almanak.jpg"},
+  [{name:"Almanak",category:eat,image:"Almanak.jpg"},
     {name:"Copenhagen Street Food",category:eat,image:"CopenhagenStreetFood.jpeg"},
     {name:"KÖD",category:eat,image:"KoD.jpg"},
     {name:"Hay House",category:shop,image:"HayHouse.jpg"},

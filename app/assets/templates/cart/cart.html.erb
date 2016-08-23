@@ -39,8 +39,12 @@
         <button href confirmed-click="clearCart()" id="clearCart" ng-confirm-click="Would you like to clear your cart?" class="checkout">Clear Cart</button>
       </div>
     </div>
-    <h1 class="empty-cart" ng-show="current_cart.length == 0">Shucks, your cart is empty! :-( <br>Check out our <a href="/things" title="Things">store</a> to add some lovely things!</h1>
+    <div class="empty-cart" ng-show="current_cart.length == 0 || !current_cart">
+      <h1>Shucks, your cart is empty! :-( <br>Check out our <a href="/things" title="Things">store</a> to add some lovely things!</h1>
+      <button href confirmed-click="clearCart()" id="clearCart" ng-confirm-click="Would you like to reset your cart?" class="checkout">Reset Cart</button>
+    </div>
   </div>
+  
 </div>
 
 
