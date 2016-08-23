@@ -1,5 +1,7 @@
 PlacesAndThings
 .service('StoreService', StoreService);
+StoreService.$inject = ["$http", "$rootScope"];
+
 function StoreService($http, $rootScope) {
 
   this.getStore = function() {
