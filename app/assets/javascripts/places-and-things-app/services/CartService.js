@@ -1,5 +1,8 @@
 PlacesAndThings
 .service('CartService', CartService);
+
+CartService.$inject = ['$http', '$rootScope'];
+
 function CartService($http, $rootScope) {
 
   this.retrieveCart = function() {
@@ -30,3 +33,5 @@ function CartService($http, $rootScope) {
 
 
 };
+
+
