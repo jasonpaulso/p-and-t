@@ -40,15 +40,7 @@ angular
             url: '/place/:placeId',
             templateUrl: 'places/place.html',
             controller: 'PlaceCtrl',
-        })
-
-        
-        // .state('place', {
-        //     url: '/place/:id',
-        //     templateUrl: 'places.html',
-        //     controller: 'PlacesCtrl'
-        // })
-        ;
+        });
 
         
 
