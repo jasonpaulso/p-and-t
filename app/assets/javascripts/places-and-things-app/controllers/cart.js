@@ -1,5 +1,4 @@
-angular
-.module('PlacesAndThings')
+PlacesAndThings
 .controller('CartCtrl', CartCtrl);
 
 CartCtrl.$inject = ['$scope', '$rootScope', 'CartService', '$http'];
