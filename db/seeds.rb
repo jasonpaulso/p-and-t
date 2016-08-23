@@ -79,8 +79,9 @@
     description:Faker::Commerce.color,
     image:"Candle.jpg",
     category:"Art",
-    country:"Denmark"),
-    destination_id:copenhagen.destinations.first.id}
+    country:"Denmark",
+    destination_id:copenhagen.destinations.first.id)
+}
 
  3.times { 
   product = Product.create(
@@ -89,8 +90,8 @@
     description:Faker::Commerce.color,
     image:"KaleidoTray.jpg",
     category:"Hardware",
-    country:"Denmark"),
-    destination_id:copenhagen.destinations.first.id
+    country:"Denmark",
+    destination_id:copenhagen.destinations.first.id)
     }
 
  3.times { 
@@ -100,8 +101,9 @@
     description:Faker::Commerce.color,
     image:"LensBox_1.jpg",
     category:"Kitchen",
-    country:"Finland"),
-    destination_id:helsinki.destinations.first.id}
+    country:"Finland",
+    destination_id:helsinki.destinations.first.id)
+}
      
  3.times { 
   product = Product.create(
@@ -110,8 +112,8 @@
     description:Faker::Commerce.color,
     image:"Parfum.jpg",
     category:"Home",
-    country:"Sweden"),
-    destination_id:stockholm.destinations.first.id
+    country:"Sweden",
+    destination_id:stockholm.destinations.first.id)
     }
 
  3.times { 
@@ -121,7 +123,8 @@
     description:Faker::Commerce.color,
     image:"Vase.jpg",
     category:"Misc",
-    country:"Denmark"),
-    destination_id:copenhagen.destinations.last.id}
+    country:"Denmark",
+    destination_id:copenhagen.destinations.last.id)
+}
 
 
