@@ -7,7 +7,7 @@ function StoreCtrl($scope, StoreService) {
 
   var store = $scope;
 
-  $scope.countryFilter = {};
+  store.countryFilter = {};
 
   store.searchCities = [
     {name: "Sweden"},

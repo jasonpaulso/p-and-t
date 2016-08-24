@@ -2,10 +2,8 @@
   <div class="search-module flexbox-container">
     <div class="search-content" >
       <form class="form-group flexbox-container search-input" ng-submit="filterSearch = search">
-
         <input name="search" class="form-control" placeholder="I'm looking for..." ng-model="search">
         <button ng-click="filterSearch = search" class="search-submit" type="reset">Search</button>
-
       </form>
       <div class="filter-options flexbox-container">
         <a href='#' ng-click="countryFilter={}; filterSearch = ''; select($this)" ng-class="{active: isActive($this)}">All</a>
