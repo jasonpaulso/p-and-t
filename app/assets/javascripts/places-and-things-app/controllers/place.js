@@ -10,7 +10,7 @@ function PlaceCtrl($scope, $stateParams, PlaceService) {
   var imageRootURL = "/assets/places-maps/";
 
 
-  var getPlace = function() {
+  place.getPlace = function() {
     PlaceService.placeShow(placeId)
     .then(function(response) {
       place.destinations = response.data.destinations;
@@ -19,5 +19,5 @@ function PlaceCtrl($scope, $stateParams, PlaceService) {
       place.blurb = response.data.blurb;
     });}
 
-    getPlace();
+    place.getPlace();
   }

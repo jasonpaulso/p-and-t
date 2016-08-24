@@ -7,8 +7,6 @@ function ProductCtrl($scope, StoreService, $stateParams, CartService, $rootScope
 
   var product = $scope;
 
-
-
   var productID = $stateParams.productId;
 
   StoreService.productShow(productID)

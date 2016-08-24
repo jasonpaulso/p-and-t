@@ -1,6 +1,6 @@
 var PlacesAndThings = angular.module('PlacesAndThings', ['ui.router','templates']);
 
-// PlacesAndThings.$inject = ["$stateProvider", "$urlRouterProvider", "$locationProvider"];
+PlacesAndThings.$inject = ["$stateProvider", "$urlRouterProvider", "$locationProvider"];
 
 PlacesAndThings.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
@@ -44,8 +44,8 @@ PlacesAndThings.config(function ($stateProvider, $urlRouterProvider, $locationPr
     // default route
     $urlRouterProvider.otherwise('/home');
 
-    // enable HTML5 Mode for to remove # from URL
+    // enable HTML5 Mode to remove # from URL
     $locationProvider.html5Mode(true);
   
 });
-PlacesAndThings.$inject = ["$stateProvider", "$urlRouterProvider", "$locationProvider"];
+

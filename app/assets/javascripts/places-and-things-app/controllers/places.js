@@ -8,13 +8,13 @@ function PlacesCtrl($scope, PlaceService) {
   places = $scope
 
 
-  var getPlaces = function() 
+  places.getPlaces = function() 
   {PlaceService.placesIndex()
     .then(function(response) {
       places.cities = response.data
     });}
 
 
-    getPlaces();
+    places.getPlaces();
   };
 
