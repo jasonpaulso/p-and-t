@@ -60,42 +60,89 @@
   }
 
 /*  .store .options.flexbox-container {
-    width: 95%;
-    margin-top: 4vh;
-    margin-bottom: -8vh;
-  }*/
+width: 95%;
+margin-top: 4vh;
+margin-bottom: -8vh;
+}*/
 
-  div.store-product {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -ms-grid-row-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    margin-bottom: 5.5vh;
+div.store-product {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 5.5vh;
 
-  }
+}
 
-  a.item {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -ms-grid-row-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
+a.item {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
 
 
+div.store-grid {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+}
+
+
+.store-product img {
+  max-height:400px;
+}
+
+
+
+
+button {
+  margin: 0 auto;
+  text-align: center;
+  background-image: none;
+  background-color: black;
+  color:white;
+  border: none;
+  height:25px;
+  width: 100px;
+  font-size: 1em;
+}
+
+.options button {
+  width:auto;
+}
+
+.country-margin {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
   div.store-grid {
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -104,153 +151,106 @@
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 
   }
 
-
-  .store-product img {
-    max-height:400px;
-  }
-
-
-
-
-  button {
-    margin: 0 auto;
-    text-align: center;
-    background-image: none;
-    background-color: black;
-    color:white;
-    border: none;
-    height:25px;
-    width: 100px;
-    font-size: 1em;
-  }
-
-  .options button {
-    width:auto;
-  }
-
-  .country-margin {
+  .store-grid.flexbox-container > div {
     margin-top: 0;
     margin-bottom: 0;
-  }
-
-  @media screen and (max-width: 768px) {
-    div.store-grid {
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -ms-grid-row-align: center;
-      align-items: center;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-
-    }
-
-    .store-grid.flexbox-container > div {
-      margin-top: 0;
-      margin-bottom: 0;
-      width: 100%;
-
-    }
-
-  }
-
-  /* SEARCH STYLES */
-
-  div.search-module {
-  
-    width: 95%;
-    margin-top: 5vh;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -ms-grid-row-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-  div.search-content {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
 
   }
 
+}
 
-  .search-content button {
-    display:block;
-    margin: 0 auto;
-    text-align: center;
-    background-image: none;
-    background-color: black;
-    color:white;
-    border: none;
-    height:35px;
-    width: 100px;
-    font-size: 1em;
-    font-family: "GT-Walsheim";
-  }
+/* SEARCH STYLES */
 
-  p.acta {
+div.search-module {
 
-    font-family: "ActaDeck-Book";
-  }
+  width: 95%;
+  margin-top: 5vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+}
 
-  form.search-input {
-    width: 30%;
-  }
+div.search-content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 
-  input.form-control {
-    border-radius: unset;
-    margin-right: 1em;
-    height:35px;
-    width:100%;
-    font-family: "GT-Walsheim";
-    background-color: transparent;
-  }
+}
 
-  .search-module .form-group {
-    flex-direction:row;
-  }
 
-  .filter-options {
-    margin-top: 2%;
-    width:30%;
-    flex-direction: row;
-    justify-content: space-around;
+.search-content button {
+  display:block;
+  margin: 0 auto;
+  text-align: center;
+  background-image: none;
+  background-color: black;
+  color:white;
+  border: none;
+  height:35px;
+  width: 100px;
+  font-size: 1em;
+  font-family: "GT-Walsheim";
+}
 
-  }
+p.acta {
+
+  font-family: "ActaDeck-Book";
+}
+
+form.search-input {
+  width: 30%;
+}
+
+input.form-control {
+  border-radius: unset;
+  margin-right: 1em;
+  height:35px;
+  width:100%;
+  font-family: "GT-Walsheim";
+  background-color: transparent;
+}
+
+.search-module .form-group {
+  flex-direction:row;
+}
+
+.filter-options {
+  margin-top: 2%;
+  width:30%;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
 
 </style>
 
