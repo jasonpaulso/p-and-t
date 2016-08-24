@@ -16,7 +16,7 @@
     <div ng-repeat="product in products | filter:countryFilter | filter:filterSearch:strict">
       <div class="store-product flexbox-container centered">
         <a href="/things/thing/{{product.id}}" class=" item flexbox-container">
-          <img ng-src="assets/{{ product.image || 'LensBox_1.jpg'}}" alt="" class="img-responsive">
+          <img ng-src="assets/products/{{ product.image || 'LensBox_1.jpg'}}" alt="" class="img-responsive">
           <h5>{{product.name}}</h5>
           <h5 class="country-margin">{{product.country}}</h5>
           <h5 class="number-font">{{product.price | currency}}</h5>
