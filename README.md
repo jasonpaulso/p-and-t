@@ -16,7 +16,7 @@ Visit http://placesandthings.herokuapp.com/home
 
 * Now you can view the app as it is now. (I plan to add more, so pull the newest version every now and then.)
 
-* As of this readme the "cart" is associated with your current browser session. If you feel the need to you can clear the session by either clearing your cookies or by clicking the "clear cart" link in the "cart" menu on the upper righthand side of the site.
+* As of this readme the "cart" is associated with your current browser session. If you feel the need to you can clear the session by either clearing your cookies or by clicking the "clear cart" link on the page.
 
 *License File
 
