@@ -87,11 +87,18 @@
 
   #Product Seeds
 
+  description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
 3.times { 
   product = Product.create(
     name:Faker::Commerce.product_name, 
     price:Faker::Commerce.price, 
-    description:Faker::Commerce.color,
+    description:description,
     image:"Candle.jpg",
     category:"Art",
     country:"Denmark",
@@ -102,7 +109,7 @@
   product = Product.create(
     name:Faker::Commerce.product_name, 
     price:Faker::Commerce.price, 
-    description:Faker::Commerce.color,
+    description:description,
     image:"KaleidoTray.jpg",
     category:"Hardware",
     country:"Denmark",
@@ -113,7 +120,7 @@
   product = Product.create(
     name:Faker::Commerce.product_name, 
     price:Faker::Commerce.price, 
-    description:Faker::Commerce.color,
+    description:description,
     image:"LensBox_1.jpg",
     category:"Kitchen",
     country:"Finland",
@@ -124,7 +131,7 @@
   product = Product.create(
     name:Faker::Commerce.product_name, 
     price:Faker::Commerce.price, 
-    description:Faker::Commerce.color,
+    description:description,
     image:"Parfum.jpg",
     category:"Home",
     country:"Sweden",
@@ -135,7 +142,7 @@
   product = Product.create(
     name:Faker::Commerce.product_name, 
     price:Faker::Commerce.price, 
-    description:Faker::Commerce.color,
+    description:description,
     image:"Vase.jpg",
     category:"Misc",
     country:"Denmark",

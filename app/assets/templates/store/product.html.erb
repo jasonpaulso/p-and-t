@@ -1,20 +1,16 @@
 <div class="container">
   <div class="product-show content">
-
     <div class="row flexbox-container">
       <div class="col-sm-7 flexbox-container product-show-image"><img ng-src="assets/{{ details.image || 'LensBox_1.jpg'}}" alt="" class="img-responsive"></div>
       <div class="col-sm-5 flexbox-container product-details">
         <h4>{{details.name}}</h4>
         <p class="number-font">{{details.price | currency}}</p>
-        <p class="number-font"><!-- {{details.description}} --> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p><b>Designer</b>: {{details.designer || "Unknown"}}</p>
-          <p><b>Materials:</b> {{details.materials || "Unknown"}}</p>
-          <p><b>Dimensions:</b> {{details.dimensions || "Unknown"}}</p>
+        <p class="number-font">{{details.description}} </p>
+          <span hidden>
+            <p><b>Designer</b>: {{details.designer || "Unknown"}}</p>
+            <p><b>Materials:</b> {{details.materials || "Unknown"}}</p>
+            <p><b>Dimensions:</b> {{details.dimensions || "Unknown"}}</p>
+          </span>
           <p><b>Origin:</b> {{details.country}}</p>
           <p><b>Currently in cart:</b> <span class="number-font">{{inCart || 0}}</span></p>
           <div class="button"><button href ng-click="addItemtoCart(details, 1)" >Add to cart</button></div>
