@@ -4,7 +4,7 @@ Places & Things is a Rails/Angular App. The idea for Places & Things is to be a 
 
 To launch the site you'll need to do the following:
 
-Visit http://placesandthings.herokuapp.com/things
+Visit http://placesandthings.herokuapp.com/home
 
 -OR-
 
