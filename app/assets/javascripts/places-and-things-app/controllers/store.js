@@ -33,10 +33,4 @@ function StoreCtrl($scope, StoreService) {
 
   };
 
-
-  // store.resultOrder = function(x) {
-  //   store.orderBy = x;
-  // }
-
-
 }

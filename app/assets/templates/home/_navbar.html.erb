@@ -14,16 +14,12 @@
                 <li class="dropdown left-most">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Places</a>
                     <ul class="dropdown-menu" ng-controller="PlacesCtrl" >
-<!--                    <span ng-repeat="city in cities">
-                            <li><a href="places/place/{{city.id}}">{{city.name}}</a></li>
-                        </span> -->
                         <li><a href="places/place/1">Copenhagen</a></li>
                         <li><a href="places/place/2">Stockholm</a></li>
                         <li><a href="places/place/3">Helsinki</a></li>
                     </ul>
                 </li>
                 <li><a href="/things">Things</a></li>
-                <!-- <li><a href="#">About</a></li> -->
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li ng-controller="CartCtrl"><a href="/cart" id="cartItemsTotal">Cart: <cart-total></cart-total></a></li>
