@@ -1,12 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
-
 #Destination Category Seeds
 
   eat = Category.create(name:"Dine")
@@ -23,7 +14,7 @@
     blurb: "Copenhagen is the capital and most populated city of Denmark. It has a municipal population of 591,481 and a larger urban population of 1,280,371 (as of 1 January 2016). The Copenhagen metropolitan area has just over 2 million inhabitants. The city is situated on the eastern coast of the island of Zealand; another small portion of the city is located on Amager, and is separated from Malmö, Sweden, by the strait of Øresund.")
   
   copenhagen_destination_list = 
-  [{name:"Almanak",category:eat,image:"Almanak.jpg", link:"http://thestandardcph.dk/en/almanak"},
+    [{name:"Almanak",category:eat,image:"Almanak.jpg", link:"http://thestandardcph.dk/en/almanak"},
     {name:"Copenhagen Street Food",category:eat,image:"CopenhagenStreetFood.jpeg", link:"http://copenhagenstreetfood.dk/en/"},
     {name:"KÖD",category:eat,image:"KoD.jpg", link:"http://koedkbh.com/"},
     {name:"Hay House",category:shop,image:"HayHouse.jpg", link:"http://hay.dk/#/site/furniture/new"},
@@ -47,7 +38,7 @@
     blurb: "Stockholm is the capital of Sweden and the most populous city in the Nordic countries, with 925 934 people living in the municipality, approximately 1.4 million in the urban area, and 2.2 million in the metropolitan area. The city is spread across 14 islands on the coast in the southeast of Sweden at the mouth of Lake Mälaren, by the Stockholm archipelago and the Baltic Sea. The area has been settled since the Stone Age, in the 6th millennium BC, and was founded as a city in 1252 by a Swedish statesman Birger Jarl. It is also the capital of Stockholm County.")
   
   stockholm_destination_list = 
-  [{name:"Knut",category:eat,image:"Eat_Knut.jpg", link:"http://restaurangknut.se/sv"},
+    [{name:"Knut",category:eat,image:"Eat_Knut.jpg", link:"http://restaurangknut.se/sv"},
     {name:"Malarpaviljongen",category:eat,image:"Eat_Malarpaviljongen.jpg", link:"http://malarpaviljongen.se/"},
     {name:"Rosendals Tradgard",category:eat,image:"Eat_RosendalsTradgard.jpg", link:"http://www.rosendalstradgard.se/"},
     {name:"Stockholm Archipelago",category:see,image:"See_Archipelago.jpeg", link:"http://www.stockholmarchipelago.se/en/"},
@@ -71,7 +62,7 @@
     blurb: "Helsinki is the capital and largest city of Finland. It is in the region of Uusimaa, in southern Finland, on the shore of the Gulf of Finland. Helsinki has a population of 629,512, an urban population of 1,214,210, and a metropolitan population of over 1.4 million, making it the most populous municipality and urban area in Finland. Helsinki is located some 80 kilometres (50 mi) north of Tallinn, Estonia, 400 km (250 mi) east of Stockholm, Sweden, and 388 km (241 mi) west of Saint Petersburg, Russia. Helsinki has close historical connections with these three cities.")
   
   helsinki_destination_list = 
-  [{name:"B Smokery",category:eat,image:"Dine_BSmokery.jpg", link:"http://bsmokery.fi/"},
+    [{name:"B Smokery",category:eat,image:"Dine_BSmokery.jpg", link:"http://bsmokery.fi/"},
     {name:"Tori",category:eat,image:"Dine_Tori.JPG", link:"http://www.ravintolatori.fi/punavuori/"},
     {name:"Vanha Kauppahalli",category:eat,image:"Dine_VanhaKauppahalli.jpg", link:"http://vanhakauppahalli.fi/en/"},
     {name:"Kiasma",category:see,image:"See_Kiasma.jpeg", link:"http://www.kiasma.fi/en/"},
@@ -94,59 +85,80 @@
           cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
           proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
-3.times { 
-  product = Product.create(
-    name:Faker::Commerce.product_name, 
-    price:Faker::Commerce.price, 
-    description:description,
-    image:"Candle.jpg",
-    category:"Art",
-    country:"Denmark",
-    destination_id:copenhagen.destinations.first.id)
-}
 
- 3.times { 
-  product = Product.create(
-    name:Faker::Commerce.product_name, 
-    price:Faker::Commerce.price, 
-    description:description,
-    image:"KaleidoTray.jpg",
-    category:"Hardware",
-    country:"Denmark",
-    destination_id:copenhagen.destinations.first.id)
-    }
+  #Copenhagen
+  Product.create(name:"", image:"", price:Faker::Commerce.price, country:"Copenhagen", destination_id:copenhagen.destinations[3], description: description)
+  Product.create(name:"", image:"", price:Faker::Commerce.price, country:"Copenhagen", destination_id:copenhagen.destinations[4], description: description)
+  Product.create(name:"", image:"", price:Faker::Commerce.price, country:"Copenhagen", destination_id:copenhagen.destinations[5], description: description)
+  Product.create(name:"", image:"", price:Faker::Commerce.price, country:"Copenhagen", destination_id:copenhagen.destinations[5], description: description)
 
- 3.times { 
-  product = Product.create(
-    name:Faker::Commerce.product_name, 
-    price:Faker::Commerce.price, 
-    description:description,
-    image:"LensBox_1.jpg",
-    category:"Kitchen",
-    country:"Finland",
-    destination_id:helsinki.destinations.first.id)
-}
+  #Stockholm
+  Product.create(name:"", image:"", price:Faker::Commerce.price, country:"Stockholm", destination_id:stockholm.destinations[3], description: description)
+  Product.create(name:"", image:"", price:Faker::Commerce.price, country:"Stockholm", destination_id:stockholm.destinations[4], description: description)
+  Product.create(name:"", image:"", price:Faker::Commerce.price, country:"Stockholm", destination_id:stockholm.destinations[5], description: description)
+  Product.create(name:"", image:"", price:Faker::Commerce.price, country:"Stockholm", destination_id:stockholm.destinations[5], description: description)
+
+  #Helsinki
+  Product.create(name:"", image:"", price:Faker::Commerce.price, country:"Helsinki", destination_id:helsinki.destinations[3], description: description)
+  Product.create(name:"", image:"", price:Faker::Commerce.price, country:"Helsinki", destination_id:helsinki.destinations[4], description: description)
+  Product.create(name:"", image:"", price:Faker::Commerce.price, country:"Helsinki", destination_id:helsinki.destinations[5], description: description)
+  Product.create(name:"", image:"", price:Faker::Commerce.price, country:"Helsinki", destination_id:helsinki.destinations[5], description: description)
+
+  
+
+# 3.times { 
+#   product = Product.create(
+#     name:Faker::Commerce.product_name, 
+#     price:Faker::Commerce.price, 
+#     description:description,
+#     image:"Candle.jpg",
+#     category:"Art",
+#     country:"Denmark",
+#     destination_id:copenhagen.destinations.first.id)
+# }
+
+#  3.times { 
+#   product = Product.create(
+#     name:Faker::Commerce.product_name, 
+#     price:Faker::Commerce.price, 
+#     description:description,
+#     image:"KaleidoTray.jpg",
+#     category:"Hardware",
+#     country:"Denmark",
+#     destination_id:copenhagen.destinations.first.id)
+#     }
+
+#  3.times { 
+#   product = Product.create(
+#     name:Faker::Commerce.product_name, 
+#     price:Faker::Commerce.price, 
+#     description:description,
+#     image:"LensBox_1.jpg",
+#     category:"Kitchen",
+#     country:"Finland",
+#     destination_id:helsinki.destinations.first.id)
+# }
      
- 3.times { 
-  product = Product.create(
-    name:Faker::Commerce.product_name, 
-    price:Faker::Commerce.price, 
-    description:description,
-    image:"Parfum.jpg",
-    category:"Home",
-    country:"Sweden",
-    destination_id:stockholm.destinations.first.id)
-    }
+#  3.times { 
+#   product = Product.create(
+#     name:Faker::Commerce.product_name, 
+#     price:Faker::Commerce.price, 
+#     description:description,
+#     image:"Parfum.jpg",
+#     category:"Home",
+#     country:"Sweden",
+#     destination_id:stockholm.destinations.first.id)
+#     }
 
- 3.times { 
-  product = Product.create(
-    name:Faker::Commerce.product_name, 
-    price:Faker::Commerce.price, 
-    description:description,
-    image:"Vase.jpg",
-    category:"Misc",
-    country:"Denmark",
-    destination_id:copenhagen.destinations.last.id)
-}
+#  3.times { 
+#   product = Product.create(
+#     name:Faker::Commerce.product_name, 
+#     price:Faker::Commerce.price, 
+#     description:description,
+#     image:"Vase.jpg",
+#     category:"Misc",
+#     country:"Denmark",
+#     destination_id:copenhagen.destinations.last.id)
+# }
 
 
