@@ -87,22 +87,22 @@
 
 
   #Copenhagen
-  Product.create(name:"Tortus Vase", image:"DK_Tortus_Vase.jpg", price:Faker::Commerce.price, country:"Copenhagen", destination_id:copenhagen.destinations[8], description: description)
-  Product.create(name:"Playtype Mug", image:"DK_Playtype_Mug.jpg", price:Faker::Commerce.price, country:"Copenhagen", destination_id:copenhagen.destinations[4], description: description)
-  Product.create(name:"Hay Box", image:"DK_Hay_Box.jpg", price:Faker::Commerce.price, country:"Copenhagen", destination_id:copenhagen.destinations[3], description: description)
-  Product.create(name:"Hay Tray", image:"DK_Hay_Tray.jpg", price:Faker::Commerce.price, country:"Copenhagen", destination_id:copenhagen.destinations[3], description: description)
+  Product.create(name:"Tortus Vase", image:"DK_Tortus_Vase.jpg", price:Faker::Commerce.price, country:"Copenhagen", destination_id:copenhagen.destinations[8].id, description: description)
+  Product.create(name:"Playtype Mug", image:"DK_Playtype_Mug.jpg", price:Faker::Commerce.price, country:"Copenhagen", destination_id:copenhagen.destinations[4].id, description: description)
+  Product.create(name:"Hay Box", image:"DK_Hay_Box.jpg", price:Faker::Commerce.price, country:"Copenhagen", destination_id:copenhagen.destinations[3].id, description: description)
+  Product.create(name:"Hay Tray", image:"DK_Hay_Tray.jpg", price:Faker::Commerce.price, country:"Copenhagen", destination_id:copenhagen.destinations[3].id, description: description)
 
   #Stockholm
-  Product.create(name:"Byredo Candle", image:"SE_Byredo_Candle.jpg", price:Faker::Commerce.price, country:"Stockholm", destination_id:stockholm.destinations[6], description: description)
-  Product.create(name:"Byredo Parfum", image:"SE_Byredo_Parfum.jpg", price:Faker::Commerce.price, country:"Stockholm", destination_id:stockholm.destinations[6], description: description)
-  Product.create(name:"Konst-ig Book", image:"SE_Konst-ig_Book.jpg", price:Faker::Commerce.price, country:"Stockholm", destination_id:stockholm.destinations[7], description: description)
-  Product.create(name:"Nitty Gritty Bracelet", image:"SE_NittyGritty_Bracelet.jpg", price:Faker::Commerce.price, country:"Stockholm", destination_id:stockholm.destinations[8], description: description)
+  Product.create(name:"Byredo Candle", image:"SE_Byredo_Candle.jpg", price:Faker::Commerce.price, country:"Stockholm", destination_id:stockholm.destinations[6].id, description: description)
+  Product.create(name:"Byredo Parfum", image:"SE_Byredo_Parfum.jpg", price:Faker::Commerce.price, country:"Stockholm", destination_id:stockholm.destinations[6].id, description: description)
+  Product.create(name:"Konst-ig Book", image:"SE_Konst-ig_Book.jpg", price:Faker::Commerce.price, country:"Stockholm", destination_id:stockholm.destinations[7].id, description: description)
+  Product.create(name:"Nitty Gritty Bracelet", image:"SE_NittyGritty_Bracelet.jpg", price:Faker::Commerce.price, country:"Stockholm", destination_id:stockholm.destinations[8].id, description: description)
 
   #Helsinki
-  Product.create(name:"Iittala CandleHolder", image:"FI_Iittala_CandleHolder.jpg", price:Faker::Commerce.price, country:"Helsinki", destination_id:helsinki.destinations[6], description: description)
-  Product.create(name:"Iittala Vase", image:"FI_Iittala_Vase.jpg", price:Faker::Commerce.price, country:"Helsinki", destination_id:helsinki.destinations[6], description: description)
-  Product.create(name:"Kauniste Pillow", image:"FI_Kauniste_Pillow.jpg", price:Faker::Commerce.price, country:"Helsinki", destination_id:helsinki.destinations[7], description: description)
-  Product.create(name:"Marimekko Pouch", image:"FI_Marimekko_Pouch.jpg", price:Faker::Commerce.price, country:"Helsinki", destination_id:helsinki.destinations[8], description: description)
+  Product.create(name:"Iittala CandleHolder", image:"FI_Iittala_CandleHolder.jpg", price:Faker::Commerce.price, country:"Helsinki", destination_id:helsinki.destinations[6].id, description: description)
+  Product.create(name:"Iittala Vase", image:"FI_Iittala_Vase.jpg", price:Faker::Commerce.price, country:"Helsinki", destination_id:helsinki.destinations[6].id, description: description)
+  Product.create(name:"Kauniste Pillow", image:"FI_Kauniste_Pillow.jpg", price:Faker::Commerce.price, country:"Helsinki", destination_id:helsinki.destinations[7].id, description: description)
+  Product.create(name:"Marimekko Pouch", image:"FI_Marimekko_Pouch.jpg", price:Faker::Commerce.price, country:"Helsinki", destination_id:helsinki.destinations[8].id, description: description)
 
   
 
