@@ -10,9 +10,9 @@ function StoreCtrl($scope, StoreService) {
   store.countryFilter = {};
 
   store.searchCities = [
-    {name: "Sweden"},
-    {name: "Denmark"},
-    {name: "Finland"},
+    {name: "Copenhagen"},
+    {name: "Stockholm"},
+    {name: "Helsinki"},
   ];
 
   store.select= function(item) {

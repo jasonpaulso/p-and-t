@@ -19,8 +19,8 @@ function ProductCtrl($scope, StoreService, $stateParams, CartService, $rootScope
     StoreService.addItemtoCart(product, quantity);
   };
 
-  product.checkInCart = function() {
-    CartService.retrieveCart()
+  product.checkInCart = function(item) {
+    CartService.retrieveCart(item)
     .then(function(response){
       response.data.cart_products.filter(function (item) { 
         if (item.product_id === product.details.id) {

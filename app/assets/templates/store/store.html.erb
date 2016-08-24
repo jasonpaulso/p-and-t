@@ -20,6 +20,7 @@
           <h5>{{product.name}}</h5>
           <h5 class="country-margin">{{product.country}}</h5>
           <h5 class="number-font">{{product.price | currency}}</h5>
+         <!--  <h5 ng-controller="ProductCtrl">{{checkInCart(product)}}</h5> -->
         </a>
         <button href ng-click="addItemtoCart(product, 1)" type="">Add</button>
       </div>
